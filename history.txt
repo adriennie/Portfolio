@@ -2457,3 +2457,4 @@
 2024-01-01 - Merged dev branch into main - 4
 2024-01-01 - Integrated third party library - 5
 2024-01-01 - Implemented early stopping callback - 6
+2024-01-01 - Fixed critical bug in pipeline - 7
