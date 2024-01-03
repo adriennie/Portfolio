@@ -2475,3 +2475,4 @@
 2024-01-02 - Worked on authentication module - 8
 2024-01-02 - Updated model evaluation metrics - 9
 2024-01-03 - Cleaned up deprecated functions - 1
+2024-01-03 - Wrote integration tests - 2
