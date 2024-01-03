@@ -2478,3 +2478,4 @@
 2024-01-03 - Wrote integration tests - 2
 2024-01-03 - Refactored training loop - 3
 2024-01-03 - Reviewed and merged PR - 4
+2024-01-03 - Updated model evaluation metrics - 5
