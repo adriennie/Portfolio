@@ -8,3 +8,4 @@
 2024-01-02 - Optimized batch processing - 6
 2024-01-02 - Optimized batch processing - 7
 2024-01-03 - Fixed critical bug in pipeline - 1
+2024-01-03 - Updated documentation - 2
