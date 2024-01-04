@@ -2481,3 +2481,4 @@
 2024-01-03 - Updated model evaluation metrics - 5
 2024-01-03 - Completed EDA notebook - 6
 2024-01-03 - Deployed hotfix to staging - 7
+2024-01-04 - Completed sprint review changes - 1
