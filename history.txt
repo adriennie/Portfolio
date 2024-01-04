@@ -2483,3 +2483,4 @@
 2024-01-03 - Deployed hotfix to staging - 7
 2024-01-04 - Completed sprint review changes - 1
 2024-01-04 - Implemented early stopping callback - 2
+2024-01-04 - Resolved failing test cases - 3
