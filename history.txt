@@ -2487,3 +2487,4 @@
 2024-01-04 - Deployed hotfix to staging - 4
 2024-01-04 - Refactored data preprocessing module - 5
 2024-01-04 - Integrated third party library - 6
+2024-01-04 - Implemented early stopping callback - 7
