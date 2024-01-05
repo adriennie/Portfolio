@@ -2490,3 +2490,4 @@
 2024-01-04 - Implemented early stopping callback - 7
 2024-01-05 - Completed sprint review changes - 1
 2024-01-05 - Updated documentation - 2
+2024-01-05 - Completed model training script - 3
