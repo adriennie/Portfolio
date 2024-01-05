@@ -2488,3 +2488,4 @@
 2024-01-04 - Refactored data preprocessing module - 5
 2024-01-04 - Integrated third party library - 6
 2024-01-04 - Implemented early stopping callback - 7
+2024-01-05 - Completed sprint review changes - 1
