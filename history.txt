@@ -22,3 +22,4 @@
 2024-01-06 - Deployed hotfix to staging - 4
 2024-01-06 - Fixed critical bug in pipeline - 5
 2024-01-06 - Completed code review - 6
+2024-01-06 - Added logging to inference script - 7
