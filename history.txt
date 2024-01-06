@@ -20,3 +20,4 @@
 2024-01-06 - Completed EDA notebook - 2
 2024-01-06 - Implemented feature extraction - 3
 2024-01-06 - Deployed hotfix to staging - 4
+2024-01-06 - Fixed critical bug in pipeline - 5
