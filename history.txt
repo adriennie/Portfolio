@@ -16,3 +16,4 @@
 2024-01-04 - Wrote integration tests - 4
 2024-01-04 - Integrated third party library - 5
 2024-01-05 - Fixed critical bug in pipeline - 1
+2024-01-06 - Optimized query performance - 1
