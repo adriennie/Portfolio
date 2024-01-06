@@ -23,3 +23,4 @@
 2024-01-06 - Fixed critical bug in pipeline - 5
 2024-01-06 - Completed code review - 6
 2024-01-06 - Added logging to inference script - 7
+2024-01-06 - Refactored training loop - 8
