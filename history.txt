@@ -2520,3 +2520,4 @@
 2024-01-08 - Completed sprint review changes - 14
 2024-01-08 - Completed model training script - 15
 2024-01-08 - Refactored data preprocessing module - 16
+2024-01-08 - Completed model training script - 17
