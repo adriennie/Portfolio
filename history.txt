@@ -27,3 +27,4 @@
 2024-01-07 - Implemented feature extraction - 1
 2024-01-08 - Implemented feature extraction - 1
 2024-01-08 - Completed sprint review changes - 2
+2024-01-08 - Tuned hyperparameters for model - 3
