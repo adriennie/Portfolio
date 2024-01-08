@@ -2514,3 +2514,4 @@
 2024-01-08 - Merged dev branch into main - 8
 2024-01-08 - Completed sprint review changes - 9
 2024-01-08 - Completed model training script - 10
+2024-01-08 - Cleaned up deprecated functions - 11
