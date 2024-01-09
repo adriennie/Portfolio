@@ -29,3 +29,4 @@
 2024-01-08 - Completed sprint review changes - 2
 2024-01-08 - Tuned hyperparameters for model - 3
 2024-01-08 - Reviewed and merged PR - 4
+2024-01-09 - Updated environment dependencies - 1
