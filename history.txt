@@ -36,3 +36,4 @@
 2024-01-10 - Refactored data preprocessing module - 1
 2024-01-11 - Completed sprint review changes - 1
 2024-01-11 - Updated model evaluation metrics - 2
+2024-01-11 - Completed code review - 3
