@@ -2557,3 +2557,4 @@
 2024-01-12 - Refactored data preprocessing module - 7
 2024-01-12 - Completed model training script - 8
 2024-01-12 - Wrote integration tests - 9
+2024-01-12 - Fixed off by one error in loader - 10
