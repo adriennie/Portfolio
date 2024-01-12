@@ -2553,3 +2553,4 @@
 2024-01-12 - Updated model evaluation metrics - 3
 2024-01-12 - Worked on authentication module - 4
 2024-01-12 - Pushed initial dataset pipeline - 5
+2024-01-12 - Finished feature engineering task - 6
