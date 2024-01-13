@@ -2559,3 +2559,4 @@
 2024-01-12 - Wrote integration tests - 9
 2024-01-12 - Fixed off by one error in loader - 10
 2024-01-13 - Updated model evaluation metrics - 1
+2024-01-13 - Added unit tests for API - 2
