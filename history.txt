@@ -2572,3 +2572,4 @@
 2024-01-13 - Implemented early stopping callback - 12
 2024-01-13 - Fixed data leakage in validation - 13
 2024-01-13 - Added logging to inference script - 14
+2024-01-13 - Fixed data leakage in validation - 15
