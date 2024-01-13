@@ -2569,3 +2569,4 @@
 2024-01-13 - Completed model training script - 9
 2024-01-13 - Pushed initial dataset pipeline - 10
 2024-01-13 - Implemented early stopping callback - 11
+2024-01-13 - Implemented early stopping callback - 12
