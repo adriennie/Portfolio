@@ -2594,3 +2594,4 @@
 2024-01-15 - Fixed data leakage in validation - 5
 2024-01-15 - Merged dev branch into main - 6
 2024-01-15 - Implemented early stopping callback - 7
+2024-01-15 - Cleaned up deprecated functions - 8
