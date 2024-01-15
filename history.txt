@@ -2591,3 +2591,4 @@
 2024-01-15 - Fixed off by one error in loader - 2
 2024-01-15 - Finished feature engineering task - 3
 2024-01-15 - Refactored data preprocessing module - 4
+2024-01-15 - Fixed data leakage in validation - 5
