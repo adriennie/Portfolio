@@ -2598,3 +2598,4 @@
 2024-01-15 - Cleaned up deprecated functions - 9
 2024-01-15 - Implemented early stopping callback - 10
 2024-01-15 - Finished feature engineering task - 11
+2024-01-15 - Implemented feature extraction - 12
