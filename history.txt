@@ -2602,3 +2602,4 @@
 2024-01-15 - Integrated third party library - 13
 2024-01-15 - Updated documentation - 14
 2024-01-15 - Optimized batch processing - 15
+2024-01-15 - Added logging to inference script - 16
