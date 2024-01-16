@@ -2613,3 +2613,4 @@
 2024-01-16 - Added logging to inference script - 8
 2024-01-16 - Fixed critical bug in pipeline - 9
 2024-01-16 - Integrated third party library - 10
+2024-01-16 - Optimized batch processing - 11
