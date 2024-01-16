@@ -2610,3 +2610,4 @@
 2024-01-16 - Updated model evaluation metrics - 5
 2024-01-16 - Merged dev branch into main - 6
 2024-01-16 - Refactored data preprocessing module - 7
+2024-01-16 - Added logging to inference script - 8
