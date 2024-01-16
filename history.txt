@@ -2611,3 +2611,4 @@
 2024-01-16 - Merged dev branch into main - 6
 2024-01-16 - Refactored data preprocessing module - 7
 2024-01-16 - Added logging to inference script - 8
+2024-01-16 - Fixed critical bug in pipeline - 9
