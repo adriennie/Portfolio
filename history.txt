@@ -54,3 +54,4 @@
 2024-01-16 - Cleaned up deprecated functions - 2
 2024-01-16 - Fixed critical bug in pipeline - 3
 2024-01-16 - Pushed initial dataset pipeline - 4
+2024-01-17 - Integrated third party library - 1
