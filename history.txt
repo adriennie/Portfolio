@@ -2635,3 +2635,4 @@
 2024-01-17 - Fixed off by one error in loader - 12
 2024-01-17 - Tuned hyperparameters for model - 13
 2024-01-17 - Refactored training loop - 14
+2024-01-17 - Updated environment dependencies - 15
