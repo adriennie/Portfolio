@@ -2639,3 +2639,4 @@
 2024-01-17 - Implemented early stopping callback - 16
 2024-01-17 - Completed model training script - 17
 2024-01-18 - Deployed hotfix to staging - 1
+2024-01-18 - Updated model evaluation metrics - 2
