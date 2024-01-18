@@ -2645,3 +2645,4 @@
 2024-01-18 - Resolved failing test cases - 5
 2024-01-18 - Updated model evaluation metrics - 6
 2024-01-18 - Tuned hyperparameters for model - 7
+2024-01-18 - Wrote integration tests - 8
