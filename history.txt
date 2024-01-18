@@ -2644,3 +2644,4 @@
 2024-01-18 - Reviewed and merged PR - 4
 2024-01-18 - Resolved failing test cases - 5
 2024-01-18 - Updated model evaluation metrics - 6
+2024-01-18 - Tuned hyperparameters for model - 7
