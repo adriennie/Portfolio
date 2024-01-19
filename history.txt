@@ -2667,3 +2667,4 @@
 2024-01-19 - Updated model evaluation metrics - 11
 2024-01-19 - Deployed hotfix to staging - 12
 2024-01-19 - Added unit tests for API - 13
+2024-01-19 - Wrote integration tests - 14
