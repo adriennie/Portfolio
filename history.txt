@@ -2670,3 +2670,4 @@
 2024-01-19 - Wrote integration tests - 14
 2024-01-19 - Integrated third party library - 15
 2024-01-19 - Implemented early stopping callback - 16
+2024-01-19 - Updated model evaluation metrics - 17
