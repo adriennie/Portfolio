@@ -2669,3 +2669,4 @@
 2024-01-19 - Added unit tests for API - 13
 2024-01-19 - Wrote integration tests - 14
 2024-01-19 - Integrated third party library - 15
+2024-01-19 - Implemented early stopping callback - 16
