@@ -73,3 +73,4 @@
 2024-01-21 - Integrated third party library - 3
 2024-01-21 - Fixed data leakage in validation - 4
 2024-01-21 - Resolved merge conflict - 5
+2024-01-21 - Worked on authentication module - 6
