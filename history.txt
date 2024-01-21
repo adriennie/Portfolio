@@ -2685,3 +2685,4 @@
 2024-01-20 - Merged dev branch into main - 11
 2024-01-21 - Deployed hotfix to staging - 1
 2024-01-21 - Integrated third party library - 2
+2024-01-21 - Added logging to inference script - 3
