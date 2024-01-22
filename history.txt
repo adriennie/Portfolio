@@ -2697,3 +2697,4 @@
 2024-01-22 - Updated documentation - 1
 2024-01-22 - Integrated third party library - 2
 2024-01-22 - Implemented early stopping callback - 3
+2024-01-22 - Fixed critical bug in pipeline - 4
