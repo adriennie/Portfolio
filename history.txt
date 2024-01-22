@@ -80,3 +80,4 @@
 2024-01-22 - Worked on authentication module - 2
 2024-01-22 - Merged dev branch into main - 3
 2024-01-22 - Updated environment dependencies - 4
+2024-01-22 - Added unit tests for API - 5
