@@ -2708,3 +2708,4 @@
 2024-01-22 - Tuned hyperparameters for model - 12
 2024-01-23 - Worked on authentication module - 1
 2024-01-23 - Wrote integration tests - 2
+2024-01-23 - Fixed off by one error in loader - 3
