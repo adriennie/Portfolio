@@ -2713,3 +2713,4 @@
 2024-01-23 - Implemented early stopping callback - 5
 2024-01-23 - Refactored training loop - 6
 2024-01-23 - Completed EDA notebook - 7
+2024-01-23 - Updated documentation - 8
