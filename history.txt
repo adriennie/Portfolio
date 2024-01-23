@@ -82,3 +82,4 @@
 2024-01-22 - Updated environment dependencies - 4
 2024-01-22 - Added unit tests for API - 5
 2024-01-23 - Finished feature engineering task - 1
+2024-01-23 - Resolved merge conflict - 2
