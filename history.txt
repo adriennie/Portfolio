@@ -85,3 +85,4 @@
 2024-01-23 - Resolved merge conflict - 2
 2024-01-23 - Optimized batch processing - 3
 2024-01-23 - Tuned hyperparameters for model - 4
+2024-01-23 - Added logging to inference script - 5
