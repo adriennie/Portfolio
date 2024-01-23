@@ -2719,3 +2719,4 @@
 2024-01-23 - Updated environment dependencies - 11
 2024-01-23 - Cleaned up deprecated functions - 12
 2024-01-23 - Added logging to inference script - 13
+2024-01-23 - Deployed hotfix to staging - 14
