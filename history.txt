@@ -2710,3 +2710,4 @@
 2024-01-23 - Wrote integration tests - 2
 2024-01-23 - Fixed off by one error in loader - 3
 2024-01-23 - Implemented early stopping callback - 4
+2024-01-23 - Implemented early stopping callback - 5
