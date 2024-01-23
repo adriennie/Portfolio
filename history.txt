@@ -2718,3 +2718,4 @@
 2024-01-23 - Integrated third party library - 10
 2024-01-23 - Updated environment dependencies - 11
 2024-01-23 - Cleaned up deprecated functions - 12
+2024-01-23 - Added logging to inference script - 13
