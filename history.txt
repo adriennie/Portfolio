@@ -2722,3 +2722,4 @@
 2024-01-23 - Deployed hotfix to staging - 14
 2024-01-23 - Added logging to inference script - 15
 2024-01-23 - Integrated third party library - 16
+2024-01-23 - Completed sprint review changes - 17
