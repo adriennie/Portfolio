@@ -2706,3 +2706,4 @@
 2024-01-22 - Refactored training loop - 10
 2024-01-22 - Cleaned up deprecated functions - 11
 2024-01-22 - Tuned hyperparameters for model - 12
+2024-01-23 - Worked on authentication module - 1
