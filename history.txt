@@ -2711,3 +2711,4 @@
 2024-01-23 - Fixed off by one error in loader - 3
 2024-01-23 - Implemented early stopping callback - 4
 2024-01-23 - Implemented early stopping callback - 5
+2024-01-23 - Refactored training loop - 6
