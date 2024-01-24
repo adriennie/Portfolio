@@ -2727,3 +2727,4 @@
 2024-01-24 - Updated model evaluation metrics - 1
 2024-01-24 - Implemented early stopping callback - 2
 2024-01-24 - Wrote integration tests - 3
+2024-01-24 - Updated environment dependencies - 4
