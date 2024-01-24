@@ -2725,3 +2725,4 @@
 2024-01-23 - Completed sprint review changes - 17
 2024-01-23 - Integrated third party library - 18
 2024-01-24 - Updated model evaluation metrics - 1
+2024-01-24 - Implemented early stopping callback - 2
