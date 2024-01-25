@@ -2739,3 +2739,4 @@
 2024-01-25 - Updated model evaluation metrics - 9
 2024-01-25 - Reviewed and merged PR - 10
 2024-01-25 - Optimized batch processing - 11
+2024-01-25 - Added logging to inference script - 12
