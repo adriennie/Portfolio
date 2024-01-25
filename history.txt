@@ -94,3 +94,4 @@
 2024-01-25 - Cleaned up deprecated functions - 1
 2024-01-25 - Resolved merge conflict - 2
 2024-01-25 - Finished feature engineering task - 3
+2024-01-25 - Resolved failing test cases - 4
