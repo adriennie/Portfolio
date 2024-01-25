@@ -91,3 +91,4 @@
 2024-01-24 - Completed EDA notebook - 3
 2024-01-24 - Reviewed and merged PR - 4
 2024-01-24 - Implemented feature extraction - 5
+2024-01-25 - Cleaned up deprecated functions - 1
