@@ -2746,3 +2746,4 @@
 2024-01-26 - Added unit tests for API - 3
 2024-01-26 - Merged dev branch into main - 4
 2024-01-26 - Implemented feature extraction - 5
+2024-01-26 - Cleaned up deprecated functions - 6
