@@ -96,3 +96,4 @@
 2024-01-25 - Finished feature engineering task - 3
 2024-01-25 - Resolved failing test cases - 4
 2024-01-25 - Updated model evaluation metrics - 5
+2024-01-26 - Added unit tests for API - 1
