@@ -101,3 +101,4 @@
 2024-01-26 - Pushed initial dataset pipeline - 3
 2024-01-27 - Pushed initial dataset pipeline - 1
 2024-01-27 - Completed code review - 2
+2024-01-27 - Implemented feature extraction - 3
