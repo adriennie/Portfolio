@@ -2760,3 +2760,4 @@
 2024-01-27 - Finished feature engineering task - 9
 2024-01-27 - Added logging to inference script - 10
 2024-01-27 - Completed EDA notebook - 11
+2024-01-27 - Deployed hotfix to staging - 12
