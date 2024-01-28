@@ -2762,3 +2762,4 @@
 2024-01-27 - Completed EDA notebook - 11
 2024-01-27 - Deployed hotfix to staging - 12
 2024-01-28 - Fixed critical bug in pipeline - 1
+2024-01-28 - Resolved failing test cases - 2
