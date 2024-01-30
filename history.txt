@@ -115,3 +115,4 @@
 2024-01-29 - Fixed off by one error in loader - 2
 2024-01-29 - Refactored data preprocessing module - 3
 2024-01-29 - Implemented early stopping callback - 4
+2024-01-30 - Refactored training loop - 1
