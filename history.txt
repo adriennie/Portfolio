@@ -116,3 +116,4 @@
 2024-01-29 - Refactored data preprocessing module - 3
 2024-01-29 - Implemented early stopping callback - 4
 2024-01-30 - Refactored training loop - 1
+2024-01-30 - Cleaned up deprecated functions - 2
