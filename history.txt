@@ -117,3 +117,4 @@
 2024-01-29 - Implemented early stopping callback - 4
 2024-01-30 - Refactored training loop - 1
 2024-01-30 - Cleaned up deprecated functions - 2
+2024-01-31 - Fixed off by one error in loader - 1
