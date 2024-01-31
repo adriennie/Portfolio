@@ -121,3 +121,4 @@
 2024-01-31 - Deployed hotfix to staging - 2
 2024-01-31 - Deployed hotfix to staging - 3
 2024-01-31 - Integrated third party library - 4
+2024-01-31 - Updated model evaluation metrics - 5
