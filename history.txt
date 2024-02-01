@@ -123,3 +123,4 @@
 2024-01-31 - Integrated third party library - 4
 2024-01-31 - Updated model evaluation metrics - 5
 2024-01-31 - Worked on authentication module - 6
+2024-02-01 - Cleaned up deprecated functions - 1
