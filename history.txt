@@ -2796,3 +2796,4 @@
 2024-02-02 - Resolved merge conflict - 5
 2024-02-02 - Deployed hotfix to staging - 6
 2024-02-02 - Added logging to inference script - 7
+2024-02-02 - Updated model evaluation metrics - 8
