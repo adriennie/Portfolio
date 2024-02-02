@@ -2790,3 +2790,4 @@
 2024-02-01 - Tuned hyperparameters for model - 7
 2024-02-01 - Added unit tests for API - 8
 2024-02-02 - Added unit tests for API - 1
+2024-02-02 - Wrote integration tests - 2
