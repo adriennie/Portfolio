@@ -132,3 +132,4 @@
 2024-02-01 - Merged dev branch into main - 7
 2024-02-02 - Deployed hotfix to staging - 1
 2024-02-02 - Refactored data preprocessing module - 2
+2024-02-02 - Deployed hotfix to staging - 3
