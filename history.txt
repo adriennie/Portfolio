@@ -135,3 +135,4 @@
 2024-02-02 - Deployed hotfix to staging - 3
 2024-02-02 - Fixed data leakage in validation - 4
 2024-02-03 - Worked on authentication module - 1
+2024-02-03 - Cleaned up deprecated functions - 2
