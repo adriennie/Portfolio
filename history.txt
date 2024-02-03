@@ -2800,3 +2800,4 @@
 2024-02-02 - Worked on authentication module - 9
 2024-02-03 - Updated documentation - 1
 2024-02-03 - Fixed data leakage in validation - 2
+2024-02-03 - Updated model evaluation metrics - 3
