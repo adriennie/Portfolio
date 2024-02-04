@@ -2807,3 +2807,4 @@
 2024-02-04 - Resolved failing test cases - 4
 2024-02-04 - Fixed off by one error in loader - 5
 2024-02-04 - Added logging to inference script - 6
+2024-02-04 - Cleaned up deprecated functions - 7
