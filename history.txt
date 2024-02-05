@@ -144,3 +144,4 @@
 2024-02-04 - Completed EDA notebook - 6
 2024-02-05 - Refactored training loop - 1
 2024-02-05 - Completed sprint review changes - 2
+2024-02-05 - Completed model training script - 3
