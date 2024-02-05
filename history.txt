@@ -146,3 +146,4 @@
 2024-02-05 - Completed sprint review changes - 2
 2024-02-05 - Completed model training script - 3
 2024-02-05 - Implemented early stopping callback - 4
+2024-02-05 - Deployed hotfix to staging - 5
