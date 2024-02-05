@@ -142,3 +142,4 @@
 2024-02-04 - Added logging to inference script - 4
 2024-02-04 - Updated documentation - 5
 2024-02-04 - Completed EDA notebook - 6
+2024-02-05 - Refactored training loop - 1
