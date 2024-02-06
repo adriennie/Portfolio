@@ -2820,3 +2820,4 @@
 2024-02-06 - Completed model training script - 2
 2024-02-06 - Wrote integration tests - 3
 2024-02-06 - Cleaned up deprecated functions - 4
+2024-02-06 - Resolved failing test cases - 5
