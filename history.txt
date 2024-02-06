@@ -2817,3 +2817,4 @@
 2024-02-05 - Updated model evaluation metrics - 1
 2024-02-05 - Fixed off by one error in loader - 2
 2024-02-06 - Completed code review - 1
+2024-02-06 - Completed model training script - 2
