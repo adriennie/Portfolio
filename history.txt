@@ -153,3 +153,4 @@
 2024-02-07 - Updated model evaluation metrics - 1
 2024-02-07 - Fixed data leakage in validation - 2
 2024-02-07 - Merged dev branch into main - 3
+2024-02-07 - Wrote integration tests - 4
