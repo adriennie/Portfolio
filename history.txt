@@ -163,3 +163,4 @@
 2024-02-08 - Wrote integration tests - 5
 2024-02-08 - Updated environment dependencies - 6
 2024-02-08 - Completed sprint review changes - 7
+2024-02-08 - Cleaned up deprecated functions - 8
