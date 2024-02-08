@@ -2848,3 +2848,4 @@
 2024-02-08 - Updated documentation - 8
 2024-02-08 - Reviewed and merged PR - 9
 2024-02-08 - Updated environment dependencies - 10
+2024-02-08 - Cleaned up deprecated functions - 11
