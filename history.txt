@@ -2854,3 +2854,4 @@
 2024-02-08 - Pushed initial dataset pipeline - 14
 2024-02-08 - Pushed initial dataset pipeline - 15
 2024-02-08 - Updated model evaluation metrics - 16
+2024-02-08 - Implemented early stopping callback - 17
