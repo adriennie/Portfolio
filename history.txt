@@ -157,3 +157,4 @@
 2024-02-07 - Optimized query performance - 5
 2024-02-07 - Finished feature engineering task - 6
 2024-02-08 - Tuned hyperparameters for model - 1
+2024-02-08 - Resolved failing test cases - 2
