@@ -2857,3 +2857,4 @@
 2024-02-08 - Implemented early stopping callback - 17
 2024-02-09 - Updated documentation - 1
 2024-02-09 - Refactored data preprocessing module - 2
+2024-02-09 - Added unit tests for API - 3
