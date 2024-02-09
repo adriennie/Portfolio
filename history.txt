@@ -167,3 +167,4 @@
 2024-02-09 - Completed EDA notebook - 1
 2024-02-09 - Completed EDA notebook - 2
 2024-02-09 - Pushed initial dataset pipeline - 3
+2024-02-09 - Fixed critical bug in pipeline - 4
