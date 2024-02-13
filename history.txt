@@ -182,3 +182,4 @@
 2024-02-13 - Integrated third party library - 3
 2024-02-13 - Tuned hyperparameters for model - 4
 2024-02-13 - Refactored training loop - 5
+2024-02-13 - Wrote integration tests - 6
