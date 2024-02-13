@@ -177,3 +177,4 @@
 2024-02-12 - Resolved merge conflict - 2
 2024-02-12 - Pushed initial dataset pipeline - 3
 2024-02-12 - Completed EDA notebook - 4
+2024-02-13 - Fixed critical bug in pipeline - 1
