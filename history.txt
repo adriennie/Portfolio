@@ -2897,3 +2897,4 @@
 2024-02-14 - Reviewed and merged PR - 14
 2024-02-14 - Completed code review - 15
 2024-02-14 - Pushed initial dataset pipeline - 16
+2024-02-14 - Completed model training script - 17
