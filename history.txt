@@ -2889,3 +2889,4 @@
 2024-02-14 - Implemented feature extraction - 6
 2024-02-14 - Updated documentation - 7
 2024-02-14 - Merged dev branch into main - 8
+2024-02-14 - Cleaned up deprecated functions - 9
