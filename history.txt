@@ -2886,3 +2886,4 @@
 2024-02-14 - Reviewed and merged PR - 3
 2024-02-14 - Worked on authentication module - 4
 2024-02-14 - Refactored training loop - 5
+2024-02-14 - Implemented feature extraction - 6
