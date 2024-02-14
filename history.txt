@@ -2881,3 +2881,4 @@
 2024-02-13 - Implemented early stopping callback - 5
 2024-02-13 - Fixed off by one error in loader - 6
 2024-02-13 - Added logging to inference script - 7
+2024-02-14 - Resolved failing test cases - 1
