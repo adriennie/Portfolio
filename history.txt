@@ -191,3 +191,4 @@
 2024-02-15 - Fixed off by one error in loader - 4
 2024-02-15 - Refactored training loop - 5
 2024-02-15 - Completed model training script - 6
+2024-02-15 - Worked on authentication module - 7
