@@ -186,3 +186,4 @@
 2024-02-13 - Refactored data preprocessing module - 7
 2024-02-14 - Updated model evaluation metrics - 1
 2024-02-15 - Added logging to inference script - 1
+2024-02-15 - Resolved failing test cases - 2
