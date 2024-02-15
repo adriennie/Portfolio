@@ -189,3 +189,4 @@
 2024-02-15 - Resolved failing test cases - 2
 2024-02-15 - Optimized batch processing - 3
 2024-02-15 - Fixed off by one error in loader - 4
+2024-02-15 - Refactored training loop - 5
