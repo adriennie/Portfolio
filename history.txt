@@ -2912,3 +2912,4 @@
 2024-02-16 - Added logging to inference script - 5
 2024-02-16 - Worked on authentication module - 6
 2024-02-16 - Optimized batch processing - 7
+2024-02-16 - Updated documentation - 8
