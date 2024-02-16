@@ -2915,3 +2915,4 @@
 2024-02-16 - Updated documentation - 8
 2024-02-16 - Fixed off by one error in loader - 9
 2024-02-16 - Fixed data leakage in validation - 10
+2024-02-16 - Added logging to inference script - 11
