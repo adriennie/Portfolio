@@ -193,3 +193,4 @@
 2024-02-15 - Completed model training script - 6
 2024-02-15 - Worked on authentication module - 7
 2024-02-16 - Added logging to inference script - 1
+2024-02-16 - Resolved failing test cases - 2
