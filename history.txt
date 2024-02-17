@@ -200,3 +200,4 @@
 2024-02-17 - Fixed data leakage in validation - 3
 2024-02-17 - Completed EDA notebook - 4
 2024-02-17 - Updated documentation - 5
+2024-02-17 - Added logging to inference script - 6
