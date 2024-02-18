@@ -2927,3 +2927,4 @@
 2024-02-17 - Refactored data preprocessing module - 5
 2024-02-18 - Cleaned up deprecated functions - 1
 2024-02-18 - Merged dev branch into main - 2
+2024-02-18 - Implemented early stopping callback - 3
