@@ -2929,3 +2929,4 @@
 2024-02-18 - Merged dev branch into main - 2
 2024-02-18 - Implemented early stopping callback - 3
 2024-02-18 - Added logging to inference script - 4
+2024-02-18 - Optimized query performance - 5
