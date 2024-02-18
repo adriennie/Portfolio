@@ -202,3 +202,4 @@
 2024-02-17 - Updated documentation - 5
 2024-02-17 - Added logging to inference script - 6
 2024-02-17 - Tuned hyperparameters for model - 7
+2024-02-18 - Added unit tests for API - 1
