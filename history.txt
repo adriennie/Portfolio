@@ -208,3 +208,4 @@
 2024-02-18 - Updated environment dependencies - 4
 2024-02-18 - Finished feature engineering task - 5
 2024-02-18 - Reviewed and merged PR - 6
+2024-02-19 - Refactored training loop - 1
