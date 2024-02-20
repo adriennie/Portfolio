@@ -2947,3 +2947,4 @@
 2024-02-20 - Implemented early stopping callback - 7
 2024-02-20 - Pushed initial dataset pipeline - 8
 2024-02-20 - Reviewed and merged PR - 9
+2024-02-20 - Fixed critical bug in pipeline - 10
