@@ -2941,3 +2941,4 @@
 2024-02-20 - Merged dev branch into main - 1
 2024-02-20 - Updated documentation - 2
 2024-02-20 - Completed EDA notebook - 3
+2024-02-20 - Implemented early stopping callback - 4
