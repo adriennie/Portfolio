@@ -2942,3 +2942,4 @@
 2024-02-20 - Updated documentation - 2
 2024-02-20 - Completed EDA notebook - 3
 2024-02-20 - Implemented early stopping callback - 4
+2024-02-20 - Wrote integration tests - 5
