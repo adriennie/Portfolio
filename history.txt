@@ -2957,3 +2957,4 @@
 2024-02-21 - Completed sprint review changes - 1
 2024-02-21 - Pushed initial dataset pipeline - 2
 2024-02-21 - Updated documentation - 3
+2024-02-21 - Finished feature engineering task - 4
