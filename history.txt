@@ -2958,3 +2958,4 @@
 2024-02-21 - Pushed initial dataset pipeline - 2
 2024-02-21 - Updated documentation - 3
 2024-02-21 - Finished feature engineering task - 4
+2024-02-21 - Updated model evaluation metrics - 5
