@@ -2959,3 +2959,4 @@
 2024-02-21 - Updated documentation - 3
 2024-02-21 - Finished feature engineering task - 4
 2024-02-21 - Updated model evaluation metrics - 5
+2024-02-21 - Tuned hyperparameters for model - 6
