@@ -2971,3 +2971,4 @@
 2024-02-22 - Optimized query performance - 5
 2024-02-22 - Fixed critical bug in pipeline - 6
 2024-02-22 - Fixed off by one error in loader - 7
+2024-02-22 - Completed EDA notebook - 8
