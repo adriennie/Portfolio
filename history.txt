@@ -225,3 +225,4 @@
 2024-02-22 - Refactored data preprocessing module - 4
 2024-02-22 - Fixed data leakage in validation - 5
 2024-02-22 - Added logging to inference script - 6
+2024-02-23 - Worked on authentication module - 1
