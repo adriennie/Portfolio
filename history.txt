@@ -2987,3 +2987,4 @@
 2024-02-23 - Completed code review - 10
 2024-02-23 - Added logging to inference script - 11
 2024-02-23 - Added logging to inference script - 12
+2024-02-24 - Optimized batch processing - 1
