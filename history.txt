@@ -238,3 +238,4 @@
 2024-02-24 - Implemented early stopping callback - 7
 2024-02-24 - Optimized query performance - 8
 2024-02-25 - Tuned hyperparameters for model - 1
+2024-02-25 - Refactored data preprocessing module - 2
