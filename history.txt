@@ -246,3 +246,4 @@
 2024-02-26 - Deployed hotfix to staging - 1
 2024-02-26 - Added logging to inference script - 2
 2024-02-26 - Optimized batch processing - 3
+2024-02-26 - Implemented early stopping callback - 4
