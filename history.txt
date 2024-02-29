@@ -3026,3 +3026,4 @@
 2024-02-29 - Fixed off by one error in loader - 9
 2024-02-29 - Reviewed and merged PR - 10
 2024-02-29 - Completed EDA notebook - 11
+2024-02-29 - Refactored training loop - 12
