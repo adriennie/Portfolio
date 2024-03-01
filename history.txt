@@ -3028,3 +3028,4 @@
 2024-02-29 - Completed EDA notebook - 11
 2024-02-29 - Refactored training loop - 12
 2024-03-01 - Refactored training loop - 1
+2024-03-01 - Optimized batch processing - 2
