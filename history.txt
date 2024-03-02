@@ -3048,3 +3048,4 @@
 2024-03-02 - Added unit tests for API - 5
 2024-03-02 - Updated documentation - 6
 2024-03-02 - Fixed off by one error in loader - 7
+2024-03-02 - Tuned hyperparameters for model - 8
