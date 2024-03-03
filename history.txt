@@ -3064,3 +3064,4 @@
 2024-03-03 - Updated documentation - 9
 2024-03-03 - Refactored training loop - 10
 2024-03-03 - Added logging to inference script - 11
+2024-03-03 - Fixed off by one error in loader - 12
