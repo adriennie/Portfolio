@@ -3060,3 +3060,4 @@
 2024-03-03 - Added unit tests for API - 5
 2024-03-03 - Resolved failing test cases - 6
 2024-03-03 - Refactored training loop - 7
+2024-03-03 - Added logging to inference script - 8
