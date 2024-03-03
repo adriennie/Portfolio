@@ -267,3 +267,4 @@
 2024-03-02 - Reviewed and merged PR - 2
 2024-03-03 - Added logging to inference script - 1
 2024-03-03 - Completed code review - 2
+2024-03-03 - Cleaned up deprecated functions - 3
