@@ -3077,3 +3077,4 @@
 2024-03-04 - Pushed initial dataset pipeline - 9
 2024-03-04 - Updated environment dependencies - 10
 2024-03-04 - Completed sprint review changes - 11
+2024-03-04 - Added logging to inference script - 12
