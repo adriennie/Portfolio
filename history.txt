@@ -276,3 +276,4 @@
 2024-03-04 - Pushed initial dataset pipeline - 5
 2024-03-04 - Merged dev branch into main - 6
 2024-03-04 - Integrated third party library - 7
+2024-03-04 - Updated documentation - 8
