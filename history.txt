@@ -3067,3 +3067,4 @@
 2024-03-03 - Fixed off by one error in loader - 12
 2024-03-03 - Refactored training loop - 13
 2024-03-04 - Completed model training script - 1
+2024-03-04 - Fixed critical bug in pipeline - 2
