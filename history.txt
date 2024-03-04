@@ -272,3 +272,4 @@
 2024-03-04 - Completed code review - 1
 2024-03-04 - Worked on authentication module - 2
 2024-03-04 - Refactored data preprocessing module - 3
+2024-03-04 - Fixed off by one error in loader - 4
