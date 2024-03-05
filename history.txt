@@ -3097,3 +3097,4 @@
 2024-03-05 - Fixed critical bug in pipeline - 12
 2024-03-05 - Refactored training loop - 13
 2024-03-05 - Fixed off by one error in loader - 14
+2024-03-05 - Cleaned up deprecated functions - 15
