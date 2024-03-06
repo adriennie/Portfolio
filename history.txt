@@ -3112,3 +3112,4 @@
 2024-03-06 - Merged dev branch into main - 7
 2024-03-06 - Added logging to inference script - 8
 2024-03-06 - Fixed off by one error in loader - 9
+2024-03-06 - Added unit tests for API - 10
