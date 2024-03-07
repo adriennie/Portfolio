@@ -3124,3 +3124,4 @@
 2024-03-07 - Resolved merge conflict - 1
 2024-03-07 - Completed model training script - 2
 2024-03-07 - Reviewed and merged PR - 3
+2024-03-07 - Implemented early stopping callback - 4
