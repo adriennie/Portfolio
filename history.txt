@@ -285,3 +285,4 @@
 2024-03-06 - Refactored data preprocessing module - 1
 2024-03-07 - Added logging to inference script - 1
 2024-03-07 - Resolved merge conflict - 2
+2024-03-07 - Wrote integration tests - 3
