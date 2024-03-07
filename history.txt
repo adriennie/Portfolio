@@ -3132,3 +3132,4 @@
 2024-03-07 - Reviewed and merged PR - 9
 2024-03-07 - Updated model evaluation metrics - 10
 2024-03-07 - Worked on authentication module - 11
+2024-03-07 - Merged dev branch into main - 12
