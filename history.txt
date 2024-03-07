@@ -289,3 +289,4 @@
 2024-03-07 - Fixed critical bug in pipeline - 4
 2024-03-07 - Pushed initial dataset pipeline - 5
 2024-03-07 - Refactored training loop - 6
+2024-03-07 - Resolved merge conflict - 7
