@@ -3137,3 +3137,4 @@
 2024-03-08 - Implemented early stopping callback - 2
 2024-03-08 - Completed model training script - 3
 2024-03-08 - Cleaned up deprecated functions - 4
+2024-03-08 - Added logging to inference script - 5
