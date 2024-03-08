@@ -3134,3 +3134,4 @@
 2024-03-07 - Worked on authentication module - 11
 2024-03-07 - Merged dev branch into main - 12
 2024-03-08 - Pushed initial dataset pipeline - 1
+2024-03-08 - Implemented early stopping callback - 2
