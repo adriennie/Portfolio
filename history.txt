@@ -3140,3 +3140,4 @@
 2024-03-08 - Added logging to inference script - 5
 2024-03-09 - Refactored training loop - 1
 2024-03-09 - Refactored data preprocessing module - 2
+2024-03-09 - Fixed critical bug in pipeline - 3
