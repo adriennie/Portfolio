@@ -294,3 +294,4 @@
 2024-03-08 - Implemented feature extraction - 1
 2024-03-08 - Finished feature engineering task - 2
 2024-03-08 - Updated model evaluation metrics - 3
+2024-03-09 - Resolved failing test cases - 1
