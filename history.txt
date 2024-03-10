@@ -3163,3 +3163,4 @@
 2024-03-10 - Cleaned up deprecated functions - 5
 2024-03-10 - Completed EDA notebook - 6
 2024-03-10 - Pushed initial dataset pipeline - 7
+2024-03-10 - Implemented early stopping callback - 8
