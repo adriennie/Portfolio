@@ -299,3 +299,4 @@
 2024-03-09 - Worked on authentication module - 3
 2024-03-10 - Pushed initial dataset pipeline - 1
 2024-03-10 - Reviewed and merged PR - 2
+2024-03-10 - Refactored training loop - 3
