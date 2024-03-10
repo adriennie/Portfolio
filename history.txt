@@ -300,3 +300,4 @@
 2024-03-10 - Pushed initial dataset pipeline - 1
 2024-03-10 - Reviewed and merged PR - 2
 2024-03-10 - Refactored training loop - 3
+2024-03-10 - Implemented feature extraction - 4
