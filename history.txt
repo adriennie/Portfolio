@@ -3191,3 +3191,4 @@
 2024-03-12 - Reviewed and merged PR - 14
 2024-03-12 - Cleaned up deprecated functions - 15
 2024-03-12 - Completed EDA notebook - 16
+2024-03-12 - Worked on authentication module - 17
