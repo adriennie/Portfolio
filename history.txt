@@ -3195,3 +3195,4 @@
 2024-03-13 - Fixed critical bug in pipeline - 1
 2024-03-13 - Completed EDA notebook - 2
 2024-03-13 - Cleaned up deprecated functions - 3
+2024-03-13 - Tuned hyperparameters for model - 4
