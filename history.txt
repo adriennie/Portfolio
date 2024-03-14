@@ -316,3 +316,4 @@
 2024-03-13 - Completed model training script - 3
 2024-03-14 - Refactored data preprocessing module - 1
 2024-03-14 - Wrote integration tests - 2
+2024-03-14 - Fixed critical bug in pipeline - 3
