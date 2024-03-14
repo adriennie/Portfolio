@@ -318,3 +318,4 @@
 2024-03-14 - Wrote integration tests - 2
 2024-03-14 - Fixed critical bug in pipeline - 3
 2024-03-14 - Cleaned up deprecated functions - 4
+2024-03-14 - Implemented feature extraction - 5
