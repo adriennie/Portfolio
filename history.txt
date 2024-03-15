@@ -320,3 +320,4 @@
 2024-03-14 - Cleaned up deprecated functions - 4
 2024-03-14 - Implemented feature extraction - 5
 2024-03-14 - Finished feature engineering task - 6
+2024-03-15 - Completed EDA notebook - 1
