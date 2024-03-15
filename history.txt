@@ -324,3 +324,4 @@
 2024-03-15 - Finished feature engineering task - 2
 2024-03-15 - Completed EDA notebook - 3
 2024-03-15 - Added unit tests for API - 4
+2024-03-15 - Merged dev branch into main - 5
