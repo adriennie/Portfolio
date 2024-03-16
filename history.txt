@@ -327,3 +327,4 @@
 2024-03-15 - Merged dev branch into main - 5
 2024-03-16 - Implemented early stopping callback - 1
 2024-03-16 - Completed code review - 2
+2024-03-16 - Resolved merge conflict - 3
