@@ -3224,3 +3224,4 @@
 2024-03-16 - Tuned hyperparameters for model - 4
 2024-03-16 - Implemented feature extraction - 5
 2024-03-16 - Resolved failing test cases - 6
+2024-03-16 - Merged dev branch into main - 7
