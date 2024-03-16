@@ -330,3 +330,4 @@
 2024-03-16 - Resolved merge conflict - 3
 2024-03-16 - Completed model training script - 4
 2024-03-16 - Merged dev branch into main - 5
+2024-03-16 - Fixed off by one error in loader - 6
