@@ -3233,3 +3233,4 @@
 2024-03-16 - Merged dev branch into main - 13
 2024-03-16 - Refactored training loop - 14
 2024-03-16 - Optimized batch processing - 15
+2024-03-16 - Wrote integration tests - 16
