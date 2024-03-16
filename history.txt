@@ -3221,3 +3221,4 @@
 2024-03-16 - Deployed hotfix to staging - 1
 2024-03-16 - Completed EDA notebook - 2
 2024-03-16 - Refactored training loop - 3
+2024-03-16 - Tuned hyperparameters for model - 4
