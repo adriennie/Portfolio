@@ -3229,3 +3229,4 @@
 2024-03-16 - Reviewed and merged PR - 9
 2024-03-16 - Completed code review - 10
 2024-03-16 - Updated environment dependencies - 11
+2024-03-16 - Cleaned up deprecated functions - 12
