@@ -3241,3 +3241,4 @@
 2024-03-17 - Deployed hotfix to staging - 5
 2024-03-17 - Integrated third party library - 6
 2024-03-18 - Updated model evaluation metrics - 1
+2024-03-18 - Cleaned up deprecated functions - 2
