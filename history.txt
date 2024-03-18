@@ -338,3 +338,4 @@
 2024-03-17 - Completed EDA notebook - 3
 2024-03-17 - Updated documentation - 4
 2024-03-17 - Tuned hyperparameters for model - 5
+2024-03-18 - Reviewed and merged PR - 1
