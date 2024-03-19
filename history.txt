@@ -3247,3 +3247,4 @@
 2024-03-19 - Pushed initial dataset pipeline - 3
 2024-03-19 - Fixed critical bug in pipeline - 4
 2024-03-19 - Refactored training loop - 5
+2024-03-19 - Cleaned up deprecated functions - 6
