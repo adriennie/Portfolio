@@ -3248,3 +3248,4 @@
 2024-03-19 - Fixed critical bug in pipeline - 4
 2024-03-19 - Refactored training loop - 5
 2024-03-19 - Cleaned up deprecated functions - 6
+2024-03-19 - Completed EDA notebook - 7
