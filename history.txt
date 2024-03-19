@@ -3250,3 +3250,4 @@
 2024-03-19 - Cleaned up deprecated functions - 6
 2024-03-19 - Completed EDA notebook - 7
 2024-03-19 - Finished feature engineering task - 8
+2024-03-19 - Updated documentation - 9
