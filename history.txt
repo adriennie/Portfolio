@@ -3254,3 +3254,4 @@
 2024-03-19 - Completed sprint review changes - 10
 2024-03-19 - Implemented early stopping callback - 11
 2024-03-19 - Cleaned up deprecated functions - 12
+2024-03-19 - Completed EDA notebook - 13
