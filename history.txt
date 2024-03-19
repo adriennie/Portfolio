@@ -344,3 +344,4 @@
 2024-03-18 - Integrated third party library - 4
 2024-03-18 - Finished feature engineering task - 5
 2024-03-18 - Reviewed and merged PR - 6
+2024-03-19 - Added logging to inference script - 1
