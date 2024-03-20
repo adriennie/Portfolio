@@ -3263,3 +3263,4 @@
 2024-03-19 - Added logging to inference script - 19
 2024-03-19 - Cleaned up deprecated functions - 20
 2024-03-20 - Worked on authentication module - 1
+2024-03-20 - Pushed initial dataset pipeline - 2
