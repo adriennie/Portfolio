@@ -346,3 +346,4 @@
 2024-03-18 - Reviewed and merged PR - 6
 2024-03-19 - Added logging to inference script - 1
 2024-03-19 - Optimized batch processing - 2
+2024-03-20 - Wrote integration tests - 1
