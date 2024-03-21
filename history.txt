@@ -3272,3 +3272,4 @@
 2024-03-21 - Added logging to inference script - 4
 2024-03-21 - Updated model evaluation metrics - 5
 2024-03-21 - Wrote integration tests - 6
+2024-03-21 - Updated environment dependencies - 7
