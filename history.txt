@@ -354,3 +354,4 @@
 2024-03-21 - Completed code review - 5
 2024-03-21 - Completed EDA notebook - 6
 2024-03-21 - Resolved merge conflict - 7
+2024-03-21 - Integrated third party library - 8
