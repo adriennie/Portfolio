@@ -3290,3 +3290,4 @@
 2024-03-23 - Completed sprint review changes - 2
 2024-03-23 - Added logging to inference script - 3
 2024-03-23 - Optimized batch processing - 4
+2024-03-23 - Refactored training loop - 5
