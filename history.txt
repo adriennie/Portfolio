@@ -3291,3 +3291,4 @@
 2024-03-23 - Added logging to inference script - 3
 2024-03-23 - Optimized batch processing - 4
 2024-03-23 - Refactored training loop - 5
+2024-03-23 - Fixed critical bug in pipeline - 6
