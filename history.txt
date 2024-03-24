@@ -363,3 +363,4 @@
 2024-03-24 - Fixed off by one error in loader - 1
 2024-03-24 - Optimized query performance - 2
 2024-03-24 - Cleaned up deprecated functions - 3
+2024-03-24 - Merged dev branch into main - 4
