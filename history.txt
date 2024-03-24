@@ -3297,3 +3297,4 @@
 2024-03-23 - Resolved merge conflict - 9
 2024-03-24 - Updated documentation - 1
 2024-03-24 - Pushed initial dataset pipeline - 2
+2024-03-24 - Implemented early stopping callback - 3
