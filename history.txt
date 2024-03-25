@@ -366,3 +366,4 @@
 2024-03-24 - Merged dev branch into main - 4
 2024-03-25 - Completed EDA notebook - 1
 2024-03-25 - Pushed initial dataset pipeline - 2
+2024-03-25 - Optimized batch processing - 3
