@@ -3316,3 +3316,4 @@
 2024-03-25 - Updated environment dependencies - 11
 2024-03-25 - Tuned hyperparameters for model - 12
 2024-03-25 - Completed code review - 13
+2024-03-25 - Cleaned up deprecated functions - 14
