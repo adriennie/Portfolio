@@ -3309,3 +3309,4 @@
 2024-03-25 - Integrated third party library - 4
 2024-03-25 - Refactored training loop - 5
 2024-03-25 - Updated documentation - 6
+2024-03-25 - Resolved failing test cases - 7
