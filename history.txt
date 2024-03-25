@@ -3319,3 +3319,4 @@
 2024-03-25 - Cleaned up deprecated functions - 14
 2024-03-25 - Worked on authentication module - 15
 2024-03-25 - Refactored data preprocessing module - 16
+2024-03-25 - Implemented early stopping callback - 17
