@@ -3305,3 +3305,4 @@
 2024-03-24 - Completed EDA notebook - 8
 2024-03-25 - Completed model training script - 1
 2024-03-25 - Wrote integration tests - 2
+2024-03-25 - Updated documentation - 3
