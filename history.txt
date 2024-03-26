@@ -3324,3 +3324,4 @@
 2024-03-26 - Finished feature engineering task - 2
 2024-03-26 - Fixed data leakage in validation - 3
 2024-03-26 - Merged dev branch into main - 4
+2024-03-26 - Tuned hyperparameters for model - 5
