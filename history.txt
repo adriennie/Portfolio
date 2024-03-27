@@ -376,3 +376,4 @@
 2024-03-27 - Pushed initial dataset pipeline - 4
 2024-03-27 - Merged dev branch into main - 5
 2024-03-27 - Reviewed and merged PR - 6
+2024-03-27 - Completed model training script - 7
