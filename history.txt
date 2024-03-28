@@ -3355,3 +3355,4 @@
 2024-03-28 - Fixed off by one error in loader - 1
 2024-03-28 - Tuned hyperparameters for model - 2
 2024-03-28 - Merged dev branch into main - 3
+2024-03-28 - Completed EDA notebook - 4
