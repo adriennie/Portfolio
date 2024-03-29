@@ -3357,3 +3357,4 @@
 2024-03-28 - Merged dev branch into main - 3
 2024-03-28 - Completed EDA notebook - 4
 2024-03-28 - Implemented early stopping callback - 5
+2024-03-29 - Added logging to inference script - 1
