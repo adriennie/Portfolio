@@ -388,3 +388,4 @@
 2024-03-29 - Merged dev branch into main - 3
 2024-03-29 - Completed sprint review changes - 4
 2024-03-29 - Fixed data leakage in validation - 5
+2024-03-29 - Implemented feature extraction - 6
