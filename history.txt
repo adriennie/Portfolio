@@ -385,3 +385,4 @@
 2024-03-28 - Resolved failing test cases - 6
 2024-03-29 - Added logging to inference script - 1
 2024-03-29 - Fixed critical bug in pipeline - 2
+2024-03-29 - Merged dev branch into main - 3
