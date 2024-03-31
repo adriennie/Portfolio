@@ -392,3 +392,4 @@
 2024-03-29 - Tuned hyperparameters for model - 7
 2024-03-30 - Updated model evaluation metrics - 1
 2024-03-30 - Pushed initial dataset pipeline - 2
+2024-03-31 - Fixed data leakage in validation - 1
