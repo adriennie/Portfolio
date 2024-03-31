@@ -3375,3 +3375,4 @@
 2024-03-31 - Refactored training loop - 4
 2024-03-31 - Updated environment dependencies - 5
 2024-03-31 - Reviewed and merged PR - 6
+2024-03-31 - Implemented early stopping callback - 7
