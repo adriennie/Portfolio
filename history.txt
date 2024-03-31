@@ -396,3 +396,4 @@
 2024-03-31 - Implemented feature extraction - 2
 2024-03-31 - Implemented early stopping callback - 3
 2024-03-31 - Integrated third party library - 4
+2024-03-31 - Updated documentation - 5
