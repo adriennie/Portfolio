@@ -398,3 +398,4 @@
 2024-03-31 - Integrated third party library - 4
 2024-03-31 - Updated documentation - 5
 2024-04-01 - Updated environment dependencies - 1
+2024-04-01 - Fixed critical bug in pipeline - 2
