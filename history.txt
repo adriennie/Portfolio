@@ -3386,3 +3386,4 @@
 2024-04-01 - Implemented early stopping callback - 5
 2024-04-02 - Merged dev branch into main - 1
 2024-04-02 - Wrote integration tests - 2
+2024-04-02 - Added unit tests for API - 3
