@@ -3411,3 +3411,4 @@
 2024-04-03 - Fixed off by one error in loader - 11
 2024-04-03 - Implemented early stopping callback - 12
 2024-04-03 - Refactored data preprocessing module - 13
+2024-04-03 - Pushed initial dataset pipeline - 14
