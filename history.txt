@@ -3404,3 +3404,4 @@
 2024-04-03 - Fixed off by one error in loader - 4
 2024-04-03 - Completed model training script - 5
 2024-04-03 - Refactored data preprocessing module - 6
+2024-04-03 - Added logging to inference script - 7
