@@ -3412,3 +3412,4 @@
 2024-04-03 - Implemented early stopping callback - 12
 2024-04-03 - Refactored data preprocessing module - 13
 2024-04-03 - Pushed initial dataset pipeline - 14
+2024-04-04 - Refactored training loop - 1
