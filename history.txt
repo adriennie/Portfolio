@@ -3439,3 +3439,4 @@
 2024-04-05 - Reviewed and merged PR - 7
 2024-04-05 - Optimized query performance - 8
 2024-04-05 - Added logging to inference script - 9
+2024-04-05 - Updated documentation - 10
