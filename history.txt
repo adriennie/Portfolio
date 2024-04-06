@@ -429,3 +429,4 @@
 2024-04-06 - Integrated third party library - 3
 2024-04-06 - Completed code review - 4
 2024-04-06 - Tuned hyperparameters for model - 5
+2024-04-06 - Pushed initial dataset pipeline - 6
