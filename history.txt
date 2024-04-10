@@ -3495,3 +3495,4 @@
 2024-04-10 - Wrote integration tests - 3
 2024-04-10 - Fixed critical bug in pipeline - 4
 2024-04-10 - Added logging to inference script - 5
+2024-04-10 - Completed EDA notebook - 6
