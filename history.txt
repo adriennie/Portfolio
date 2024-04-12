@@ -454,3 +454,4 @@
 2024-04-11 - Completed EDA notebook - 7
 2024-04-12 - Merged dev branch into main - 1
 2024-04-12 - Added logging to inference script - 2
+2024-04-12 - Tuned hyperparameters for model - 3
