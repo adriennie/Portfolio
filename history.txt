@@ -469,3 +469,4 @@
 2024-04-13 - Deployed hotfix to staging - 8
 2024-04-14 - Pushed initial dataset pipeline - 1
 2024-04-14 - Added logging to inference script - 2
+2024-04-14 - Fixed critical bug in pipeline - 3
