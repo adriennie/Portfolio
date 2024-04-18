@@ -3577,3 +3577,4 @@
 2024-04-18 - Completed EDA notebook - 14
 2024-04-18 - Refactored data preprocessing module - 15
 2024-04-18 - Tuned hyperparameters for model - 16
+2024-04-18 - Updated environment dependencies - 17
