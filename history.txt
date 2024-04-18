@@ -495,3 +495,4 @@
 2024-04-18 - Updated environment dependencies - 1
 2024-04-18 - Cleaned up deprecated functions - 2
 2024-04-18 - Added unit tests for API - 3
+2024-04-18 - Implemented feature extraction - 4
