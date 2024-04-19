@@ -3590,3 +3590,4 @@
 2024-04-19 - Fixed off by one error in loader - 8
 2024-04-19 - Fixed off by one error in loader - 9
 2024-04-19 - Updated documentation - 10
+2024-04-19 - Added logging to inference script - 11
