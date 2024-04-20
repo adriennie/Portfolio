@@ -3598,3 +3598,4 @@
 2024-04-20 - Fixed critical bug in pipeline - 4
 2024-04-20 - Merged dev branch into main - 5
 2024-04-20 - Finished feature engineering task - 6
+2024-04-20 - Resolved failing test cases - 7
