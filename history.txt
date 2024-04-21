@@ -3621,3 +3621,4 @@
 2024-04-21 - Updated environment dependencies - 8
 2024-04-21 - Implemented feature extraction - 9
 2024-04-21 - Fixed critical bug in pipeline - 10
+2024-04-21 - Wrote integration tests - 11
