@@ -3633,3 +3633,4 @@
 2024-04-22 - Deployed hotfix to staging - 5
 2024-04-22 - Added logging to inference script - 6
 2024-04-22 - Integrated third party library - 7
+2024-04-22 - Fixed off by one error in loader - 8
