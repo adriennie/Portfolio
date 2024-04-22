@@ -3634,3 +3634,4 @@
 2024-04-22 - Added logging to inference script - 6
 2024-04-22 - Integrated third party library - 7
 2024-04-22 - Fixed off by one error in loader - 8
+2024-04-22 - Updated documentation - 9
