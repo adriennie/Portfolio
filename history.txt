@@ -3648,3 +3648,4 @@
 2024-04-23 - Fixed critical bug in pipeline - 6
 2024-04-23 - Completed EDA notebook - 7
 2024-04-23 - Updated documentation - 8
+2024-04-23 - Tuned hyperparameters for model - 9
