@@ -3646,3 +3646,4 @@
 2024-04-23 - Fixed data leakage in validation - 4
 2024-04-23 - Completed code review - 5
 2024-04-23 - Fixed critical bug in pipeline - 6
+2024-04-23 - Completed EDA notebook - 7
