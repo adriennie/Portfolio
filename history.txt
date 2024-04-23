@@ -519,3 +519,4 @@
 2024-04-21 - Implemented feature extraction - 5
 2024-04-22 - Worked on authentication module - 1
 2024-04-23 - Completed model training script - 1
+2024-04-23 - Completed sprint review changes - 2
