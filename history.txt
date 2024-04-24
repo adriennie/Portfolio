@@ -3672,3 +3672,4 @@
 2024-04-24 - Completed model training script - 12
 2024-04-24 - Completed sprint review changes - 13
 2024-04-24 - Implemented feature extraction - 14
+2024-04-24 - Wrote integration tests - 15
