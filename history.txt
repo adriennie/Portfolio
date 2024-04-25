@@ -3681,3 +3681,4 @@
 2024-04-25 - Added logging to inference script - 6
 2024-04-25 - Optimized query performance - 7
 2024-04-25 - Updated environment dependencies - 8
+2024-04-25 - Merged dev branch into main - 9
