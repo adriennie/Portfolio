@@ -3688,3 +3688,4 @@
 2024-04-25 - Completed sprint review changes - 13
 2024-04-26 - Implemented feature extraction - 1
 2024-04-26 - Completed model training script - 2
+2024-04-26 - Completed EDA notebook - 3
