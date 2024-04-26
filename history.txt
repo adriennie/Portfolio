@@ -3689,3 +3689,4 @@
 2024-04-26 - Implemented feature extraction - 1
 2024-04-26 - Completed model training script - 2
 2024-04-26 - Completed EDA notebook - 3
+2024-04-26 - Updated documentation - 4
