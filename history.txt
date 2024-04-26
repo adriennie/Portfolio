@@ -3690,3 +3690,4 @@
 2024-04-26 - Completed model training script - 2
 2024-04-26 - Completed EDA notebook - 3
 2024-04-26 - Updated documentation - 4
+2024-04-26 - Added unit tests for API - 5
