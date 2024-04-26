@@ -3702,3 +3702,4 @@
 2024-04-26 - Updated model evaluation metrics - 14
 2024-04-26 - Reviewed and merged PR - 15
 2024-04-26 - Pushed initial dataset pipeline - 16
+2024-04-26 - Resolved failing test cases - 17
