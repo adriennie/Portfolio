@@ -3697,3 +3697,4 @@
 2024-04-26 - Added unit tests for API - 9
 2024-04-26 - Fixed critical bug in pipeline - 10
 2024-04-26 - Reviewed and merged PR - 11
+2024-04-26 - Resolved failing test cases - 12
