@@ -3707,3 +3707,4 @@
 2024-04-27 - Fixed data leakage in validation - 1
 2024-04-27 - Completed EDA notebook - 2
 2024-04-28 - Implemented feature extraction - 1
+2024-04-28 - Completed code review - 2
