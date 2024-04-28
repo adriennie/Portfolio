@@ -3719,3 +3719,4 @@
 2024-04-28 - Tuned hyperparameters for model - 11
 2024-04-28 - Implemented feature extraction - 12
 2024-04-28 - Implemented early stopping callback - 13
+2024-04-28 - Fixed critical bug in pipeline - 14
