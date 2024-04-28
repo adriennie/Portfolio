@@ -3716,3 +3716,4 @@
 2024-04-28 - Integrated third party library - 8
 2024-04-28 - Worked on authentication module - 9
 2024-04-28 - Worked on authentication module - 10
+2024-04-28 - Tuned hyperparameters for model - 11
