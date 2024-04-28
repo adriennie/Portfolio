@@ -542,3 +542,4 @@
 2024-04-27 - Fixed off by one error in loader - 1
 2024-04-28 - Completed EDA notebook - 1
 2024-04-28 - Implemented feature extraction - 2
+2024-04-28 - Reviewed and merged PR - 3
