@@ -545,3 +545,4 @@
 2024-04-28 - Reviewed and merged PR - 3
 2024-04-29 - Integrated third party library - 1
 2024-04-29 - Cleaned up deprecated functions - 2
+2024-04-29 - Refactored training loop - 3
