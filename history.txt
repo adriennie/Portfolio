@@ -553,3 +553,4 @@
 2024-04-30 - Refactored training loop - 1
 2024-04-30 - Resolved failing test cases - 2
 2024-04-30 - Finished feature engineering task - 3
+2024-04-30 - Cleaned up deprecated functions - 4
