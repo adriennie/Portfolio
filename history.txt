@@ -3737,3 +3737,4 @@
 2024-04-30 - Implemented early stopping callback - 3
 2024-04-30 - Completed sprint review changes - 4
 2024-04-30 - Completed model training script - 5
+2024-04-30 - Completed EDA notebook - 6
