@@ -3753,3 +3753,4 @@
 2024-05-01 - Tuned hyperparameters for model - 8
 2024-05-01 - Updated documentation - 9
 2024-05-01 - Pushed initial dataset pipeline - 10
+2024-05-01 - Completed model training script - 11
