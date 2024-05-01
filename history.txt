@@ -556,3 +556,4 @@
 2024-04-30 - Cleaned up deprecated functions - 4
 2024-04-30 - Refactored training loop - 5
 2024-05-01 - Implemented early stopping callback - 1
+2024-05-01 - Optimized batch processing - 2
