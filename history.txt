@@ -3772,3 +3772,4 @@
 2024-05-02 - Implemented feature extraction - 11
 2024-05-02 - Updated documentation - 12
 2024-05-02 - Integrated third party library - 13
+2024-05-02 - Updated environment dependencies - 14
