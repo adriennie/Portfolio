@@ -3762,3 +3762,4 @@
 2024-05-02 - Completed sprint review changes - 1
 2024-05-02 - Integrated third party library - 2
 2024-05-02 - Integrated third party library - 3
+2024-05-02 - Refactored training loop - 4
