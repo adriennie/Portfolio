@@ -3763,3 +3763,4 @@
 2024-05-02 - Integrated third party library - 2
 2024-05-02 - Integrated third party library - 3
 2024-05-02 - Refactored training loop - 4
+2024-05-02 - Fixed off by one error in loader - 5
