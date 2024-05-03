@@ -566,3 +566,4 @@
 2024-05-02 - Refactored training loop - 2
 2024-05-02 - Deployed hotfix to staging - 3
 2024-05-02 - Tuned hyperparameters for model - 4
+2024-05-03 - Finished feature engineering task - 1
