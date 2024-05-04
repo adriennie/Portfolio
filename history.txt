@@ -570,3 +570,4 @@
 2024-05-03 - Added unit tests for API - 2
 2024-05-03 - Resolved merge conflict - 3
 2024-05-03 - Reviewed and merged PR - 4
+2024-05-04 - Cleaned up deprecated functions - 1
