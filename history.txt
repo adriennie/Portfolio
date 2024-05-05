@@ -3790,3 +3790,4 @@
 2024-05-04 - Completed EDA notebook - 6
 2024-05-04 - Resolved failing test cases - 7
 2024-05-05 - Refactored training loop - 1
+2024-05-05 - Wrote integration tests - 2
