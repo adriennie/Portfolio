@@ -3811,3 +3811,4 @@
 2024-05-06 - Added logging to inference script - 2
 2024-05-06 - Completed EDA notebook - 3
 2024-05-06 - Integrated third party library - 4
+2024-05-06 - Updated model evaluation metrics - 5
