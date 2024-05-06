@@ -3821,3 +3821,4 @@
 2024-05-06 - Worked on authentication module - 12
 2024-05-06 - Fixed off by one error in loader - 13
 2024-05-06 - Refactored data preprocessing module - 14
+2024-05-06 - Updated model evaluation metrics - 15
