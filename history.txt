@@ -3833,3 +3833,4 @@
 2024-05-07 - Refactored training loop - 7
 2024-05-07 - Fixed off by one error in loader - 8
 2024-05-07 - Worked on authentication module - 9
+2024-05-07 - Fixed off by one error in loader - 10
