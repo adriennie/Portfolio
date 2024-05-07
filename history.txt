@@ -3826,3 +3826,4 @@
 2024-05-06 - Fixed data leakage in validation - 17
 2024-05-07 - Added unit tests for API - 1
 2024-05-07 - Fixed data leakage in validation - 2
+2024-05-07 - Tuned hyperparameters for model - 3
