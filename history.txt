@@ -3837,3 +3837,4 @@
 2024-05-07 - Integrated third party library - 11
 2024-05-07 - Cleaned up deprecated functions - 12
 2024-05-07 - Tuned hyperparameters for model - 13
+2024-05-07 - Implemented feature extraction - 14
