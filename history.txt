@@ -3845,3 +3845,4 @@
 2024-05-08 - Implemented early stopping callback - 1
 2024-05-08 - Completed model training script - 2
 2024-05-08 - Added logging to inference script - 3
+2024-05-08 - Merged dev branch into main - 4
