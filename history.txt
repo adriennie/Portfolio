@@ -3865,3 +3865,4 @@
 2024-05-09 - Updated documentation - 9
 2024-05-09 - Refactored training loop - 10
 2024-05-09 - Updated model evaluation metrics - 11
+2024-05-09 - Fixed critical bug in pipeline - 12
