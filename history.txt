@@ -585,3 +585,4 @@
 2024-05-07 - Updated model evaluation metrics - 2
 2024-05-08 - Refactored training loop - 1
 2024-05-09 - Worked on authentication module - 1
+2024-05-09 - Updated documentation - 2
