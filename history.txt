@@ -595,3 +595,4 @@
 2024-05-10 - Tuned hyperparameters for model - 4
 2024-05-11 - Refactored data preprocessing module - 1
 2024-05-11 - Fixed data leakage in validation - 2
+2024-05-12 - Implemented feature extraction - 1
