@@ -3902,3 +3902,4 @@
 2024-05-14 - Integrated third party library - 1
 2024-05-14 - Integrated third party library - 2
 2024-05-14 - Worked on authentication module - 3
+2024-05-14 - Implemented early stopping callback - 4
