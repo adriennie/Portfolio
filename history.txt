@@ -605,3 +605,4 @@
 2024-05-14 - Tuned hyperparameters for model - 1
 2024-05-14 - Completed code review - 2
 2024-05-14 - Resolved merge conflict - 3
+2024-05-14 - Resolved failing test cases - 4
