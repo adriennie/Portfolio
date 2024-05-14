@@ -3904,3 +3904,4 @@
 2024-05-14 - Worked on authentication module - 3
 2024-05-14 - Implemented early stopping callback - 4
 2024-05-14 - Updated model evaluation metrics - 5
+2024-05-14 - Fixed off by one error in loader - 6
