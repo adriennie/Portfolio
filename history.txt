@@ -3919,3 +3919,4 @@
 2024-05-15 - Added unit tests for API - 1
 2024-05-15 - Optimized query performance - 2
 2024-05-15 - Finished feature engineering task - 3
+2024-05-15 - Resolved failing test cases - 4
