@@ -3943,3 +3943,4 @@
 2024-05-16 - Fixed off by one error in loader - 7
 2024-05-16 - Added logging to inference script - 8
 2024-05-16 - Optimized batch processing - 9
+2024-05-16 - Completed sprint review changes - 10
