@@ -613,3 +613,4 @@
 2024-05-16 - Refactored data preprocessing module - 1
 2024-05-16 - Completed EDA notebook - 2
 2024-05-16 - Fixed critical bug in pipeline - 3
+2024-05-16 - Updated model evaluation metrics - 4
