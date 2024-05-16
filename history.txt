@@ -611,3 +611,4 @@
 2024-05-15 - Refactored data preprocessing module - 1
 2024-05-15 - Tuned hyperparameters for model - 2
 2024-05-16 - Refactored data preprocessing module - 1
+2024-05-16 - Completed EDA notebook - 2
