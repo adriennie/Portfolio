@@ -620,3 +620,4 @@
 2024-05-17 - Deployed hotfix to staging - 4
 2024-05-17 - Optimized batch processing - 5
 2024-05-18 - Implemented early stopping callback - 1
+2024-05-18 - Added unit tests for API - 2
