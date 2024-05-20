@@ -628,3 +628,4 @@
 2024-05-19 - Deployed hotfix to staging - 1
 2024-05-19 - Completed code review - 2
 2024-05-20 - Completed code review - 1
+2024-05-20 - Cleaned up deprecated functions - 2
