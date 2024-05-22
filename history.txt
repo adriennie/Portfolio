@@ -637,3 +637,4 @@
 2024-05-22 - Updated documentation - 1
 2024-05-22 - Wrote integration tests - 2
 2024-05-22 - Completed model training script - 3
+2024-05-22 - Refactored data preprocessing module - 4
