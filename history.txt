@@ -645,3 +645,4 @@
 2024-05-23 - Optimized query performance - 2
 2024-05-23 - Completed EDA notebook - 3
 2024-05-23 - Wrote integration tests - 4
+2024-05-23 - Resolved merge conflict - 5
