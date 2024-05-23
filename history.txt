@@ -4016,3 +4016,4 @@
 2024-05-23 - Updated environment dependencies - 13
 2024-05-23 - Implemented early stopping callback - 14
 2024-05-23 - Updated documentation - 15
+2024-05-23 - Optimized batch processing - 16
