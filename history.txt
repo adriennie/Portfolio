@@ -4011,3 +4011,4 @@
 2024-05-23 - Worked on authentication module - 8
 2024-05-23 - Updated model evaluation metrics - 9
 2024-05-23 - Fixed off by one error in loader - 10
+2024-05-23 - Wrote integration tests - 11
