@@ -659,3 +659,4 @@
 2024-05-25 - Fixed data leakage in validation - 7
 2024-05-25 - Added unit tests for API - 8
 2024-05-26 - Fixed data leakage in validation - 1
+2024-05-26 - Implemented early stopping callback - 2
