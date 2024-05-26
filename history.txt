@@ -4038,3 +4038,4 @@
 2024-05-26 - Completed code review - 4
 2024-05-26 - Integrated third party library - 5
 2024-05-26 - Fixed off by one error in loader - 6
+2024-05-26 - Completed model training script - 7
