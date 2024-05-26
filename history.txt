@@ -4043,3 +4043,4 @@
 2024-05-26 - Resolved failing test cases - 9
 2024-05-26 - Completed code review - 10
 2024-05-26 - Tuned hyperparameters for model - 11
+2024-05-26 - Added logging to inference script - 12
