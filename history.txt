@@ -4032,3 +4032,4 @@
 2024-05-25 - Added unit tests for API - 4
 2024-05-25 - Added logging to inference script - 5
 2024-05-25 - Reviewed and merged PR - 6
+2024-05-26 - Resolved failing test cases - 1
