@@ -4045,3 +4045,4 @@
 2024-05-26 - Tuned hyperparameters for model - 11
 2024-05-26 - Added logging to inference script - 12
 2024-05-27 - Fixed data leakage in validation - 1
+2024-05-27 - Optimized batch processing - 2
