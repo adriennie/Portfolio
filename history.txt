@@ -671,3 +671,4 @@
 2024-05-28 - Integrated third party library - 5
 2024-05-28 - Reviewed and merged PR - 6
 2024-05-28 - Worked on authentication module - 7
+2024-05-29 - Fixed off by one error in loader - 1
