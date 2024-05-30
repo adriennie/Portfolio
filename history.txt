@@ -4087,3 +4087,4 @@
 2024-05-30 - Tuned hyperparameters for model - 10
 2024-05-30 - Refactored training loop - 11
 2024-05-30 - Fixed critical bug in pipeline - 12
+2024-05-30 - Fixed data leakage in validation - 13
