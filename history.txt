@@ -674,3 +674,4 @@
 2024-05-29 - Fixed off by one error in loader - 1
 2024-05-30 - Tuned hyperparameters for model - 1
 2024-05-30 - Completed EDA notebook - 2
+2024-05-31 - Wrote integration tests - 1
