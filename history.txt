@@ -4098,3 +4098,4 @@
 2024-05-31 - Refactored training loop - 1
 2024-05-31 - Updated model evaluation metrics - 2
 2024-05-31 - Resolved failing test cases - 3
+2024-05-31 - Tuned hyperparameters for model - 4
