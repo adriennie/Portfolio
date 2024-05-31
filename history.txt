@@ -4104,3 +4104,4 @@
 2024-05-31 - Pushed initial dataset pipeline - 7
 2024-05-31 - Completed EDA notebook - 8
 2024-05-31 - Implemented early stopping callback - 9
+2024-05-31 - Added logging to inference script - 10
