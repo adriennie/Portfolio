@@ -4106,3 +4106,4 @@
 2024-05-31 - Implemented early stopping callback - 9
 2024-05-31 - Added logging to inference script - 10
 2024-05-31 - Completed sprint review changes - 11
+2024-06-01 - Optimized batch processing - 1
