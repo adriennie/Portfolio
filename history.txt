@@ -4116,3 +4116,4 @@
 2024-06-01 - Refactored training loop - 8
 2024-06-01 - Wrote integration tests - 9
 2024-06-01 - Merged dev branch into main - 10
+2024-06-02 - Fixed critical bug in pipeline - 1
