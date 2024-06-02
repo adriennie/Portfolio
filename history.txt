@@ -686,3 +686,4 @@
 2024-06-01 - Deployed hotfix to staging - 3
 2024-06-01 - Completed sprint review changes - 4
 2024-06-01 - Refactored data preprocessing module - 5
+2024-06-02 - Implemented feature extraction - 1
