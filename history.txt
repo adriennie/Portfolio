@@ -4134,3 +4134,4 @@
 2024-06-03 - Fixed off by one error in loader - 4
 2024-06-03 - Integrated third party library - 5
 2024-06-03 - Merged dev branch into main - 6
+2024-06-03 - Implemented feature extraction - 7
