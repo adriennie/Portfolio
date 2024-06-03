@@ -4128,3 +4128,4 @@
 2024-06-02 - Cleaned up deprecated functions - 10
 2024-06-02 - Fixed off by one error in loader - 11
 2024-06-02 - Tuned hyperparameters for model - 12
+2024-06-03 - Updated environment dependencies - 1
