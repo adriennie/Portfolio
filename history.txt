@@ -693,3 +693,4 @@
 2024-06-03 - Finished feature engineering task - 1
 2024-06-03 - Completed model training script - 2
 2024-06-04 - Refactored training loop - 1
+2024-06-04 - Updated environment dependencies - 2
