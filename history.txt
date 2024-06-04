@@ -4144,3 +4144,4 @@
 2024-06-04 - Updated environment dependencies - 5
 2024-06-04 - Added logging to inference script - 6
 2024-06-04 - Refactored training loop - 7
+2024-06-04 - Worked on authentication module - 8
