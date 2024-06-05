@@ -698,3 +698,4 @@
 2024-06-04 - Implemented early stopping callback - 4
 2024-06-05 - Reviewed and merged PR - 1
 2024-06-05 - Optimized query performance - 2
+2024-06-05 - Refactored training loop - 3
