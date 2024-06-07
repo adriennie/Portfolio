@@ -707,3 +707,4 @@
 2024-06-06 - Updated model evaluation metrics - 1
 2024-06-06 - Completed EDA notebook - 2
 2024-06-06 - Fixed off by one error in loader - 3
+2024-06-07 - Optimized batch processing - 1
