@@ -4191,3 +4191,4 @@
 2024-06-09 - Fixed off by one error in loader - 1
 2024-06-09 - Added logging to inference script - 2
 2024-06-09 - Optimized batch processing - 3
+2024-06-09 - Implemented feature extraction - 4
