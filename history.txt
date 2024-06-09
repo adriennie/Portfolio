@@ -4189,3 +4189,4 @@
 2024-06-08 - Cleaned up deprecated functions - 8
 2024-06-08 - Tuned hyperparameters for model - 9
 2024-06-09 - Fixed off by one error in loader - 1
+2024-06-09 - Added logging to inference script - 2
