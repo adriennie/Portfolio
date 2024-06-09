@@ -715,3 +715,4 @@
 2024-06-09 - Updated documentation - 1
 2024-06-09 - Wrote integration tests - 2
 2024-06-09 - Added logging to inference script - 3
+2024-06-09 - Updated environment dependencies - 4
