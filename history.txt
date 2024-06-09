@@ -713,3 +713,4 @@
 2024-06-08 - Updated documentation - 1
 2024-06-08 - Finished feature engineering task - 2
 2024-06-09 - Updated documentation - 1
+2024-06-09 - Wrote integration tests - 2
