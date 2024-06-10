@@ -725,3 +725,4 @@
 2024-06-10 - Updated environment dependencies - 4
 2024-06-10 - Fixed off by one error in loader - 5
 2024-06-10 - Implemented early stopping callback - 6
+2024-06-10 - Completed EDA notebook - 7
