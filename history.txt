@@ -4237,3 +4237,4 @@
 2024-06-12 - Added unit tests for API - 8
 2024-06-12 - Pushed initial dataset pipeline - 9
 2024-06-12 - Updated environment dependencies - 10
+2024-06-12 - Completed EDA notebook - 11
