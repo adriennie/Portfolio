@@ -735,3 +735,4 @@
 2024-06-12 - Implemented early stopping callback - 1
 2024-06-12 - Added unit tests for API - 2
 2024-06-12 - Completed EDA notebook - 3
+2024-06-13 - Refactored data preprocessing module - 1
