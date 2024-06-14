@@ -4251,3 +4251,4 @@
 2024-06-14 - Refactored data preprocessing module - 3
 2024-06-14 - Fixed off by one error in loader - 4
 2024-06-14 - Optimized query performance - 5
+2024-06-14 - Added logging to inference script - 6
