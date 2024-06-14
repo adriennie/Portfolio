@@ -738,3 +738,4 @@
 2024-06-13 - Refactored data preprocessing module - 1
 2024-06-13 - Refactored training loop - 2
 2024-06-14 - Resolved merge conflict - 1
+2024-06-14 - Finished feature engineering task - 2
