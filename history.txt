@@ -4255,3 +4255,4 @@
 2024-06-14 - Implemented feature extraction - 7
 2024-06-14 - Merged dev branch into main - 8
 2024-06-14 - Completed code review - 9
+2024-06-14 - Refactored training loop - 10
