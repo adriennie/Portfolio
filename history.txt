@@ -4258,3 +4258,4 @@
 2024-06-14 - Refactored training loop - 10
 2024-06-14 - Updated documentation - 11
 2024-06-14 - Implemented feature extraction - 12
+2024-06-14 - Resolved failing test cases - 13
