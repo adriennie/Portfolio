@@ -744,3 +744,4 @@
 2024-06-15 - Finished feature engineering task - 1
 2024-06-15 - Wrote integration tests - 2
 2024-06-15 - Integrated third party library - 3
+2024-06-16 - Merged dev branch into main - 1
