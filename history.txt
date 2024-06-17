@@ -4290,3 +4290,4 @@
 2024-06-17 - Reviewed and merged PR - 7
 2024-06-17 - Refactored data preprocessing module - 8
 2024-06-17 - Integrated third party library - 9
+2024-06-17 - Finished feature engineering task - 10
