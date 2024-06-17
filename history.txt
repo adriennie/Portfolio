@@ -4281,3 +4281,4 @@
 2024-06-16 - Finished feature engineering task - 2
 2024-06-16 - Integrated third party library - 3
 2024-06-16 - Cleaned up deprecated functions - 4
+2024-06-17 - Updated model evaluation metrics - 1
