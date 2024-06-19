@@ -4304,3 +4304,4 @@
 2024-06-19 - Updated documentation - 5
 2024-06-19 - Implemented feature extraction - 6
 2024-06-19 - Added logging to inference script - 7
+2024-06-19 - Resolved merge conflict - 8
