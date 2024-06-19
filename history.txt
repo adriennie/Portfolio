@@ -753,3 +753,4 @@
 2024-06-18 - Merged dev branch into main - 1
 2024-06-18 - Refactored data preprocessing module - 2
 2024-06-18 - Merged dev branch into main - 3
+2024-06-19 - Updated environment dependencies - 1
