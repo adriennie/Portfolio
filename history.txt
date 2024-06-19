@@ -4302,3 +4302,4 @@
 2024-06-19 - Completed sprint review changes - 3
 2024-06-19 - Integrated third party library - 4
 2024-06-19 - Updated documentation - 5
+2024-06-19 - Implemented feature extraction - 6
