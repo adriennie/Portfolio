@@ -4316,3 +4316,4 @@
 2024-06-20 - Completed code review - 5
 2024-06-20 - Merged dev branch into main - 6
 2024-06-20 - Finished feature engineering task - 7
+2024-06-20 - Completed EDA notebook - 8
