@@ -776,3 +776,4 @@
 2024-06-23 - Added unit tests for API - 3
 2024-06-23 - Integrated third party library - 4
 2024-06-23 - Completed EDA notebook - 5
+2024-06-23 - Merged dev branch into main - 6
