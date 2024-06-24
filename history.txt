@@ -778,3 +778,4 @@
 2024-06-23 - Completed EDA notebook - 5
 2024-06-23 - Merged dev branch into main - 6
 2024-06-24 - Reviewed and merged PR - 1
+2024-06-24 - Refactored training loop - 2
