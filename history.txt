@@ -4349,3 +4349,4 @@
 2024-06-24 - Implemented feature extraction - 5
 2024-06-24 - Pushed initial dataset pipeline - 6
 2024-06-24 - Implemented feature extraction - 7
+2024-06-24 - Tuned hyperparameters for model - 8
