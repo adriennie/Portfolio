@@ -4359,3 +4359,4 @@
 2024-06-25 - Fixed off by one error in loader - 5
 2024-06-25 - Implemented early stopping callback - 6
 2024-06-25 - Added unit tests for API - 7
+2024-06-25 - Implemented early stopping callback - 8
