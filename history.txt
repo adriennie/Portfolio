@@ -4355,3 +4355,4 @@
 2024-06-25 - Added unit tests for API - 1
 2024-06-25 - Added logging to inference script - 2
 2024-06-25 - Resolved failing test cases - 3
+2024-06-25 - Completed sprint review changes - 4
