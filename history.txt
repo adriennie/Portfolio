@@ -4356,3 +4356,4 @@
 2024-06-25 - Added logging to inference script - 2
 2024-06-25 - Resolved failing test cases - 3
 2024-06-25 - Completed sprint review changes - 4
+2024-06-25 - Fixed off by one error in loader - 5
