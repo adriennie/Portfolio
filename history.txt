@@ -780,3 +780,4 @@
 2024-06-24 - Reviewed and merged PR - 1
 2024-06-24 - Refactored training loop - 2
 2024-06-25 - Fixed critical bug in pipeline - 1
+2024-06-25 - Added unit tests for API - 2
