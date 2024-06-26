@@ -4367,3 +4367,4 @@
 2024-06-26 - Integrated third party library - 5
 2024-06-26 - Fixed off by one error in loader - 6
 2024-06-26 - Pushed initial dataset pipeline - 7
+2024-06-26 - Completed EDA notebook - 8
