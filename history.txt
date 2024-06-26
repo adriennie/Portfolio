@@ -4362,3 +4362,4 @@
 2024-06-25 - Implemented early stopping callback - 8
 2024-06-26 - Fixed off by one error in loader - 1
 2024-06-26 - Completed code review - 2
+2024-06-26 - Completed sprint review changes - 3
