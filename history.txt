@@ -783,3 +783,4 @@
 2024-06-25 - Added unit tests for API - 2
 2024-06-25 - Worked on authentication module - 3
 2024-06-26 - Tuned hyperparameters for model - 1
+2024-06-26 - Updated model evaluation metrics - 2
