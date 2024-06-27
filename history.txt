@@ -4372,3 +4372,4 @@
 2024-06-26 - Optimized query performance - 10
 2024-06-27 - Implemented feature extraction - 1
 2024-06-27 - Pushed initial dataset pipeline - 2
+2024-06-27 - Added logging to inference script - 3
