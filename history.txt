@@ -4375,3 +4375,4 @@
 2024-06-27 - Added logging to inference script - 3
 2024-06-27 - Resolved merge conflict - 4
 2024-06-27 - Optimized batch processing - 5
+2024-06-27 - Updated environment dependencies - 6
