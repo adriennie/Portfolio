@@ -4390,3 +4390,4 @@
 2024-06-28 - Updated model evaluation metrics - 8
 2024-06-28 - Updated environment dependencies - 9
 2024-06-28 - Completed EDA notebook - 10
+2024-06-28 - Merged dev branch into main - 11
