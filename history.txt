@@ -4383,3 +4383,4 @@
 2024-06-28 - Updated model evaluation metrics - 1
 2024-06-28 - Tuned hyperparameters for model - 2
 2024-06-28 - Reviewed and merged PR - 3
+2024-06-28 - Implemented feature extraction - 4
