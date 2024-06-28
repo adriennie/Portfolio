@@ -787,3 +787,4 @@
 2024-06-26 - Updated documentation - 3
 2024-06-27 - Optimized query performance - 1
 2024-06-27 - Completed EDA notebook - 2
+2024-06-28 - Resolved merge conflict - 1
