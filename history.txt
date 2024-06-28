@@ -791,3 +791,4 @@
 2024-06-28 - Deployed hotfix to staging - 2
 2024-06-28 - Updated documentation - 3
 2024-06-28 - Added unit tests for API - 4
+2024-06-28 - Refactored training loop - 5
