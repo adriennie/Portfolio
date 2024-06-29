@@ -4393,3 +4393,4 @@
 2024-06-28 - Merged dev branch into main - 11
 2024-06-29 - Optimized batch processing - 1
 2024-06-29 - Tuned hyperparameters for model - 2
+2024-06-29 - Added logging to inference script - 3
