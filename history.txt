@@ -796,3 +796,4 @@
 2024-06-28 - Fixed critical bug in pipeline - 7
 2024-06-28 - Completed code review - 8
 2024-06-29 - Refactored training loop - 1
+2024-06-29 - Completed EDA notebook - 2
