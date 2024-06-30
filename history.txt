@@ -803,3 +803,4 @@
 2024-06-29 - Merged dev branch into main - 6
 2024-06-29 - Cleaned up deprecated functions - 7
 2024-06-30 - Integrated third party library - 1
+2024-06-30 - Worked on authentication module - 2
