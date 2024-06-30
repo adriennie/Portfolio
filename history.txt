@@ -807,3 +807,4 @@
 2024-06-30 - Wrote integration tests - 3
 2024-06-30 - Implemented feature extraction - 4
 2024-06-30 - Added logging to inference script - 5
+2024-06-30 - Completed model training script - 6
