@@ -804,3 +804,4 @@
 2024-06-29 - Cleaned up deprecated functions - 7
 2024-06-30 - Integrated third party library - 1
 2024-06-30 - Worked on authentication module - 2
+2024-06-30 - Wrote integration tests - 3
