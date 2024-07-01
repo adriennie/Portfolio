@@ -812,3 +812,4 @@
 2024-06-30 - Refactored data preprocessing module - 8
 2024-07-01 - Tuned hyperparameters for model - 1
 2024-07-01 - Resolved failing test cases - 2
+2024-07-01 - Implemented early stopping callback - 3
