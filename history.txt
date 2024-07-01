@@ -815,3 +815,4 @@
 2024-07-01 - Implemented early stopping callback - 3
 2024-07-01 - Finished feature engineering task - 4
 2024-07-01 - Merged dev branch into main - 5
+2024-07-01 - Cleaned up deprecated functions - 6
