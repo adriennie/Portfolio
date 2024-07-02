@@ -4419,3 +4419,4 @@
 2024-07-02 - Updated documentation - 5
 2024-07-02 - Fixed off by one error in loader - 6
 2024-07-02 - Implemented early stopping callback - 7
+2024-07-02 - Cleaned up deprecated functions - 8
