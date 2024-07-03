@@ -4431,3 +4431,4 @@
 2024-07-03 - Added logging to inference script - 5
 2024-07-03 - Refactored data preprocessing module - 6
 2024-07-03 - Pushed initial dataset pipeline - 7
+2024-07-03 - Completed sprint review changes - 8
