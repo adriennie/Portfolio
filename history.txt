@@ -826,3 +826,4 @@
 2024-07-03 - Pushed initial dataset pipeline - 3
 2024-07-03 - Refactored data preprocessing module - 4
 2024-07-03 - Refactored data preprocessing module - 5
+2024-07-03 - Added logging to inference script - 6
