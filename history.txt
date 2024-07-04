@@ -4440,3 +4440,4 @@
 2024-07-03 - Updated documentation - 14
 2024-07-03 - Implemented early stopping callback - 15
 2024-07-04 - Merged dev branch into main - 1
+2024-07-04 - Added unit tests for API - 2
