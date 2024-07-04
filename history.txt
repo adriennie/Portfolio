@@ -830,3 +830,4 @@
 2024-07-03 - Fixed off by one error in loader - 7
 2024-07-04 - Cleaned up deprecated functions - 1
 2024-07-04 - Finished feature engineering task - 2
+2024-07-04 - Resolved failing test cases - 3
