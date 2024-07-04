@@ -833,3 +833,4 @@
 2024-07-04 - Resolved failing test cases - 3
 2024-07-04 - Integrated third party library - 4
 2024-07-04 - Completed sprint review changes - 5
+2024-07-04 - Fixed off by one error in loader - 6
