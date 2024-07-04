@@ -828,3 +828,4 @@
 2024-07-03 - Refactored data preprocessing module - 5
 2024-07-03 - Added logging to inference script - 6
 2024-07-03 - Fixed off by one error in loader - 7
+2024-07-04 - Cleaned up deprecated functions - 1
