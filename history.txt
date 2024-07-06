@@ -4457,3 +4457,4 @@
 2024-07-05 - Merged dev branch into main - 14
 2024-07-05 - Tuned hyperparameters for model - 15
 2024-07-05 - Integrated third party library - 16
+2024-07-06 - Implemented early stopping callback - 1
