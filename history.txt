@@ -4471,3 +4471,4 @@
 2024-07-07 - Added logging to inference script - 6
 2024-07-07 - Added logging to inference script - 7
 2024-07-08 - Completed EDA notebook - 1
+2024-07-08 - Finished feature engineering task - 2
