@@ -847,3 +847,4 @@
 2024-07-08 - Resolved merge conflict - 2
 2024-07-09 - Refactored data preprocessing module - 1
 2024-07-09 - Completed EDA notebook - 2
+2024-07-09 - Reviewed and merged PR - 3
