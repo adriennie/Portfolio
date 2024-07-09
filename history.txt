@@ -4475,3 +4475,4 @@
 2024-07-08 - Refactored data preprocessing module - 3
 2024-07-08 - Fixed off by one error in loader - 4
 2024-07-08 - Pushed initial dataset pipeline - 5
+2024-07-09 - Fixed critical bug in pipeline - 1
