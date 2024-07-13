@@ -4515,3 +4515,4 @@
 2024-07-13 - Worked on authentication module - 3
 2024-07-13 - Reviewed and merged PR - 4
 2024-07-13 - Fixed off by one error in loader - 5
+2024-07-13 - Refactored data preprocessing module - 6
