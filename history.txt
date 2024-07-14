@@ -4532,3 +4532,4 @@
 2024-07-14 - Added logging to inference script - 13
 2024-07-14 - Updated environment dependencies - 14
 2024-07-14 - Reviewed and merged PR - 15
+2024-07-14 - Added unit tests for API - 16
