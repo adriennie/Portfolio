@@ -4520,3 +4520,4 @@
 2024-07-14 - Updated documentation - 1
 2024-07-14 - Added logging to inference script - 2
 2024-07-14 - Worked on authentication module - 3
+2024-07-14 - Updated documentation - 4
