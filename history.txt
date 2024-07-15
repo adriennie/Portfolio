@@ -874,3 +874,4 @@
 2024-07-13 - Merged dev branch into main - 8
 2024-07-14 - Added unit tests for API - 1
 2024-07-15 - Added logging to inference script - 1
+2024-07-15 - Optimized query performance - 2
