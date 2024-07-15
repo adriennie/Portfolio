@@ -875,3 +875,4 @@
 2024-07-14 - Added unit tests for API - 1
 2024-07-15 - Added logging to inference script - 1
 2024-07-15 - Optimized query performance - 2
+2024-07-15 - Pushed initial dataset pipeline - 3
