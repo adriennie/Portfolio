@@ -4551,3 +4551,4 @@
 2024-07-15 - Completed model training script - 12
 2024-07-15 - Reviewed and merged PR - 13
 2024-07-15 - Merged dev branch into main - 14
+2024-07-15 - Completed EDA notebook - 15
