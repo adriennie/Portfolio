@@ -4559,3 +4559,4 @@
 2024-07-16 - Added logging to inference script - 3
 2024-07-16 - Completed model training script - 4
 2024-07-16 - Updated model evaluation metrics - 5
+2024-07-16 - Wrote integration tests - 6
