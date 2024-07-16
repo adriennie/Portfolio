@@ -877,3 +877,4 @@
 2024-07-15 - Optimized query performance - 2
 2024-07-15 - Pushed initial dataset pipeline - 3
 2024-07-16 - Added logging to inference script - 1
+2024-07-16 - Wrote integration tests - 2
