@@ -880,3 +880,4 @@
 2024-07-16 - Wrote integration tests - 2
 2024-07-16 - Cleaned up deprecated functions - 3
 2024-07-17 - Tuned hyperparameters for model - 1
+2024-07-17 - Updated model evaluation metrics - 2
