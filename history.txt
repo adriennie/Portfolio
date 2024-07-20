@@ -894,3 +894,4 @@
 2024-07-18 - Integrated third party library - 5
 2024-07-19 - Updated model evaluation metrics - 1
 2024-07-20 - Refactored training loop - 1
+2024-07-20 - Updated environment dependencies - 2
