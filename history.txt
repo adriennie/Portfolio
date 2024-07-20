@@ -4583,3 +4583,4 @@
 2024-07-20 - Completed EDA notebook - 1
 2024-07-20 - Refactored training loop - 2
 2024-07-20 - Completed EDA notebook - 3
+2024-07-20 - Integrated third party library - 4
