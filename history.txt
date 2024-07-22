@@ -4597,3 +4597,4 @@
 2024-07-22 - Integrated third party library - 1
 2024-07-22 - Tuned hyperparameters for model - 2
 2024-07-22 - Worked on authentication module - 3
+2024-07-22 - Implemented feature extraction - 4
