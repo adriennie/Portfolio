@@ -914,3 +914,4 @@
 2024-07-22 - Deployed hotfix to staging - 5
 2024-07-22 - Implemented early stopping callback - 6
 2024-07-23 - Fixed off by one error in loader - 1
+2024-07-23 - Updated environment dependencies - 2
