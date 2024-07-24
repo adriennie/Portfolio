@@ -4628,3 +4628,4 @@
 2024-07-24 - Implemented early stopping callback - 11
 2024-07-24 - Refactored training loop - 12
 2024-07-24 - Refactored training loop - 13
+2024-07-24 - Merged dev branch into main - 14
