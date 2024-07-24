@@ -4625,3 +4625,4 @@
 2024-07-24 - Refactored training loop - 8
 2024-07-24 - Worked on authentication module - 9
 2024-07-24 - Completed sprint review changes - 10
+2024-07-24 - Implemented early stopping callback - 11
