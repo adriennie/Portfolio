@@ -4646,3 +4646,4 @@
 2024-07-25 - Implemented early stopping callback - 10
 2024-07-25 - Wrote integration tests - 11
 2024-07-25 - Added logging to inference script - 12
+2024-07-25 - Added unit tests for API - 13
