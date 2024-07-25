@@ -4643,3 +4643,4 @@
 2024-07-25 - Fixed off by one error in loader - 7
 2024-07-25 - Wrote integration tests - 8
 2024-07-25 - Merged dev branch into main - 9
+2024-07-25 - Implemented early stopping callback - 10
