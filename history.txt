@@ -925,3 +925,4 @@
 2024-07-25 - Optimized batch processing - 3
 2024-07-25 - Merged dev branch into main - 4
 2024-07-25 - Finished feature engineering task - 5
+2024-07-25 - Implemented early stopping callback - 6
