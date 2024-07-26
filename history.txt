@@ -4660,3 +4660,4 @@
 2024-07-26 - Completed EDA notebook - 7
 2024-07-26 - Reviewed and merged PR - 8
 2024-07-26 - Updated model evaluation metrics - 9
+2024-07-26 - Refactored training loop - 10
