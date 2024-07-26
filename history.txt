@@ -927,3 +927,4 @@
 2024-07-25 - Finished feature engineering task - 5
 2024-07-25 - Implemented early stopping callback - 6
 2024-07-25 - Refactored data preprocessing module - 7
+2024-07-26 - Wrote integration tests - 1
