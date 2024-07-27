@@ -4665,3 +4665,4 @@
 2024-07-27 - Deployed hotfix to staging - 1
 2024-07-27 - Integrated third party library - 2
 2024-07-27 - Finished feature engineering task - 3
+2024-07-27 - Cleaned up deprecated functions - 4
