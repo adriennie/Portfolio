@@ -4667,3 +4667,4 @@
 2024-07-27 - Finished feature engineering task - 3
 2024-07-27 - Cleaned up deprecated functions - 4
 2024-07-28 - Refactored training loop - 1
+2024-07-28 - Wrote integration tests - 2
