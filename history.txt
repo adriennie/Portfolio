@@ -4668,3 +4668,4 @@
 2024-07-27 - Cleaned up deprecated functions - 4
 2024-07-28 - Refactored training loop - 1
 2024-07-28 - Wrote integration tests - 2
+2024-07-28 - Refactored data preprocessing module - 3
