@@ -935,3 +935,4 @@
 2024-07-29 - Worked on authentication module - 2
 2024-07-29 - Merged dev branch into main - 3
 2024-07-29 - Integrated third party library - 4
+2024-07-29 - Cleaned up deprecated functions - 5
