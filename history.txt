@@ -4697,3 +4697,4 @@
 2024-07-29 - Cleaned up deprecated functions - 13
 2024-07-29 - Completed code review - 14
 2024-07-29 - Completed EDA notebook - 15
+2024-07-29 - Completed model training script - 16
