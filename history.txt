@@ -4701,3 +4701,4 @@
 2024-07-29 - Fixed off by one error in loader - 17
 2024-07-30 - Integrated third party library - 1
 2024-07-30 - Wrote integration tests - 2
+2024-07-30 - Added unit tests for API - 3
