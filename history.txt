@@ -4699,3 +4699,4 @@
 2024-07-29 - Completed EDA notebook - 15
 2024-07-29 - Completed model training script - 16
 2024-07-29 - Fixed off by one error in loader - 17
+2024-07-30 - Integrated third party library - 1
