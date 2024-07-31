@@ -4727,3 +4727,4 @@
 2024-07-31 - Cleaned up deprecated functions - 11
 2024-07-31 - Fixed off by one error in loader - 12
 2024-07-31 - Worked on authentication module - 13
+2024-07-31 - Updated model evaluation metrics - 14
