@@ -4718,3 +4718,4 @@
 2024-07-31 - Wrote integration tests - 2
 2024-07-31 - Fixed critical bug in pipeline - 3
 2024-07-31 - Reviewed and merged PR - 4
+2024-07-31 - Completed EDA notebook - 5
