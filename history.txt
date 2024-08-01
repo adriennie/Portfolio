@@ -4746,3 +4746,4 @@
 2024-08-01 - Refactored data preprocessing module - 12
 2024-08-01 - Fixed off by one error in loader - 13
 2024-08-01 - Implemented feature extraction - 14
+2024-08-01 - Wrote integration tests - 15
