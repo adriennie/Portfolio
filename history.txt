@@ -4744,3 +4744,4 @@
 2024-08-01 - Resolved merge conflict - 10
 2024-08-01 - Refactored training loop - 11
 2024-08-01 - Refactored data preprocessing module - 12
+2024-08-01 - Fixed off by one error in loader - 13
