@@ -4751,3 +4751,4 @@
 2024-08-02 - Cleaned up deprecated functions - 2
 2024-08-02 - Reviewed and merged PR - 3
 2024-08-02 - Added logging to inference script - 4
+2024-08-02 - Fixed critical bug in pipeline - 5
