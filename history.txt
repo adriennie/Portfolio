@@ -4757,3 +4757,4 @@
 2024-08-02 - Deployed hotfix to staging - 8
 2024-08-02 - Tuned hyperparameters for model - 9
 2024-08-02 - Implemented feature extraction - 10
+2024-08-02 - Added logging to inference script - 11
