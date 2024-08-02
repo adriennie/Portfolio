@@ -4748,3 +4748,4 @@
 2024-08-01 - Implemented feature extraction - 14
 2024-08-01 - Wrote integration tests - 15
 2024-08-02 - Tuned hyperparameters for model - 1
+2024-08-02 - Cleaned up deprecated functions - 2
