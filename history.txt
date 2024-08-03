@@ -4773,3 +4773,4 @@
 2024-08-03 - Resolved merge conflict - 12
 2024-08-03 - Refactored data preprocessing module - 13
 2024-08-03 - Completed code review - 14
+2024-08-03 - Added logging to inference script - 15
