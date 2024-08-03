@@ -4759,3 +4759,4 @@
 2024-08-02 - Implemented feature extraction - 10
 2024-08-02 - Added logging to inference script - 11
 2024-08-02 - Fixed off by one error in loader - 12
+2024-08-03 - Cleaned up deprecated functions - 1
