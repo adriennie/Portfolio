@@ -960,3 +960,4 @@
 2024-08-03 - Resolved merge conflict - 3
 2024-08-03 - Added logging to inference script - 4
 2024-08-04 - Worked on authentication module - 1
+2024-08-04 - Updated environment dependencies - 2
