@@ -964,3 +964,4 @@
 2024-08-04 - Fixed off by one error in loader - 3
 2024-08-04 - Completed model training script - 4
 2024-08-04 - Deployed hotfix to staging - 5
+2024-08-04 - Refactored data preprocessing module - 6
