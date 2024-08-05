@@ -971,3 +971,4 @@
 2024-08-05 - Refactored data preprocessing module - 3
 2024-08-05 - Refactored training loop - 4
 2024-08-05 - Integrated third party library - 5
+2024-08-05 - Refactored data preprocessing module - 6
