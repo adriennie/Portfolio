@@ -4791,3 +4791,4 @@
 2024-08-05 - Merged dev branch into main - 9
 2024-08-05 - Added unit tests for API - 10
 2024-08-05 - Integrated third party library - 11
+2024-08-05 - Fixed off by one error in loader - 12
