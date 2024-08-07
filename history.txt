@@ -4799,3 +4799,4 @@
 2024-08-06 - Completed EDA notebook - 3
 2024-08-07 - Added logging to inference script - 1
 2024-08-07 - Finished feature engineering task - 2
+2024-08-07 - Cleaned up deprecated functions - 3
