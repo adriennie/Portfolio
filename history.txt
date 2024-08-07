@@ -4804,3 +4804,4 @@
 2024-08-07 - Implemented feature extraction - 5
 2024-08-07 - Updated documentation - 6
 2024-08-07 - Updated documentation - 7
+2024-08-07 - Resolved failing test cases - 8
