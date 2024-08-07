@@ -978,3 +978,4 @@
 2024-08-06 - Completed EDA notebook - 3
 2024-08-06 - Pushed initial dataset pipeline - 4
 2024-08-07 - Deployed hotfix to staging - 1
+2024-08-07 - Completed code review - 2
