@@ -4810,3 +4810,4 @@
 2024-08-08 - Implemented feature extraction - 2
 2024-08-08 - Pushed initial dataset pipeline - 3
 2024-08-08 - Resolved merge conflict - 4
+2024-08-08 - Added logging to inference script - 5
