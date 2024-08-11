@@ -4838,3 +4838,4 @@
 2024-08-11 - Pushed initial dataset pipeline - 9
 2024-08-11 - Implemented early stopping callback - 10
 2024-08-11 - Fixed off by one error in loader - 11
+2024-08-11 - Tuned hyperparameters for model - 12
