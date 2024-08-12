@@ -4858,3 +4858,4 @@
 2024-08-12 - Merged dev branch into main - 9
 2024-08-12 - Resolved merge conflict - 10
 2024-08-12 - Implemented early stopping callback - 11
+2024-08-12 - Resolved failing test cases - 12
