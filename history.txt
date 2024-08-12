@@ -1012,3 +1012,4 @@
 2024-08-12 - Fixed off by one error in loader - 1
 2024-08-12 - Fixed off by one error in loader - 2
 2024-08-12 - Refactored training loop - 3
+2024-08-12 - Fixed critical bug in pipeline - 4
