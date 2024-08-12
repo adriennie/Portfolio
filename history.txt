@@ -4852,3 +4852,4 @@
 2024-08-12 - Fixed off by one error in loader - 3
 2024-08-12 - Worked on authentication module - 4
 2024-08-12 - Resolved failing test cases - 5
+2024-08-12 - Tuned hyperparameters for model - 6
