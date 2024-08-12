@@ -4854,3 +4854,4 @@
 2024-08-12 - Resolved failing test cases - 5
 2024-08-12 - Tuned hyperparameters for model - 6
 2024-08-12 - Updated documentation - 7
+2024-08-12 - Added unit tests for API - 8
