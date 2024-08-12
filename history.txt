@@ -4849,3 +4849,4 @@
 2024-08-11 - Tuned hyperparameters for model - 20
 2024-08-12 - Implemented feature extraction - 1
 2024-08-12 - Implemented feature extraction - 2
+2024-08-12 - Fixed off by one error in loader - 3
