@@ -4866,3 +4866,4 @@
 2024-08-12 - Refactored training loop - 17
 2024-08-12 - Implemented feature extraction - 18
 2024-08-13 - Completed sprint review changes - 1
+2024-08-13 - Wrote integration tests - 2
