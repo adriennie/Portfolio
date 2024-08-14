@@ -4880,3 +4880,4 @@
 2024-08-13 - Merged dev branch into main - 13
 2024-08-14 - Reviewed and merged PR - 1
 2024-08-14 - Pushed initial dataset pipeline - 2
+2024-08-14 - Fixed critical bug in pipeline - 3
