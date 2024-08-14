@@ -4884,3 +4884,4 @@
 2024-08-14 - Reviewed and merged PR - 4
 2024-08-14 - Added unit tests for API - 5
 2024-08-14 - Updated environment dependencies - 6
+2024-08-14 - Refactored training loop - 7
