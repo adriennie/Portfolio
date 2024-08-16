@@ -1028,3 +1028,4 @@
 2024-08-15 - Refactored data preprocessing module - 1
 2024-08-15 - Tuned hyperparameters for model - 2
 2024-08-15 - Wrote integration tests - 3
+2024-08-16 - Fixed off by one error in loader - 1
