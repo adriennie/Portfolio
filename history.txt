@@ -4913,3 +4913,4 @@
 2024-08-17 - Added logging to inference script - 8
 2024-08-17 - Reviewed and merged PR - 9
 2024-08-17 - Cleaned up deprecated functions - 10
+2024-08-17 - Merged dev branch into main - 11
