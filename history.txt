@@ -4921,3 +4921,4 @@
 2024-08-18 - Added unit tests for API - 3
 2024-08-18 - Worked on authentication module - 4
 2024-08-18 - Added logging to inference script - 5
+2024-08-18 - Added logging to inference script - 6
