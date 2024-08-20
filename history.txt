@@ -1042,3 +1042,4 @@
 2024-08-19 - Implemented early stopping callback - 1
 2024-08-19 - Updated documentation - 2
 2024-08-20 - Pushed initial dataset pipeline - 1
+2024-08-20 - Reviewed and merged PR - 2
