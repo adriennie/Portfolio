@@ -4943,3 +4943,4 @@
 2024-08-20 - Refactored training loop - 4
 2024-08-21 - Completed sprint review changes - 1
 2024-08-21 - Completed EDA notebook - 2
+2024-08-21 - Implemented feature extraction - 3
