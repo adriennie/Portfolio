@@ -1048,3 +1048,4 @@
 2024-08-21 - Implemented early stopping callback - 2
 2024-08-21 - Resolved merge conflict - 3
 2024-08-21 - Updated documentation - 4
+2024-08-21 - Refactored training loop - 5
