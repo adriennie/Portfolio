@@ -4946,3 +4946,4 @@
 2024-08-21 - Implemented feature extraction - 3
 2024-08-21 - Completed code review - 4
 2024-08-22 - Tuned hyperparameters for model - 1
+2024-08-22 - Added logging to inference script - 2
