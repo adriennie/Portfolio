@@ -4960,3 +4960,4 @@
 2024-08-23 - Reviewed and merged PR - 1
 2024-08-23 - Completed code review - 2
 2024-08-23 - Merged dev branch into main - 3
+2024-08-23 - Cleaned up deprecated functions - 4
