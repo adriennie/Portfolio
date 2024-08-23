@@ -4971,3 +4971,4 @@
 2024-08-23 - Pushed initial dataset pipeline - 12
 2024-08-23 - Cleaned up deprecated functions - 13
 2024-08-23 - Implemented early stopping callback - 14
+2024-08-23 - Implemented feature extraction - 15
