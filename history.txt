@@ -4975,3 +4975,4 @@
 2024-08-23 - Worked on authentication module - 16
 2024-08-23 - Refactored data preprocessing module - 17
 2024-08-24 - Cleaned up deprecated functions - 1
+2024-08-24 - Updated model evaluation metrics - 2
