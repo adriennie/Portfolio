@@ -4976,3 +4976,4 @@
 2024-08-23 - Refactored data preprocessing module - 17
 2024-08-24 - Cleaned up deprecated functions - 1
 2024-08-24 - Updated model evaluation metrics - 2
+2024-08-24 - Merged dev branch into main - 3
