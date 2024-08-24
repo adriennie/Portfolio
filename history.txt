@@ -1057,3 +1057,4 @@
 2024-08-23 - Updated model evaluation metrics - 1
 2024-08-24 - Updated model evaluation metrics - 1
 2024-08-24 - Refactored data preprocessing module - 2
+2024-08-24 - Fixed critical bug in pipeline - 3
