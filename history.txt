@@ -4983,3 +4983,4 @@
 2024-08-25 - Completed EDA notebook - 1
 2024-08-25 - Cleaned up deprecated functions - 2
 2024-08-25 - Completed EDA notebook - 3
+2024-08-25 - Implemented early stopping callback - 4
