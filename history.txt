@@ -1077,3 +1077,4 @@
 2024-08-27 - Tuned hyperparameters for model - 2
 2024-08-27 - Implemented feature extraction - 3
 2024-08-28 - Completed sprint review changes - 1
+2024-08-28 - Refactored training loop - 2
