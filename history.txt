@@ -5027,3 +5027,4 @@
 2024-08-30 - Implemented early stopping callback - 8
 2024-08-30 - Completed code review - 9
 2024-08-30 - Resolved failing test cases - 10
+2024-08-30 - Added logging to inference script - 11
