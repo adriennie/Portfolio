@@ -1084,3 +1084,4 @@
 2024-08-29 - Completed code review - 2
 2024-08-29 - Completed sprint review changes - 3
 2024-08-29 - Integrated third party library - 4
+2024-08-30 - Fixed off by one error in loader - 1
