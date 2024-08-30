@@ -1086,3 +1086,4 @@
 2024-08-29 - Integrated third party library - 4
 2024-08-30 - Fixed off by one error in loader - 1
 2024-08-30 - Finished feature engineering task - 2
+2024-08-30 - Cleaned up deprecated functions - 3
