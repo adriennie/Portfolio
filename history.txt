@@ -5035,3 +5035,4 @@
 2024-08-31 - Updated environment dependencies - 1
 2024-08-31 - Added unit tests for API - 2
 2024-09-01 - Resolved failing test cases - 1
+2024-09-01 - Refactored training loop - 2
