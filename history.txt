@@ -1088,3 +1088,4 @@
 2024-08-30 - Finished feature engineering task - 2
 2024-08-30 - Cleaned up deprecated functions - 3
 2024-08-31 - Implemented early stopping callback - 1
+2024-09-01 - Integrated third party library - 1
