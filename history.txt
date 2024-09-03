@@ -1103,3 +1103,4 @@
 2024-09-03 - Pushed initial dataset pipeline - 3
 2024-09-03 - Resolved failing test cases - 4
 2024-09-03 - Completed sprint review changes - 5
+2024-09-03 - Tuned hyperparameters for model - 6
