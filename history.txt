@@ -5061,3 +5061,4 @@
 2024-09-03 - Worked on authentication module - 9
 2024-09-03 - Pushed initial dataset pipeline - 10
 2024-09-03 - Completed code review - 11
+2024-09-03 - Implemented early stopping callback - 12
