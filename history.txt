@@ -5052,3 +5052,4 @@
 2024-09-02 - Resolved failing test cases - 4
 2024-09-03 - Implemented early stopping callback - 1
 2024-09-03 - Integrated third party library - 2
+2024-09-03 - Fixed data leakage in validation - 3
