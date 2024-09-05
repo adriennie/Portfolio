@@ -5073,3 +5073,4 @@
 2024-09-05 - Fixed off by one error in loader - 6
 2024-09-05 - Reviewed and merged PR - 7
 2024-09-05 - Refactored data preprocessing module - 8
+2024-09-05 - Wrote integration tests - 9
