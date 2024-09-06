@@ -1109,3 +1109,4 @@
 2024-09-04 - Merged dev branch into main - 3
 2024-09-05 - Fixed off by one error in loader - 1
 2024-09-06 - Refactored data preprocessing module - 1
+2024-09-06 - Completed EDA notebook - 2
