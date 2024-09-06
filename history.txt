@@ -5082,3 +5082,4 @@
 2024-09-05 - Completed EDA notebook - 15
 2024-09-05 - Integrated third party library - 16
 2024-09-06 - Integrated third party library - 1
+2024-09-06 - Updated documentation - 2
