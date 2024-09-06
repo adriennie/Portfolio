@@ -1110,3 +1110,4 @@
 2024-09-05 - Fixed off by one error in loader - 1
 2024-09-06 - Refactored data preprocessing module - 1
 2024-09-06 - Completed EDA notebook - 2
+2024-09-06 - Added unit tests for API - 3
