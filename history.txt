@@ -5109,3 +5109,4 @@
 2024-09-07 - Deployed hotfix to staging - 7
 2024-09-07 - Wrote integration tests - 8
 2024-09-07 - Refactored training loop - 9
+2024-09-07 - Completed EDA notebook - 10
