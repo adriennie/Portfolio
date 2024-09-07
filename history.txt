@@ -1113,3 +1113,4 @@
 2024-09-06 - Added unit tests for API - 3
 2024-09-06 - Implemented feature extraction - 4
 2024-09-07 - Pushed initial dataset pipeline - 1
+2024-09-07 - Added logging to inference script - 2
