@@ -5112,3 +5112,4 @@
 2024-09-07 - Completed EDA notebook - 10
 2024-09-07 - Completed model training script - 11
 2024-09-07 - Finished feature engineering task - 12
+2024-09-07 - Pushed initial dataset pipeline - 13
