@@ -1114,3 +1114,4 @@
 2024-09-06 - Implemented feature extraction - 4
 2024-09-07 - Pushed initial dataset pipeline - 1
 2024-09-07 - Added logging to inference script - 2
+2024-09-08 - Implemented feature extraction - 1
