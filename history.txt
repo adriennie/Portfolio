@@ -5129,3 +5129,4 @@
 2024-09-09 - Wrote integration tests - 2
 2024-09-09 - Reviewed and merged PR - 3
 2024-09-09 - Completed EDA notebook - 4
+2024-09-09 - Tuned hyperparameters for model - 5
