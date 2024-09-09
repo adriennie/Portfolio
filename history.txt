@@ -5141,3 +5141,4 @@
 2024-09-09 - Reviewed and merged PR - 14
 2024-09-09 - Added logging to inference script - 15
 2024-09-09 - Refactored training loop - 16
+2024-09-09 - Cleaned up deprecated functions - 17
