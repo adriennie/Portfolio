@@ -5147,3 +5147,4 @@
 2024-09-10 - Updated documentation - 3
 2024-09-10 - Added logging to inference script - 4
 2024-09-10 - Merged dev branch into main - 5
+2024-09-10 - Completed EDA notebook - 6
