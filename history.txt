@@ -5143,3 +5143,4 @@
 2024-09-09 - Refactored training loop - 16
 2024-09-09 - Cleaned up deprecated functions - 17
 2024-09-10 - Completed code review - 1
+2024-09-10 - Fixed off by one error in loader - 2
