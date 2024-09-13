@@ -5185,3 +5185,4 @@
 2024-09-12 - Implemented early stopping callback - 13
 2024-09-13 - Completed code review - 1
 2024-09-13 - Merged dev branch into main - 2
+2024-09-13 - Integrated third party library - 3
