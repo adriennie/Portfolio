@@ -1156,3 +1156,4 @@
 2024-09-16 - Fixed data leakage in validation - 4
 2024-09-16 - Completed sprint review changes - 5
 2024-09-16 - Added logging to inference script - 6
+2024-09-16 - Merged dev branch into main - 7
