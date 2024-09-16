@@ -5226,3 +5226,4 @@
 2024-09-15 - Updated documentation - 8
 2024-09-15 - Updated model evaluation metrics - 9
 2024-09-16 - Updated documentation - 1
+2024-09-16 - Implemented feature extraction - 2
