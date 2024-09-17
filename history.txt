@@ -1157,3 +1157,4 @@
 2024-09-16 - Completed sprint review changes - 5
 2024-09-16 - Added logging to inference script - 6
 2024-09-16 - Merged dev branch into main - 7
+2024-09-17 - Updated environment dependencies - 1
