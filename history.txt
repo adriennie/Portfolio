@@ -5240,3 +5240,4 @@
 2024-09-17 - Tuned hyperparameters for model - 3
 2024-09-17 - Tuned hyperparameters for model - 4
 2024-09-17 - Implemented early stopping callback - 5
+2024-09-17 - Fixed critical bug in pipeline - 6
