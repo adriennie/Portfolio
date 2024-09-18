@@ -5257,3 +5257,4 @@
 2024-09-18 - Updated documentation - 8
 2024-09-18 - Added logging to inference script - 9
 2024-09-18 - Deployed hotfix to staging - 10
+2024-09-18 - Completed EDA notebook - 11
