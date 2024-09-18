@@ -5248,3 +5248,4 @@
 2024-09-17 - Merged dev branch into main - 11
 2024-09-17 - Added unit tests for API - 12
 2024-09-18 - Completed sprint review changes - 1
+2024-09-18 - Deployed hotfix to staging - 2
