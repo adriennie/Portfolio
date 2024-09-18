@@ -5255,3 +5255,4 @@
 2024-09-18 - Merged dev branch into main - 6
 2024-09-18 - Merged dev branch into main - 7
 2024-09-18 - Updated documentation - 8
+2024-09-18 - Added logging to inference script - 9
