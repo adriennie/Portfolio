@@ -5276,3 +5276,4 @@
 2024-09-19 - Refactored data preprocessing module - 10
 2024-09-19 - Updated environment dependencies - 11
 2024-09-19 - Wrote integration tests - 12
+2024-09-19 - Completed EDA notebook - 13
