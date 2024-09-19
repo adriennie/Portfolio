@@ -5273,3 +5273,4 @@
 2024-09-19 - Completed EDA notebook - 7
 2024-09-19 - Added logging to inference script - 8
 2024-09-19 - Implemented early stopping callback - 9
+2024-09-19 - Refactored data preprocessing module - 10
