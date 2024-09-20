@@ -5280,3 +5280,4 @@
 2024-09-19 - Completed sprint review changes - 14
 2024-09-19 - Merged dev branch into main - 15
 2024-09-20 - Refactored data preprocessing module - 1
+2024-09-20 - Completed EDA notebook - 2
