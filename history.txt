@@ -5286,3 +5286,4 @@
 2024-09-20 - Completed sprint review changes - 5
 2024-09-20 - Fixed critical bug in pipeline - 6
 2024-09-20 - Added logging to inference script - 7
+2024-09-20 - Refactored training loop - 8
