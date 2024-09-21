@@ -1164,3 +1164,4 @@
 2024-09-19 - Implemented early stopping callback - 1
 2024-09-20 - Implemented early stopping callback - 1
 2024-09-21 - Added unit tests for API - 1
+2024-09-21 - Added logging to inference script - 2
