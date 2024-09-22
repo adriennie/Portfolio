@@ -1169,3 +1169,4 @@
 2024-09-22 - Completed model training script - 1
 2024-09-22 - Worked on authentication module - 2
 2024-09-22 - Wrote integration tests - 3
+2024-09-22 - Fixed off by one error in loader - 4
