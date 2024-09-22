@@ -1172,3 +1172,4 @@
 2024-09-22 - Fixed off by one error in loader - 4
 2024-09-22 - Finished feature engineering task - 5
 2024-09-22 - Deployed hotfix to staging - 6
+2024-09-22 - Merged dev branch into main - 7
