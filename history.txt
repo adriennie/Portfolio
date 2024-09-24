@@ -5337,3 +5337,4 @@
 2024-09-24 - Reviewed and merged PR - 15
 2024-09-24 - Refactored data preprocessing module - 16
 2024-09-24 - Completed sprint review changes - 17
+2024-09-24 - Completed EDA notebook - 18
