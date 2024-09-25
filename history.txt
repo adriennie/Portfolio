@@ -5340,3 +5340,4 @@
 2024-09-24 - Completed EDA notebook - 18
 2024-09-25 - Refactored data preprocessing module - 1
 2024-09-25 - Implemented early stopping callback - 2
+2024-09-25 - Completed sprint review changes - 3
