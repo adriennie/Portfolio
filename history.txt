@@ -1183,3 +1183,4 @@
 2024-09-25 - Optimized query performance - 4
 2024-09-25 - Added unit tests for API - 5
 2024-09-26 - Pushed initial dataset pipeline - 1
+2024-09-26 - Completed EDA notebook - 2
