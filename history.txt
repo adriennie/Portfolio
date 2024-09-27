@@ -5378,3 +5378,4 @@
 2024-09-27 - Worked on authentication module - 11
 2024-09-27 - Completed EDA notebook - 12
 2024-09-27 - Completed EDA notebook - 13
+2024-09-27 - Tuned hyperparameters for model - 14
