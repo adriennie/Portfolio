@@ -5385,3 +5385,4 @@
 2024-09-28 - Updated documentation - 1
 2024-09-28 - Refactored data preprocessing module - 2
 2024-09-28 - Implemented feature extraction - 3
+2024-09-28 - Implemented early stopping callback - 4
