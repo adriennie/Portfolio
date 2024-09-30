@@ -5418,3 +5418,4 @@
 2024-09-30 - Implemented early stopping callback - 10
 2024-09-30 - Wrote integration tests - 11
 2024-09-30 - Added unit tests for API - 12
+2024-09-30 - Cleaned up deprecated functions - 13
