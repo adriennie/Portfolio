@@ -5433,3 +5433,4 @@
 2024-10-01 - Reviewed and merged PR - 6
 2024-10-01 - Implemented early stopping callback - 7
 2024-10-01 - Reviewed and merged PR - 8
+2024-10-01 - Deployed hotfix to staging - 9
