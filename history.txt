@@ -5455,3 +5455,4 @@
 2024-10-03 - Fixed off by one error in loader - 13
 2024-10-03 - Completed model training script - 14
 2024-10-03 - Fixed data leakage in validation - 15
+2024-10-03 - Fixed data leakage in validation - 16
