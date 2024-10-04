@@ -5470,3 +5470,4 @@
 2024-10-04 - Completed EDA notebook - 9
 2024-10-04 - Fixed off by one error in loader - 10
 2024-10-04 - Merged dev branch into main - 11
+2024-10-04 - Cleaned up deprecated functions - 12
