@@ -5460,3 +5460,4 @@
 2024-10-03 - Implemented feature extraction - 18
 2024-10-03 - Fixed data leakage in validation - 19
 2024-10-04 - Implemented feature extraction - 1
+2024-10-04 - Refactored training loop - 2
