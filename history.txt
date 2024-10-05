@@ -5480,3 +5480,4 @@
 2024-10-05 - Fixed critical bug in pipeline - 3
 2024-10-05 - Completed EDA notebook - 4
 2024-10-05 - Updated documentation - 5
+2024-10-05 - Updated model evaluation metrics - 6
