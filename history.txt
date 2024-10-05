@@ -5487,3 +5487,4 @@
 2024-10-05 - Pushed initial dataset pipeline - 10
 2024-10-05 - Completed EDA notebook - 11
 2024-10-05 - Completed code review - 12
+2024-10-05 - Implemented feature extraction - 13
