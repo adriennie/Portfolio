@@ -1227,3 +1227,4 @@
 2024-10-06 - Wrote integration tests - 2
 2024-10-06 - Updated environment dependencies - 3
 2024-10-06 - Fixed off by one error in loader - 4
+2024-10-06 - Tuned hyperparameters for model - 5
