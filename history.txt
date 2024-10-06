@@ -1228,3 +1228,4 @@
 2024-10-06 - Updated environment dependencies - 3
 2024-10-06 - Fixed off by one error in loader - 4
 2024-10-06 - Tuned hyperparameters for model - 5
+2024-10-06 - Added unit tests for API - 6
