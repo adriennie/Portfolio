@@ -1232,3 +1232,4 @@
 2024-10-06 - Implemented early stopping callback - 7
 2024-10-06 - Pushed initial dataset pipeline - 8
 2024-10-07 - Updated documentation - 1
+2024-10-07 - Cleaned up deprecated functions - 2
