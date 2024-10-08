@@ -5512,3 +5512,4 @@
 2024-10-07 - Tuned hyperparameters for model - 2
 2024-10-07 - Completed sprint review changes - 3
 2024-10-07 - Fixed data leakage in validation - 4
+2024-10-08 - Implemented early stopping callback - 1
