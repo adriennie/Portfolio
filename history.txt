@@ -1243,3 +1243,4 @@
 2024-10-09 - Reviewed and merged PR - 3
 2024-10-09 - Refactored training loop - 4
 2024-10-09 - Updated documentation - 5
+2024-10-09 - Fixed critical bug in pipeline - 6
