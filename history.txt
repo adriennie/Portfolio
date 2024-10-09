@@ -5519,3 +5519,4 @@
 2024-10-09 - Updated model evaluation metrics - 2
 2024-10-09 - Completed EDA notebook - 3
 2024-10-09 - Fixed critical bug in pipeline - 4
+2024-10-09 - Completed sprint review changes - 5
