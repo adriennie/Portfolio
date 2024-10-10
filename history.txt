@@ -1244,3 +1244,4 @@
 2024-10-09 - Refactored training loop - 4
 2024-10-09 - Updated documentation - 5
 2024-10-09 - Fixed critical bug in pipeline - 6
+2024-10-10 - Wrote integration tests - 1
