@@ -5536,3 +5536,4 @@
 2024-10-10 - Added logging to inference script - 5
 2024-10-10 - Pushed initial dataset pipeline - 6
 2024-10-10 - Refactored training loop - 7
+2024-10-10 - Updated environment dependencies - 8
