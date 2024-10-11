@@ -1253,3 +1253,4 @@
 2024-10-11 - Completed model training script - 2
 2024-10-11 - Completed model training script - 3
 2024-10-11 - Completed EDA notebook - 4
+2024-10-11 - Added logging to inference script - 5
