@@ -5555,3 +5555,4 @@
 2024-10-11 - Wrote integration tests - 12
 2024-10-11 - Added logging to inference script - 13
 2024-10-11 - Fixed data leakage in validation - 14
+2024-10-11 - Implemented early stopping callback - 15
