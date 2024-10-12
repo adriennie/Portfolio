@@ -1256,3 +1256,4 @@
 2024-10-11 - Added logging to inference script - 5
 2024-10-11 - Completed code review - 6
 2024-10-12 - Merged dev branch into main - 1
+2024-10-12 - Fixed critical bug in pipeline - 2
