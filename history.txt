@@ -1261,3 +1261,4 @@
 2024-10-13 - Reviewed and merged PR - 1
 2024-10-13 - Pushed initial dataset pipeline - 2
 2024-10-13 - Worked on authentication module - 3
+2024-10-13 - Integrated third party library - 4
