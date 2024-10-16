@@ -5589,3 +5589,4 @@
 2024-10-15 - Integrated third party library - 2
 2024-10-15 - Merged dev branch into main - 3
 2024-10-15 - Merged dev branch into main - 4
+2024-10-16 - Refactored training loop - 1
