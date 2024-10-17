@@ -5601,3 +5601,4 @@
 2024-10-16 - Cleaned up deprecated functions - 10
 2024-10-17 - Completed EDA notebook - 1
 2024-10-17 - Tuned hyperparameters for model - 2
+2024-10-17 - Updated environment dependencies - 3
