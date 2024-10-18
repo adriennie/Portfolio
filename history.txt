@@ -1284,3 +1284,4 @@
 2024-10-17 - Integrated third party library - 3
 2024-10-17 - Resolved merge conflict - 4
 2024-10-18 - Pushed initial dataset pipeline - 1
+2024-10-18 - Cleaned up deprecated functions - 2
