@@ -5637,3 +5637,4 @@
 2024-10-20 - Refactored training loop - 1
 2024-10-20 - Optimized batch processing - 2
 2024-10-20 - Added logging to inference script - 3
+2024-10-20 - Merged dev branch into main - 4
