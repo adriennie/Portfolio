@@ -1288,3 +1288,4 @@
 2024-10-19 - Updated environment dependencies - 1
 2024-10-20 - Finished feature engineering task - 1
 2024-10-20 - Completed EDA notebook - 2
+2024-10-20 - Implemented feature extraction - 3
