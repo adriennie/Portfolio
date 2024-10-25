@@ -5667,3 +5667,4 @@
 2024-10-25 - Added unit tests for API - 2
 2024-10-25 - Added logging to inference script - 3
 2024-10-25 - Completed model training script - 4
+2024-10-25 - Completed sprint review changes - 5
