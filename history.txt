@@ -1316,3 +1316,4 @@
 2024-10-28 - Integrated third party library - 1
 2024-10-28 - Pushed initial dataset pipeline - 2
 2024-10-28 - Fixed off by one error in loader - 3
+2024-10-28 - Implemented feature extraction - 4
