@@ -1318,3 +1318,4 @@
 2024-10-28 - Fixed off by one error in loader - 3
 2024-10-28 - Implemented feature extraction - 4
 2024-10-28 - Refactored training loop - 5
+2024-10-29 - Wrote integration tests - 1
