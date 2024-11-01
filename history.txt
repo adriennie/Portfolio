@@ -5721,3 +5721,4 @@
 2024-10-31 - Updated environment dependencies - 15
 2024-11-01 - Completed model training script - 1
 2024-11-01 - Completed EDA notebook - 2
+2024-11-01 - Refactored training loop - 3
