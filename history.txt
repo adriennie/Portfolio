@@ -5730,3 +5730,4 @@
 2024-11-01 - Finished feature engineering task - 9
 2024-11-01 - Fixed critical bug in pipeline - 10
 2024-11-01 - Completed sprint review changes - 11
+2024-11-01 - Updated model evaluation metrics - 12
