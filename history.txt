@@ -1344,3 +1344,4 @@
 2024-11-02 - Updated model evaluation metrics - 5
 2024-11-02 - Added unit tests for API - 6
 2024-11-03 - Fixed off by one error in loader - 1
+2024-11-03 - Implemented early stopping callback - 2
