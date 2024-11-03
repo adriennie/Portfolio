@@ -5750,3 +5750,4 @@
 2024-11-03 - Added logging to inference script - 3
 2024-11-03 - Fixed off by one error in loader - 4
 2024-11-03 - Merged dev branch into main - 5
+2024-11-03 - Completed sprint review changes - 6
