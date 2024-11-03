@@ -1347,3 +1347,4 @@
 2024-11-03 - Implemented early stopping callback - 2
 2024-11-03 - Completed sprint review changes - 3
 2024-11-03 - Completed sprint review changes - 4
+2024-11-03 - Resolved failing test cases - 5
