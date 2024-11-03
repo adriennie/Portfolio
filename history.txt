@@ -5759,3 +5759,4 @@
 2024-11-03 - Added logging to inference script - 12
 2024-11-03 - Resolved merge conflict - 13
 2024-11-03 - Integrated third party library - 14
+2024-11-03 - Tuned hyperparameters for model - 15
