@@ -1351,3 +1351,4 @@
 2024-11-03 - Resolved failing test cases - 6
 2024-11-03 - Updated documentation - 7
 2024-11-03 - Completed model training script - 8
+2024-11-04 - Added logging to inference script - 1
