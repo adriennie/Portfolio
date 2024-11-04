@@ -5770,3 +5770,4 @@
 2024-11-04 - Reviewed and merged PR - 5
 2024-11-04 - Reviewed and merged PR - 6
 2024-11-04 - Fixed data leakage in validation - 7
+2024-11-04 - Resolved failing test cases - 8
