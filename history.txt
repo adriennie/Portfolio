@@ -5787,3 +5787,4 @@
 2024-11-05 - Tuned hyperparameters for model - 12
 2024-11-05 - Fixed off by one error in loader - 13
 2024-11-05 - Wrote integration tests - 14
+2024-11-06 - Refactored data preprocessing module - 1
