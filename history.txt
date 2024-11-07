@@ -5802,3 +5802,4 @@
 2024-11-06 - Added logging to inference script - 13
 2024-11-06 - Optimized batch processing - 14
 2024-11-07 - Wrote integration tests - 1
+2024-11-07 - Fixed off by one error in loader - 2
