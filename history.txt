@@ -1367,3 +1367,4 @@
 2024-11-06 - Optimized query performance - 4
 2024-11-07 - Optimized query performance - 1
 2024-11-07 - Completed model training script - 2
+2024-11-07 - Completed EDA notebook - 3
