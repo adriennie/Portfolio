@@ -1369,3 +1369,4 @@
 2024-11-07 - Completed model training script - 2
 2024-11-07 - Completed EDA notebook - 3
 2024-11-07 - Added unit tests for API - 4
+2024-11-08 - Fixed off by one error in loader - 1
