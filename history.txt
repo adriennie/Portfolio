@@ -1371,3 +1371,4 @@
 2024-11-07 - Added unit tests for API - 4
 2024-11-08 - Fixed off by one error in loader - 1
 2024-11-08 - Refactored training loop - 2
+2024-11-08 - Deployed hotfix to staging - 3
