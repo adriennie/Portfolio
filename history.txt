@@ -5820,3 +5820,4 @@
 2024-11-08 - Implemented early stopping callback - 9
 2024-11-08 - Pushed initial dataset pipeline - 10
 2024-11-08 - Implemented early stopping callback - 11
+2024-11-08 - Refactored training loop - 12
