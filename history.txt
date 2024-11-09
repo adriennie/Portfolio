@@ -5836,3 +5836,4 @@
 2024-11-09 - Implemented early stopping callback - 5
 2024-11-09 - Updated model evaluation metrics - 6
 2024-11-09 - Finished feature engineering task - 7
+2024-11-09 - Fixed data leakage in validation - 8
