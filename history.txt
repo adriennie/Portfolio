@@ -1379,3 +1379,4 @@
 2024-11-09 - Optimized batch processing - 3
 2024-11-10 - Implemented early stopping callback - 1
 2024-11-10 - Fixed critical bug in pipeline - 2
+2024-11-10 - Added logging to inference script - 3
