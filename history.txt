@@ -5843,3 +5843,4 @@
 2024-11-09 - Worked on authentication module - 12
 2024-11-09 - Tuned hyperparameters for model - 13
 2024-11-10 - Finished feature engineering task - 1
+2024-11-10 - Implemented early stopping callback - 2
