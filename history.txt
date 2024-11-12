@@ -1392,3 +1392,4 @@
 2024-11-12 - Implemented feature extraction - 4
 2024-11-12 - Wrote integration tests - 5
 2024-11-12 - Added logging to inference script - 6
+2024-11-12 - Updated documentation - 7
