@@ -5865,3 +5865,4 @@
 2024-11-12 - Optimized batch processing - 1
 2024-11-12 - Merged dev branch into main - 2
 2024-11-12 - Implemented early stopping callback - 3
+2024-11-12 - Added unit tests for API - 4
