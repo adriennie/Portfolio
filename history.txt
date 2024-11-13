@@ -5869,3 +5869,4 @@
 2024-11-12 - Refactored training loop - 5
 2024-11-12 - Completed model training script - 6
 2024-11-12 - Completed EDA notebook - 7
+2024-11-13 - Tuned hyperparameters for model - 1
