@@ -1394,3 +1394,4 @@
 2024-11-12 - Added logging to inference script - 6
 2024-11-12 - Updated documentation - 7
 2024-11-13 - Resolved merge conflict - 1
+2024-11-13 - Resolved failing test cases - 2
