@@ -5871,3 +5871,4 @@
 2024-11-12 - Completed EDA notebook - 7
 2024-11-13 - Tuned hyperparameters for model - 1
 2024-11-13 - Optimized query performance - 2
+2024-11-13 - Updated environment dependencies - 3
