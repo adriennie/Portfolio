@@ -1397,3 +1397,4 @@
 2024-11-13 - Resolved failing test cases - 2
 2024-11-14 - Refactored data preprocessing module - 1
 2024-11-14 - Refactored training loop - 2
+2024-11-14 - Added unit tests for API - 3
