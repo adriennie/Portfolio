@@ -5901,3 +5901,4 @@
 2024-11-15 - Tuned hyperparameters for model - 3
 2024-11-15 - Finished feature engineering task - 4
 2024-11-15 - Updated documentation - 5
+2024-11-15 - Implemented early stopping callback - 6
