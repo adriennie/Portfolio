@@ -1399,3 +1399,4 @@
 2024-11-14 - Refactored training loop - 2
 2024-11-14 - Added unit tests for API - 3
 2024-11-15 - Reviewed and merged PR - 1
+2024-11-15 - Tuned hyperparameters for model - 2
