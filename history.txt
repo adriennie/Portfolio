@@ -5915,3 +5915,4 @@
 2024-11-17 - Completed code review - 5
 2024-11-17 - Refactored training loop - 6
 2024-11-17 - Deployed hotfix to staging - 7
+2024-11-17 - Added logging to inference script - 8
