@@ -5922,3 +5922,4 @@
 2024-11-18 - Fixed data leakage in validation - 1
 2024-11-18 - Finished feature engineering task - 2
 2024-11-18 - Fixed off by one error in loader - 3
+2024-11-18 - Implemented early stopping callback - 4
