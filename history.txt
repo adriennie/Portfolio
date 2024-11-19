@@ -5933,3 +5933,4 @@
 2024-11-19 - Completed model training script - 3
 2024-11-19 - Worked on authentication module - 4
 2024-11-19 - Implemented early stopping callback - 5
+2024-11-19 - Merged dev branch into main - 6
