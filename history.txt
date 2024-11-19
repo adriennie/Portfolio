@@ -5935,3 +5935,4 @@
 2024-11-19 - Implemented early stopping callback - 5
 2024-11-19 - Merged dev branch into main - 6
 2024-11-19 - Refactored training loop - 7
+2024-11-19 - Refactored training loop - 8
