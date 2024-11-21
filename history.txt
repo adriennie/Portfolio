@@ -1431,3 +1431,4 @@
 2024-11-21 - Added logging to inference script - 1
 2024-11-21 - Implemented early stopping callback - 2
 2024-11-21 - Fixed off by one error in loader - 3
+2024-11-21 - Updated environment dependencies - 4
