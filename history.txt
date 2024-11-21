@@ -1429,3 +1429,4 @@
 2024-11-20 - Updated model evaluation metrics - 7
 2024-11-20 - Updated model evaluation metrics - 8
 2024-11-21 - Added logging to inference script - 1
+2024-11-21 - Implemented early stopping callback - 2
