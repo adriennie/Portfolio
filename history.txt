@@ -5993,3 +5993,4 @@
 2024-11-25 - Reviewed and merged PR - 3
 2024-11-25 - Fixed off by one error in loader - 4
 2024-11-25 - Added logging to inference script - 5
+2024-11-25 - Completed sprint review changes - 6
