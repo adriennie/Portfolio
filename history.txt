@@ -5995,3 +5995,4 @@
 2024-11-25 - Added logging to inference script - 5
 2024-11-25 - Completed sprint review changes - 6
 2024-11-25 - Updated documentation - 7
+2024-11-25 - Fixed critical bug in pipeline - 8
