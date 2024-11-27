@@ -1461,3 +1461,4 @@
 2024-11-27 - Merged dev branch into main - 1
 2024-11-27 - Wrote integration tests - 2
 2024-11-27 - Completed EDA notebook - 3
+2024-11-27 - Updated environment dependencies - 4
