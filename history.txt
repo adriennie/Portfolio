@@ -1466,3 +1466,4 @@
 2024-11-27 - Implemented feature extraction - 6
 2024-11-27 - Fixed critical bug in pipeline - 7
 2024-11-27 - Fixed off by one error in loader - 8
+2024-11-28 - Cleaned up deprecated functions - 1
