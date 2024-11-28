@@ -6022,3 +6022,4 @@
 2024-11-28 - Wrote integration tests - 2
 2024-11-28 - Completed code review - 3
 2024-11-28 - Merged dev branch into main - 4
+2024-11-28 - Added logging to inference script - 5
