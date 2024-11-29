@@ -6036,3 +6036,4 @@
 2024-11-29 - Fixed data leakage in validation - 3
 2024-11-29 - Pushed initial dataset pipeline - 4
 2024-11-29 - Implemented early stopping callback - 5
+2024-11-29 - Added unit tests for API - 6
