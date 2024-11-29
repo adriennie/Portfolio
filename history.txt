@@ -6037,3 +6037,4 @@
 2024-11-29 - Pushed initial dataset pipeline - 4
 2024-11-29 - Implemented early stopping callback - 5
 2024-11-29 - Added unit tests for API - 6
+2024-11-29 - Merged dev branch into main - 7
