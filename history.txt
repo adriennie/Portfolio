@@ -1468,3 +1468,4 @@
 2024-11-27 - Fixed off by one error in loader - 8
 2024-11-28 - Cleaned up deprecated functions - 1
 2024-11-28 - Resolved failing test cases - 2
+2024-11-29 - Added unit tests for API - 1
