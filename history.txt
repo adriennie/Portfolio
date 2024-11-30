@@ -6052,3 +6052,4 @@
 2024-11-30 - Optimized batch processing - 8
 2024-11-30 - Refactored training loop - 9
 2024-11-30 - Updated environment dependencies - 10
+2024-11-30 - Fixed off by one error in loader - 11
