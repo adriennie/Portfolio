@@ -1480,3 +1480,4 @@
 2024-11-30 - Deployed hotfix to staging - 5
 2024-11-30 - Updated documentation - 6
 2024-11-30 - Completed sprint review changes - 7
+2024-11-30 - Completed EDA notebook - 8
