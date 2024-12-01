@@ -1481,3 +1481,4 @@
 2024-11-30 - Updated documentation - 6
 2024-11-30 - Completed sprint review changes - 7
 2024-11-30 - Completed EDA notebook - 8
+2024-12-01 - Completed model training script - 1
