@@ -1483,3 +1483,4 @@
 2024-11-30 - Completed EDA notebook - 8
 2024-12-01 - Completed model training script - 1
 2024-12-02 - Fixed off by one error in loader - 1
+2024-12-02 - Tuned hyperparameters for model - 2
