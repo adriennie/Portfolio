@@ -6090,3 +6090,4 @@
 2024-12-03 - Implemented feature extraction - 10
 2024-12-03 - Refactored training loop - 11
 2024-12-04 - Updated documentation - 1
+2024-12-04 - Fixed off by one error in loader - 2
