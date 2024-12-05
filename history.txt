@@ -6104,3 +6104,4 @@
 2024-12-04 - Reviewed and merged PR - 13
 2024-12-05 - Resolved merge conflict - 1
 2024-12-05 - Implemented early stopping callback - 2
+2024-12-05 - Completed EDA notebook - 3
