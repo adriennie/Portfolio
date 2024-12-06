@@ -6117,3 +6117,4 @@
 2024-12-06 - Tuned hyperparameters for model - 10
 2024-12-06 - Added logging to inference script - 11
 2024-12-06 - Finished feature engineering task - 12
+2024-12-06 - Updated model evaluation metrics - 13
