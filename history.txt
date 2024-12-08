@@ -1504,3 +1504,4 @@
 2024-12-06 - Fixed critical bug in pipeline - 7
 2024-12-07 - Pushed initial dataset pipeline - 1
 2024-12-08 - Refactored training loop - 1
+2024-12-08 - Completed EDA notebook - 2
