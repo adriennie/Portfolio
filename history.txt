@@ -1506,3 +1506,4 @@
 2024-12-08 - Refactored training loop - 1
 2024-12-08 - Completed EDA notebook - 2
 2024-12-08 - Fixed off by one error in loader - 3
+2024-12-08 - Worked on authentication module - 4
