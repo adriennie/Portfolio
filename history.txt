@@ -6148,3 +6148,4 @@
 2024-12-09 - Refactored training loop - 6
 2024-12-09 - Deployed hotfix to staging - 7
 2024-12-09 - Worked on authentication module - 8
+2024-12-09 - Completed EDA notebook - 9
