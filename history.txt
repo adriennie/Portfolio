@@ -1525,3 +1525,4 @@
 2024-12-11 - Completed model training script - 1
 2024-12-11 - Completed sprint review changes - 2
 2024-12-12 - Completed EDA notebook - 1
+2024-12-12 - Completed model training script - 2
