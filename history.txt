@@ -6189,3 +6189,4 @@
 2024-12-14 - Added logging to inference script - 13
 2024-12-14 - Refactored data preprocessing module - 14
 2024-12-14 - Completed model training script - 15
+2024-12-15 - Completed EDA notebook - 1
