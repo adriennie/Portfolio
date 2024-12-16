@@ -6215,3 +6215,4 @@
 2024-12-16 - Refactored training loop - 7
 2024-12-16 - Completed model training script - 8
 2024-12-16 - Added logging to inference script - 9
+2024-12-16 - Completed EDA notebook - 10
