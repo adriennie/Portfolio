@@ -1555,3 +1555,4 @@
 2024-12-17 - Integrated third party library - 2
 2024-12-17 - Worked on authentication module - 3
 2024-12-17 - Worked on authentication module - 4
+2024-12-17 - Implemented feature extraction - 5
