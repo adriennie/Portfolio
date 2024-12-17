@@ -6226,3 +6226,4 @@
 2024-12-16 - Fixed off by one error in loader - 18
 2024-12-17 - Updated documentation - 1
 2024-12-17 - Refactored data preprocessing module - 2
+2024-12-17 - Completed model training script - 3
