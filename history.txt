@@ -1566,3 +1566,4 @@
 2024-12-19 - Merged dev branch into main - 3
 2024-12-19 - Integrated third party library - 4
 2024-12-19 - Worked on authentication module - 5
+2024-12-19 - Cleaned up deprecated functions - 6
