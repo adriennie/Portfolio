@@ -6239,3 +6239,4 @@
 2024-12-19 - Cleaned up deprecated functions - 2
 2024-12-19 - Wrote integration tests - 3
 2024-12-19 - Updated model evaluation metrics - 4
+2024-12-19 - Added logging to inference script - 5
