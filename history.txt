@@ -6264,3 +6264,4 @@
 2024-12-20 - Added logging to inference script - 10
 2024-12-20 - Pushed initial dataset pipeline - 11
 2024-12-20 - Updated documentation - 12
+2024-12-20 - Updated environment dependencies - 13
