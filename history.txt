@@ -6261,3 +6261,4 @@
 2024-12-20 - Fixed critical bug in pipeline - 7
 2024-12-20 - Pushed initial dataset pipeline - 8
 2024-12-20 - Optimized query performance - 9
+2024-12-20 - Added logging to inference script - 10
