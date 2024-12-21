@@ -6268,3 +6268,4 @@
 2024-12-21 - Finished feature engineering task - 1
 2024-12-21 - Pushed initial dataset pipeline - 2
 2024-12-21 - Fixed off by one error in loader - 3
+2024-12-21 - Tuned hyperparameters for model - 4
