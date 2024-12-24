@@ -6318,3 +6318,4 @@
 2024-12-24 - Updated documentation - 16
 2024-12-24 - Refactored training loop - 17
 2024-12-24 - Tuned hyperparameters for model - 18
+2024-12-24 - Implemented feature extraction - 19
