@@ -6306,3 +6306,4 @@
 2024-12-24 - Implemented early stopping callback - 4
 2024-12-24 - Refactored training loop - 5
 2024-12-24 - Optimized batch processing - 6
+2024-12-24 - Fixed off by one error in loader - 7
