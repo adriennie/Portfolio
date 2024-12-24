@@ -6308,3 +6308,4 @@
 2024-12-24 - Optimized batch processing - 6
 2024-12-24 - Fixed off by one error in loader - 7
 2024-12-24 - Wrote integration tests - 8
+2024-12-24 - Completed EDA notebook - 9
