@@ -1585,3 +1585,4 @@
 2024-12-22 - Tuned hyperparameters for model - 8
 2024-12-23 - Resolved failing test cases - 1
 2024-12-24 - Updated environment dependencies - 1
+2024-12-24 - Cleaned up deprecated functions - 2
