@@ -6336,3 +6336,4 @@
 2024-12-25 - Added unit tests for API - 15
 2024-12-25 - Added logging to inference script - 16
 2024-12-25 - Tuned hyperparameters for model - 17
+2024-12-25 - Completed EDA notebook - 18
