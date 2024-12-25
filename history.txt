@@ -6334,3 +6334,4 @@
 2024-12-25 - Deployed hotfix to staging - 13
 2024-12-25 - Pushed initial dataset pipeline - 14
 2024-12-25 - Added unit tests for API - 15
+2024-12-25 - Added logging to inference script - 16
