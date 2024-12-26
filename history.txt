@@ -1597,3 +1597,4 @@
 2024-12-26 - Implemented early stopping callback - 2
 2024-12-26 - Added logging to inference script - 3
 2024-12-26 - Optimized batch processing - 4
+2024-12-26 - Merged dev branch into main - 5
