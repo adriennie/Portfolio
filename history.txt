@@ -6349,3 +6349,4 @@
 2024-12-26 - Cleaned up deprecated functions - 8
 2024-12-26 - Integrated third party library - 9
 2024-12-26 - Wrote integration tests - 10
+2024-12-26 - Resolved failing test cases - 11
