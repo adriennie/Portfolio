@@ -1600,3 +1600,4 @@
 2024-12-26 - Merged dev branch into main - 5
 2024-12-27 - Updated model evaluation metrics - 1
 2024-12-27 - Pushed initial dataset pipeline - 2
+2024-12-27 - Implemented early stopping callback - 3
