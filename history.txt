@@ -6375,3 +6375,4 @@
 2024-12-29 - Resolved merge conflict - 1
 2024-12-29 - Fixed off by one error in loader - 2
 2024-12-29 - Implemented early stopping callback - 3
+2024-12-29 - Resolved failing test cases - 4
