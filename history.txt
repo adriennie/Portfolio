@@ -6373,3 +6373,4 @@
 2024-12-28 - Merged dev branch into main - 9
 2024-12-28 - Optimized batch processing - 10
 2024-12-29 - Resolved merge conflict - 1
+2024-12-29 - Fixed off by one error in loader - 2
