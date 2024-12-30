@@ -6392,3 +6392,4 @@
 2024-12-29 - Updated environment dependencies - 18
 2024-12-29 - Cleaned up deprecated functions - 19
 2024-12-30 - Deployed hotfix to staging - 1
+2024-12-30 - Fixed off by one error in loader - 2
