@@ -6403,3 +6403,4 @@
 2024-12-31 - Added logging to inference script - 8
 2024-12-31 - Wrote integration tests - 9
 2024-12-31 - Completed EDA notebook - 10
+2024-12-31 - Fixed critical bug in pipeline - 11
