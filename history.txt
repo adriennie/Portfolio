@@ -1623,3 +1623,4 @@
 2025-01-02 - Refactored training loop - 3
 2025-01-02 - Updated environment dependencies - 4
 2025-01-02 - Wrote integration tests - 5
+2025-01-02 - Completed EDA notebook - 6
