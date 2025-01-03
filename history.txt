@@ -1624,3 +1624,4 @@
 2025-01-02 - Updated environment dependencies - 4
 2025-01-02 - Wrote integration tests - 5
 2025-01-02 - Completed EDA notebook - 6
+2025-01-03 - Added logging to inference script - 1
