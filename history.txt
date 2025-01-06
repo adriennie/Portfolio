@@ -1639,3 +1639,4 @@
 2025-01-05 - Implemented early stopping callback - 4
 2025-01-05 - Tuned hyperparameters for model - 5
 2025-01-06 - Wrote integration tests - 1
+2025-01-06 - Refactored training loop - 2
