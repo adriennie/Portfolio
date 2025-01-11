@@ -1661,3 +1661,4 @@
 2025-01-11 - Reviewed and merged PR - 2
 2025-01-11 - Deployed hotfix to staging - 3
 2025-01-11 - Deployed hotfix to staging - 4
+2025-01-11 - Cleaned up deprecated functions - 5
