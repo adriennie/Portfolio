@@ -1680,3 +1680,4 @@
 2025-01-14 - Implemented early stopping callback - 5
 2025-01-14 - Completed EDA notebook - 6
 2025-01-14 - Refactored data preprocessing module - 7
+2025-01-14 - Implemented feature extraction - 8
