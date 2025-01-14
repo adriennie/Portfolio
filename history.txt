@@ -1675,3 +1675,4 @@
 2025-01-13 - Deployed hotfix to staging - 8
 2025-01-14 - Added logging to inference script - 1
 2025-01-14 - Completed sprint review changes - 2
+2025-01-14 - Fixed off by one error in loader - 3
