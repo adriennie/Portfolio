@@ -1673,3 +1673,4 @@
 2025-01-13 - Integrated third party library - 6
 2025-01-13 - Fixed data leakage in validation - 7
 2025-01-13 - Deployed hotfix to staging - 8
+2025-01-14 - Added logging to inference script - 1
