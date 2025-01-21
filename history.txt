@@ -1717,3 +1717,4 @@
 2025-01-20 - Worked on authentication module - 7
 2025-01-20 - Added logging to inference script - 8
 2025-01-21 - Resolved failing test cases - 1
+2025-01-21 - Wrote integration tests - 2
