@@ -1720,3 +1720,4 @@
 2025-01-21 - Wrote integration tests - 2
 2025-01-22 - Implemented early stopping callback - 1
 2025-01-22 - Refactored data preprocessing module - 2
+2025-01-22 - Tuned hyperparameters for model - 3
