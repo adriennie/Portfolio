@@ -1725,3 +1725,4 @@
 2025-01-22 - Added unit tests for API - 5
 2025-01-22 - Added unit tests for API - 6
 2025-01-23 - Added logging to inference script - 1
+2025-01-23 - Integrated third party library - 2
