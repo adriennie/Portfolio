@@ -1737,3 +1737,4 @@
 2025-01-24 - Completed code review - 4
 2025-01-24 - Added logging to inference script - 5
 2025-01-24 - Completed model training script - 6
+2025-01-24 - Fixed off by one error in loader - 7
