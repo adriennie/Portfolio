@@ -1746,3 +1746,4 @@
 2025-01-25 - Implemented early stopping callback - 5
 2025-01-25 - Wrote integration tests - 6
 2025-01-25 - Pushed initial dataset pipeline - 7
+2025-01-26 - Merged dev branch into main - 1
