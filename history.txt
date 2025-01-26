@@ -1750,3 +1750,4 @@
 2025-01-26 - Added unit tests for API - 2
 2025-01-26 - Updated model evaluation metrics - 3
 2025-01-26 - Refactored data preprocessing module - 4
+2025-01-26 - Completed EDA notebook - 5
