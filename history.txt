@@ -1779,3 +1779,4 @@
 2025-02-03 - Refactored training loop - 7
 2025-02-03 - Wrote integration tests - 8
 2025-02-04 - Implemented early stopping callback - 1
+2025-02-04 - Resolved failing test cases - 2
