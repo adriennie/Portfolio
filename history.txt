@@ -1784,3 +1784,4 @@
 2025-02-04 - Fixed critical bug in pipeline - 4
 2025-02-04 - Wrote integration tests - 5
 2025-02-05 - Completed model training script - 1
+2025-02-05 - Refactored training loop - 2
