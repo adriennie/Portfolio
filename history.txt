@@ -1790,3 +1790,4 @@
 2025-02-05 - Tuned hyperparameters for model - 5
 2025-02-05 - Integrated third party library - 6
 2025-02-05 - Implemented early stopping callback - 7
+2025-02-05 - Added unit tests for API - 8
