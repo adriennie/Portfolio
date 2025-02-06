@@ -1793,3 +1793,4 @@
 2025-02-05 - Added unit tests for API - 8
 2025-02-06 - Merged dev branch into main - 1
 2025-02-06 - Updated environment dependencies - 2
+2025-02-06 - Implemented early stopping callback - 3
