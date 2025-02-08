@@ -1796,3 +1796,4 @@
 2025-02-06 - Implemented early stopping callback - 3
 2025-02-06 - Updated documentation - 4
 2025-02-07 - Wrote integration tests - 1
+2025-02-08 - Merged dev branch into main - 1
