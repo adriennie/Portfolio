@@ -1804,3 +1804,4 @@
 2025-02-08 - Fixed off by one error in loader - 6
 2025-02-09 - Merged dev branch into main - 1
 2025-02-09 - Deployed hotfix to staging - 2
+2025-02-09 - Added logging to inference script - 3
