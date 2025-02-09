@@ -1806,3 +1806,4 @@
 2025-02-09 - Deployed hotfix to staging - 2
 2025-02-09 - Added logging to inference script - 3
 2025-02-09 - Worked on authentication module - 4
+2025-02-09 - Fixed data leakage in validation - 5
