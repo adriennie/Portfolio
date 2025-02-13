@@ -1824,3 +1824,4 @@
 2025-02-13 - Updated documentation - 2
 2025-02-13 - Refactored data preprocessing module - 3
 2025-02-13 - Completed model training script - 4
+2025-02-13 - Completed EDA notebook - 5
