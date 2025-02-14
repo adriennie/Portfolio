@@ -1830,3 +1830,4 @@
 2025-02-13 - Updated model evaluation metrics - 8
 2025-02-14 - Pushed initial dataset pipeline - 1
 2025-02-14 - Integrated third party library - 2
+2025-02-14 - Resolved failing test cases - 3
