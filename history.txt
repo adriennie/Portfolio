@@ -1881,3 +1881,4 @@
 2025-02-22 - Implemented feature extraction - 7
 2025-02-22 - Worked on authentication module - 8
 2025-02-23 - Worked on authentication module - 1
+2025-02-24 - Added logging to inference script - 1
