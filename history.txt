@@ -1884,3 +1884,4 @@
 2025-02-24 - Added logging to inference script - 1
 2025-02-24 - Completed EDA notebook - 2
 2025-02-25 - Updated documentation - 1
+2025-02-25 - Cleaned up deprecated functions - 2
