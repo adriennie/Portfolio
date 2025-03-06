@@ -1927,3 +1927,4 @@
 2025-03-06 - Updated environment dependencies - 3
 2025-03-06 - Added logging to inference script - 4
 2025-03-06 - Implemented feature extraction - 5
+2025-03-06 - Completed EDA notebook - 6
