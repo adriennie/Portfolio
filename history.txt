@@ -1954,3 +1954,4 @@
 2025-03-11 - Fixed data leakage in validation - 1
 2025-03-11 - Completed EDA notebook - 2
 2025-03-12 - Fixed off by one error in loader - 1
+2025-03-12 - Fixed critical bug in pipeline - 2
