@@ -1962,3 +1962,4 @@
 2025-03-13 - Resolved failing test cases - 1
 2025-03-13 - Added unit tests for API - 2
 2025-03-13 - Integrated third party library - 3
+2025-03-13 - Added logging to inference script - 4
