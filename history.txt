@@ -1975,3 +1975,4 @@
 2025-03-16 - Resolved merge conflict - 3
 2025-03-16 - Pushed initial dataset pipeline - 4
 2025-03-16 - Cleaned up deprecated functions - 5
+2025-03-16 - Resolved failing test cases - 6
