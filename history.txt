@@ -1992,3 +1992,4 @@
 2025-03-19 - Wrote integration tests - 3
 2025-03-19 - Completed EDA notebook - 4
 2025-03-19 - Integrated third party library - 5
+2025-03-20 - Updated model evaluation metrics - 1
