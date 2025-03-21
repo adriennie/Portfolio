@@ -1999,3 +1999,4 @@
 2025-03-21 - Added logging to inference script - 1
 2025-03-21 - Updated model evaluation metrics - 2
 2025-03-21 - Updated documentation - 3
+2025-03-21 - Completed sprint review changes - 4
