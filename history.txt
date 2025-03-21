@@ -1996,3 +1996,4 @@
 2025-03-20 - Cleaned up deprecated functions - 2
 2025-03-20 - Updated model evaluation metrics - 3
 2025-03-20 - Reviewed and merged PR - 4
+2025-03-21 - Added logging to inference script - 1
