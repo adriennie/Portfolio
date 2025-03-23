@@ -2014,3 +2014,4 @@
 2025-03-23 - Integrated third party library - 3
 2025-03-23 - Refactored data preprocessing module - 4
 2025-03-23 - Pushed initial dataset pipeline - 5
+2025-03-23 - Implemented feature extraction - 6
