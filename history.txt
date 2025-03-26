@@ -2027,3 +2027,4 @@
 2025-03-26 - Resolved failing test cases - 3
 2025-03-26 - Completed model training script - 4
 2025-03-26 - Completed EDA notebook - 5
+2025-03-26 - Wrote integration tests - 6
