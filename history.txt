@@ -2031,3 +2031,4 @@
 2025-03-26 - Reviewed and merged PR - 7
 2025-03-27 - Worked on authentication module - 1
 2025-03-27 - Tuned hyperparameters for model - 2
+2025-03-27 - Fixed data leakage in validation - 3
