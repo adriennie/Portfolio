@@ -2042,3 +2042,4 @@
 2025-03-28 - Reviewed and merged PR - 5
 2025-03-28 - Fixed critical bug in pipeline - 6
 2025-03-28 - Merged dev branch into main - 7
+2025-03-29 - Refactored training loop - 1
