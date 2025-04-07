@@ -2077,3 +2077,4 @@
 2025-04-07 - Added logging to inference script - 1
 2025-04-07 - Wrote integration tests - 2
 2025-04-07 - Deployed hotfix to staging - 3
+2025-04-07 - Implemented early stopping callback - 4
