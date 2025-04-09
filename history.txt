@@ -2079,3 +2079,4 @@
 2025-04-07 - Deployed hotfix to staging - 3
 2025-04-07 - Implemented early stopping callback - 4
 2025-04-08 - Updated model evaluation metrics - 1
+2025-04-09 - Fixed data leakage in validation - 1
