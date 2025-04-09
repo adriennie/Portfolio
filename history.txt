@@ -2084,3 +2084,4 @@
 2025-04-09 - Merged dev branch into main - 3
 2025-04-09 - Refactored data preprocessing module - 4
 2025-04-09 - Added logging to inference script - 5
+2025-04-09 - Implemented early stopping callback - 6
