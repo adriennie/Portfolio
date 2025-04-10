@@ -2094,3 +2094,4 @@
 2025-04-10 - Merged dev branch into main - 5
 2025-04-10 - Added logging to inference script - 6
 2025-04-10 - Worked on authentication module - 7
+2025-04-10 - Tuned hyperparameters for model - 8
