@@ -2104,3 +2104,4 @@
 2025-04-12 - Deployed hotfix to staging - 2
 2025-04-12 - Worked on authentication module - 3
 2025-04-12 - Wrote integration tests - 4
+2025-04-12 - Added logging to inference script - 5
