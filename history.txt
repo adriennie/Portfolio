@@ -2107,3 +2107,4 @@
 2025-04-12 - Added logging to inference script - 5
 2025-04-13 - Completed EDA notebook - 1
 2025-04-13 - Updated environment dependencies - 2
+2025-04-13 - Refactored training loop - 3
