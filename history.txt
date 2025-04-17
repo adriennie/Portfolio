@@ -2122,3 +2122,4 @@
 2025-04-15 - Refactored training loop - 6
 2025-04-15 - Cleaned up deprecated functions - 7
 2025-04-16 - Updated documentation - 1
+2025-04-17 - Fixed data leakage in validation - 1
