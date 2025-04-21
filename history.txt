@@ -2146,3 +2146,4 @@
 2025-04-21 - Merged dev branch into main - 4
 2025-04-21 - Refactored training loop - 5
 2025-04-21 - Updated environment dependencies - 6
+2025-04-21 - Wrote integration tests - 7
