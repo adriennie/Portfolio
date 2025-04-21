@@ -2143,3 +2143,4 @@
 2025-04-21 - Wrote integration tests - 1
 2025-04-21 - Added logging to inference script - 2
 2025-04-21 - Refactored training loop - 3
+2025-04-21 - Merged dev branch into main - 4
