@@ -2161,3 +2161,4 @@
 2025-04-24 - Pushed initial dataset pipeline - 2
 2025-04-24 - Refactored data preprocessing module - 3
 2025-04-24 - Tuned hyperparameters for model - 4
+2025-04-24 - Updated environment dependencies - 5
