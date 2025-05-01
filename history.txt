@@ -2183,3 +2183,4 @@
 2025-05-01 - Optimized batch processing - 1
 2025-05-01 - Updated documentation - 2
 2025-05-01 - Implemented early stopping callback - 3
+2025-05-01 - Wrote integration tests - 4
