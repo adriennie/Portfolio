@@ -2182,3 +2182,4 @@
 2025-04-30 - Merged dev branch into main - 1
 2025-05-01 - Optimized batch processing - 1
 2025-05-01 - Updated documentation - 2
+2025-05-01 - Implemented early stopping callback - 3
