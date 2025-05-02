@@ -2189,3 +2189,4 @@
 2025-05-02 - Integrated third party library - 3
 2025-05-02 - Tuned hyperparameters for model - 4
 2025-05-02 - Tuned hyperparameters for model - 5
+2025-05-02 - Updated model evaluation metrics - 6
