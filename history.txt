@@ -2195,3 +2195,4 @@
 2025-05-03 - Fixed critical bug in pipeline - 1
 2025-05-03 - Added logging to inference script - 2
 2025-05-03 - Pushed initial dataset pipeline - 3
+2025-05-03 - Implemented early stopping callback - 4
