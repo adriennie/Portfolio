@@ -2193,3 +2193,4 @@
 2025-05-02 - Added unit tests for API - 7
 2025-05-02 - Updated model evaluation metrics - 8
 2025-05-03 - Fixed critical bug in pipeline - 1
+2025-05-03 - Added logging to inference script - 2
