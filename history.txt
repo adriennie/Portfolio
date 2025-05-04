@@ -2198,3 +2198,4 @@
 2025-05-03 - Implemented early stopping callback - 4
 2025-05-03 - Updated documentation - 5
 2025-05-04 - Completed sprint review changes - 1
+2025-05-04 - Fixed data leakage in validation - 2
