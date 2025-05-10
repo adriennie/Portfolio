@@ -2223,3 +2223,4 @@
 2025-05-09 - Refactored data preprocessing module - 1
 2025-05-10 - Fixed off by one error in loader - 1
 2025-05-10 - Added logging to inference script - 2
+2025-05-10 - Added unit tests for API - 3
