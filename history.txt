@@ -2225,3 +2225,4 @@
 2025-05-10 - Added logging to inference script - 2
 2025-05-10 - Added unit tests for API - 3
 2025-05-10 - Completed EDA notebook - 4
+2025-05-10 - Tuned hyperparameters for model - 5
