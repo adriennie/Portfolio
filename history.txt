@@ -2226,3 +2226,4 @@
 2025-05-10 - Added unit tests for API - 3
 2025-05-10 - Completed EDA notebook - 4
 2025-05-10 - Tuned hyperparameters for model - 5
+2025-05-11 - Updated environment dependencies - 1
