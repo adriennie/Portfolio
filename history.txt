@@ -2249,3 +2249,4 @@
 2025-05-15 - Fixed critical bug in pipeline - 1
 2025-05-16 - Tuned hyperparameters for model - 1
 2025-05-16 - Updated environment dependencies - 2
+2025-05-16 - Fixed data leakage in validation - 3
