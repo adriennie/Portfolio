@@ -2255,3 +2255,4 @@
 2025-05-17 - Finished feature engineering task - 3
 2025-05-17 - Implemented early stopping callback - 4
 2025-05-18 - Fixed off by one error in loader - 1
+2025-05-19 - Refactored training loop - 1
