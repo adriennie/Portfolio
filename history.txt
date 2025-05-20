@@ -2258,3 +2258,4 @@
 2025-05-19 - Refactored training loop - 1
 2025-05-19 - Cleaned up deprecated functions - 2
 2025-05-19 - Reviewed and merged PR - 3
+2025-05-20 - Fixed data leakage in validation - 1
