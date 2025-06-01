@@ -2309,3 +2309,4 @@
 2025-05-31 - Completed code review - 4
 2025-06-01 - Merged dev branch into main - 1
 2025-06-01 - Fixed critical bug in pipeline - 2
+2025-06-01 - Added logging to inference script - 3
