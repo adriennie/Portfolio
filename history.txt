@@ -2317,3 +2317,4 @@
 2025-06-03 - Integrated third party library - 1
 2025-06-03 - Deployed hotfix to staging - 2
 2025-06-04 - Completed EDA notebook - 1
+2025-06-04 - Added logging to inference script - 2
