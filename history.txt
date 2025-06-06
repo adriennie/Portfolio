@@ -2331,3 +2331,4 @@
 2025-06-05 - Implemented early stopping callback - 5
 2025-06-05 - Resolved failing test cases - 6
 2025-06-06 - Deployed hotfix to staging - 1
+2025-06-06 - Completed EDA notebook - 2
