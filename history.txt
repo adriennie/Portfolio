@@ -2378,3 +2378,4 @@
 2025-06-14 - Refactored training loop - 3
 2025-06-14 - Resolved merge conflict - 4
 2025-06-14 - Pushed initial dataset pipeline - 5
+2025-06-14 - Added logging to inference script - 6
