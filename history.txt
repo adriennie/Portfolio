@@ -2387,3 +2387,4 @@
 2025-06-15 - Implemented early stopping callback - 5
 2025-06-15 - Fixed off by one error in loader - 6
 2025-06-15 - Pushed initial dataset pipeline - 7
+2025-06-15 - Resolved failing test cases - 8
