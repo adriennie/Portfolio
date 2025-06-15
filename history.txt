@@ -2381,3 +2381,4 @@
 2025-06-14 - Added logging to inference script - 6
 2025-06-14 - Completed code review - 7
 2025-06-15 - Updated environment dependencies - 1
+2025-06-15 - Implemented feature extraction - 2
