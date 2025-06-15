@@ -2385,3 +2385,4 @@
 2025-06-15 - Finished feature engineering task - 3
 2025-06-15 - Tuned hyperparameters for model - 4
 2025-06-15 - Implemented early stopping callback - 5
+2025-06-15 - Fixed off by one error in loader - 6
