@@ -2395,3 +2395,4 @@
 2025-06-16 - Fixed data leakage in validation - 5
 2025-06-17 - Completed sprint review changes - 1
 2025-06-17 - Added logging to inference script - 2
+2025-06-17 - Completed EDA notebook - 3
