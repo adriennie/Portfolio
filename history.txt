@@ -2443,3 +2443,4 @@
 2025-06-28 - Completed code review - 5
 2025-06-28 - Added logging to inference script - 6
 2025-06-29 - Completed EDA notebook - 1
+2025-06-29 - Completed sprint review changes - 2
