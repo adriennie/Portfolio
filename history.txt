@@ -2448,3 +2448,4 @@
 2025-06-30 - Completed model training script - 2
 2025-06-30 - Reviewed and merged PR - 3
 2025-06-30 - Completed EDA notebook - 4
+2025-06-30 - Cleaned up deprecated functions - 5
