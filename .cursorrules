@@ -1,0 +1,58 @@
+# AI Coding Rules
+
+> For Cursor, GitHub Copilot, and Gemini Code Assist on this repo.
+
+This project is an autonomous research assistant: FastAPI backend, React 18 + Vite frontend, LangChain orchestration, Claude tool_use calls, Qdrant storage, and async search against arXiv and Semantic Scholar.
+
+## Core Rules
+
+- Prefer small, local changes over broad refactors.
+- Keep type hints on new or modified Python code; preserve mypy-friendly signatures.
+- Use async-first I/O everywhere: `httpx.AsyncClient` for HTTP, `async def` for endpoints and services, and `asyncio.to_thread()` for CPU-bound work.
+- Never add `requests` to async code paths.
+- Wrap external API calls with retry logic, using `tenacity` with exponential backoff.
+- Read required configuration from environment variables or config objects; do not hard-code secrets or operational limits.
+- Keep token limits, paper counts, timeouts, and batch sizes configurable unless the code already establishes a safe constant.
+- Cache repeated work when the same paper or session input can produce the same result.
+
+## Backend Rules
+
+- FastAPI endpoints should define `response_model` and `status_code`.
+- Keep background agent work explicit and await it in the request lifecycle unless the code already uses a dedicated task runner.
+- Add request ID tracing middleware when touching API entry points.
+- Validate all user input with Pydantic models before it reaches search, ranking, embedding, or Claude calls.
+- Keep agent tools single-purpose. Search, ranking, clustering, extraction, and synthesis should remain separate functions.
+- Truncate paper text before Claude calls and before embedding when the code path expects summaries or abstracts only.
+- Use structured JSON outputs for model-driven extraction instead of free-form text whenever the result will be consumed by code.
+- Keep Qdrant operations explicit: collection config, bounded searches, and payloads on upsert.
+
+## Frontend Rules
+
+- Use React functional components only.
+- Use Zustand for shared agent state; do not introduce Redux or React Context for cross-component session state.
+- Keep the wide-screen layout pattern already established in the repo.
+- Use Tailwind utility classes instead of inline styles.
+- Render a loading skeleton while the agent is running.
+- Wrap output rendering in an error boundary so a bad markdown render does not crash the app.
+- Use `EventSource` for streaming progress updates and close the stream on complete or error.
+
+## Testing Rules
+
+- Add or update tests when behavior changes.
+- Mock HTTP calls and Claude responses in unit tests.
+- Keep tests async where the code under test is async.
+- Do not introduce live API calls in CI.
+- Favor targeted tests for the touched module or behavior instead of broad snapshots.
+
+## Assistant-Specific Guidance
+
+- Cursor: inspect nearby code before editing, and avoid multi-file refactors unless the change truly requires them.
+- GitHub Copilot: accept async completions only after checking they do not introduce blocking calls or new sync HTTP.
+- Gemini Code Assist: when explaining a change, note any Claude token-budget impact if the change affects prompts, batching, or output size.
+
+## Practical Constraints
+
+- Do not log secrets, raw paper content, or user research topics at info level.
+- Preserve per-session isolation for embeddings and review state.
+- Prefer `asyncio.gather()` for independent concurrent calls such as arXiv and Semantic Scholar search.
+- Keep prompt templates and model settings consistent with the repo unless the user explicitly asks for a change.
