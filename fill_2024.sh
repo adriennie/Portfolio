@@ -42,7 +42,7 @@ for month in $(seq 1 12); do
         d_epoch=$(date -j -f "%Y-%m-%d" "$date_str" +%s 2>/dev/null)
         if [ -z "$d_epoch" ]; then continue; fi
 
-        count=$(( RANDOM % 8 + 1 ))
+        count=$(( RANDOM % 19 + 2 ))
         for j in $(seq 1 $count); do
             t=$(( d_epoch + j * 60 ))
             d=$(date -r "$t" +%Y-%m-%dT%H:%M:%S)
