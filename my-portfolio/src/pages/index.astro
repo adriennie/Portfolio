@@ -1,0 +1,37 @@
+---
+import PortfolioGrid from '../components/PortfolioGrid.jsx';
+import '../styles/global.css';
+---
+
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}/favicon.svg`} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Adrika Pradhan | Portfolio</title>
+		<meta name="description" content="Adrika Pradhan is an M.Sc. Artificial Intelligence student at USI Lugano, focused on LLM systems, applied machine learning, and scientific data." />
+		<meta name="theme-color" content="#06080f" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Adrika Pradhan | AI Engineer & Researcher" />
+		<meta property="og:description" content="Projects and research in LLM systems, applied machine learning, and scientific data." />
+		<meta property="og:image" content="https://github.com/adriennie.png" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Adrika Pradhan | AI Engineer & Researcher" />
+		<meta name="twitter:description" content="Projects and research in LLM systems, applied machine learning, and scientific data." />
+		<meta name="twitter:image" content="https://github.com/adriennie.png" />
+		<script is:inline>
+			const navigationEntry = performance.getEntriesByType('navigation')[0];
+			if (navigationEntry?.type === 'reload') {
+				if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+				if (location.hash) history.replaceState(history.state, '', `${location.pathname}${location.search}`);
+				window.addEventListener('pageshow', () => window.scrollTo(0, 0), { once: true });
+			}
+		</script>
+	</head>
+	<body class="bg-[#06080F] text-slate-100 antialiased selection:bg-pink-500/30 selection:text-pink-200 min-h-screen">
+		<main>
+			<PortfolioGrid client:load />
+		</main>
+	</body>
+</html>

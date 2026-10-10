@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@theme {
+	--font-sans: "Inter", "Avenir Next", Avenir, "Segoe UI", sans-serif;
+	--font-mono: "SFMono-Regular", "Cascadia Code", "Roboto Mono", Consolas, monospace;
+}
+
+@layer base {
+	:root {
+		color-scheme: dark;
+		font-family: var(--font-sans);
+		font-synthesis: none;
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	html {
+		min-width: 320px;
+		background: #06080f;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		min-width: 320px;
+		min-height: 100vh;
+		margin: 0;
+		overflow-x: hidden;
+		background:
+			radial-gradient(circle at 80% 0%, rgba(219, 39, 119, 0.08), transparent 28rem),
+			radial-gradient(circle at 10% 100%, rgba(14, 165, 233, 0.06), transparent 24rem),
+			#06080f;
+		color: #f8fafc;
+		font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+	}
+
+	body::before {
+		position: fixed;
+		inset: 0;
+		z-index: -1;
+		pointer-events: none;
+		background-image: linear-gradient(rgba(148, 163, 184, 0.035) 1px, transparent 1px);
+		background-size: 100% 4rem;
+		content: "";
+		mask-image: linear-gradient(to bottom, black, transparent 78%);
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	:focus-visible {
+		outline: 2px solid #f472b6;
+		outline-offset: 4px;
+	}
+
+	code,
+	pre,
+	kbd,
+	samp {
+		font-family: var(--font-mono);
+	}
+
+	img,
+	svg {
+		display: block;
+		max-width: 100%;
+	}
+
+	::selection {
+		background: rgba(236, 72, 153, 0.3);
+		color: #fbcfe8;
+	}
+}
+
+@layer utilities {
+	.font-mono {
+		font-family: var(--font-mono);
+	}
+}
+
+::-webkit-scrollbar {
+	width: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+	background: #06080f;
+}
+
+::-webkit-scrollbar-thumb {
+	border: 2px solid #06080f;
+	border-radius: 999px;
+	background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #db2777;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+@media (max-width: 640px) {
+	body::before {
+		background-size: 100% 3rem;
+	}
+
+	input:not([type="range"]),
+	textarea,
+	select {
+		font-size: 16px !important;
+	}
+
+	details summary {
+		min-height: 44px;
+	}
+
+	:target {
+		scroll-margin-top: 6rem;
+	}
+}
+
+.contact-message {
+	scrollbar-width: none;
+}
+
+.contact-message::-webkit-scrollbar {
+	display: none;
+}
+
+.site-navigation {
+	position: sticky;
+}
+
+.skip-link {
+	position: fixed;
+	top: 8px;
+	left: 8px;
+	z-index: 100;
+	transform: translateY(-160%);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 12px;
+	background: #111521;
+	padding: 10px 14px;
+	color: #fff;
+	font-size: 14px;
+	transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+	transform: translateY(0);
+}
+
