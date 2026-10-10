@@ -195,18 +195,41 @@ export default function PortfolioGrid() {
 
   useEffect(() => setSelectedCommand(0), [paletteQuery]);
 
-  const runPaletteCommand = (item) => {
+  const navigateToSection = (event, section) => {
+    event?.preventDefault();
+    const overlayWasOpen = isMobileMenuOpen || isPaletteOpen;
+    setIsMobileMenuOpen(false);
     setIsPaletteOpen(false);
+    setActiveNav(section);
+
+    const hash = `#${section}`;
+    if (window.location.hash !== hash) window.history.pushState(window.history.state, '', hash);
+
+    const scrollToSection = () => {
+      document.getElementById(section)?.scrollIntoView({
+        behavior: reducedMotion ? 'auto' : 'smooth',
+        block: 'start',
+      });
+    };
+
+    if (overlayWasOpen) {
+      window.requestAnimationFrame(() => window.requestAnimationFrame(scrollToSection));
+    } else {
+      scrollToSection();
+    }
+  };
+
+  const runPaletteCommand = (item) => {
     if (item.action === 'resume') {
+      setIsPaletteOpen(false);
       setIsResumeOpen(true);
       return;
     }
     if (item.href.startsWith('#')) {
-      const section = item.href.slice(1);
-      setActiveNav(section);
-      document.querySelector(item.href)?.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
+      navigateToSection(null, item.href.slice(1));
       return;
     }
+    setIsPaletteOpen(false);
     window.location.assign(item.href);
   };
 
@@ -286,7 +309,7 @@ export default function PortfolioGrid() {
               <a 
                 key={tab} 
                 href={`#${tab}`}
-                onClick={() => { setActiveNav(tab); setIsMobileMenuOpen(false); }}
+                onClick={(event) => navigateToSection(event, tab)}
                 aria-current={activeNav === tab ? 'location' : undefined}
                 className={`uppercase transition-colors duration-200 hover:text-pink-200 ${activeNav === tab ? 'text-white font-bold' : 'text-slate-300'}`}
               >
@@ -384,7 +407,7 @@ export default function PortfolioGrid() {
                   <motion.a
                     key={tab}
                     href={`#${tab}`}
-                    onClick={() => { setActiveNav(tab); setIsMobileMenuOpen(false); }}
+                    onClick={(event) => navigateToSection(event, tab)}
                     aria-current={activeNav === tab ? 'location' : undefined}
                     initial={reducedMotion ? false : { opacity: 0, x: -12 }}
                     animate={{ opacity: 1, x: 0 }}
