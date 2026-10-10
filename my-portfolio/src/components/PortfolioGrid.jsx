@@ -669,7 +669,7 @@ export default function PortfolioGrid() {
         </section>
 
         {/* SECTION: SKILLS */}
-        <section id="skills" className="space-y-12 pt-12">
+        <section id="skills" className="space-y-12 pt-12 scroll-mt-28">
           <div className="max-w-3xl space-y-2">
             <h2 className="text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
               🌸 {t('Core', 'Zentrale')} <span className="text-pink-400">{t('Skills', 'Kenntnisse')}</span> 🌸
@@ -692,7 +692,7 @@ export default function PortfolioGrid() {
         </section>
 
         {/* SECTION: CERTIFICATES & ACHIEVEMENTS */}
-        <section id="certificates" className="space-y-12 pt-12">
+        <section id="certificates" className="space-y-12 pt-12 scroll-mt-28">
           <div className="max-w-3xl space-y-2">
             <h2 className="text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
               🌸 {t('Certificates &', 'Zertifikate &')} <span className="text-pink-400">{t('Achievements', 'Auszeichnungen')}</span> 🌸
@@ -728,7 +728,7 @@ export default function PortfolioGrid() {
         </section>
 
         {/* SECTION: PROJECTS (Chronological Order) */}
-        <section id="projects" className="space-y-12 pt-12">
+        <section id="projects" className="space-y-12 pt-12 scroll-mt-28">
           <div className="max-w-3xl space-y-2">
             <h2 className="text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
               🌸 {t('Selected', 'Ausgewählte')} <span className="text-pink-400">{t('Projects', 'Projekte')}</span> 🌸
@@ -859,7 +859,7 @@ export default function PortfolioGrid() {
         </section>
 
         {/* SECTION: CONTACT */}
-        <section id="contact" className="space-y-12 pt-12">
+        <section id="contact" className="space-y-12 pt-12 scroll-mt-28">
           <div className="max-w-3xl space-y-2">
             <h2 className="text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
               🌸 {t('Contact Me', 'Kontaktiere mich')} 🌸
