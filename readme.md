@@ -1,4 +1,4 @@
-# Adrika Pradhan — Portfolio
+# Adrika Pradhan — AI Portfolio
 
 Personal portfolio for my work in artificial intelligence, machine learning, and practical AI systems. I’m an M.Sc. Artificial Intelligence student at Università della Svizzera italiana (USI) in Lugano, Switzerland.
 
