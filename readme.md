@@ -1,30 +1,66 @@
-To make your portfolio even more compelling as an M.Sc. AI student, here are a few advanced, highly engaging additions you can seamlessly integrate into your current layout:
+# Adrika Pradhan — AI Portfolio
 
-### 1. Interactive vLLM Throughput & Memory Playground
+Personal portfolio for my work in artificial intelligence, machine learning, and practical AI systems. I’m an M.Sc. Artificial Intelligence student at Università della Svizzera italiana (USI) in Lugano, Switzerland.
 
-Add a mini interactive widget directly onto your vLLM benchmark project card or deep-dive page.
+**Live site:** [adriennie.github.io/Portfolio](https://adriennie.github.io/Portfolio/)
 
-* **The Concept:** Let visitors use a slider to change batch sizes (e.g., from 1 to 32) and watch real-time simulated or benchmarked metrics update instantly (showing throughput jump to 877.69 tok/s and VRAM savings).
+## What’s here
 
+- Selected projects in LLM inference, LoRA adapters, scientific image processing, and applied ML.
+- Project pages with implementation details, results, limitations, and research artifacts where available.
+- A research console, skills and education sections, and contact links.
+- English and concise German language options.
+- Responsive layout, keyboard-accessible command palette (`⌘K` / `Ctrl+K`), and reduced-motion support.
+- Downloadable résumé.
 
-* **Why it shines:** It transforms static research metrics into a live, hands-on demonstration of your systems-level optimization skills.
+## Tech stack
 
-### 2. "Research Artifacts & Reproduction Badge"
+- [Astro](https://astro.build/) for static site generation
+- [React](https://react.dev/) for interactive components
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Framer Motion](https://www.framer.com/motion/) for UI animation
+- GitHub Pages and GitHub Actions for hosting and deployment
 
-For your astronomical denoising paper and vLLM ablation studies, add an explicit **Open Science & Artifacts** tag set:
+## Run locally
 
-* **Includes:** Links to raw evaluation CSVs, clear hardware specs (e.g., Tesla T4 constraints), and exact reproduction notebooks.
+Requires Node.js 22.12 or newer.
 
+```sh
+cd my-portfolio
+npm ci
+npm run dev
+```
 
-* **Why it shines:** It signals to academic research labs and rigorous engineering teams that your work adheres to strict scientific and reproducibility standards.
+The development server runs at `http://localhost:4321`.
 
-### 3. Engineering Trade-offs & Bottlenecks Log
+Build and preview the production site locally:
 
-Add a sleek collapsible section on your project detail pages titled **"Bottlenecks & Failure Modes"**.
+```sh
+npm run build
+npm run preview
+```
 
-* **The Concept:** Explicitly document real challenges you solved—such as handling KV-cache memory fragmentation, mapping Supabase Row-Level Security (RLS) constraints, or managing multi-adapter routing overhead via `LoraRequest`.
+## Deploy
 
+The workflow at `.github/workflows/deploy.yml` builds the Astro app from `my-portfolio/` and deploys `my-portfolio/dist/` to GitHub Pages when code is pushed to `main`. It can also be started manually from the repository’s **Actions** tab.
 
-* **Why it shines:** It proves senior-level engineering maturity, showing you don't just write code that works in a clean notebook, but understand how systems behave under production constraints.
+GitHub Pages must use **GitHub Actions** as its publishing source under **Settings → Pages**. The Astro configuration targets the project site path `/Portfolio/`.
 
-Would you like to build an interactive batch-size vs. throughput slider widget for your vLLM project card?
+> The repository can be private while its GitHub Pages site is public. Don’t include secrets or private information in the site or its build output.
+
+## Repository layout
+
+```text
+.
+├── .github/workflows/deploy.yml   # Build and deploy workflow
+└── my-portfolio/
+    ├── public/                    # Résumé, paper, favicon
+    ├── src/
+    │   ├── assets/                # Profile images and bundled assets
+    │   ├── components/            # Portfolio UI and interactive components
+    │   ├── data/                  # Project and timeline content
+    │   ├── pages/                 # Home and project detail routes
+    │   └── styles/                # Global styles
+    ├── astro.config.mjs
+    └── package.json
+```
