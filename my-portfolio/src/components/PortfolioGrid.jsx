@@ -79,7 +79,7 @@ export default function PortfolioGrid() {
   const [typedHeroTagline, setTypedHeroTagline] = useState('');
   const reducedMotion = useReducedMotion();
   const t = (english, german) => language === 'de' ? german : english;
-  const heroTagline = t('I build useful AI systems', 'Ich entwickle nützliche KI-Systeme');
+  const heroTagline = t('No one is better; some simply work smarter and harder.', 'Niemand ist besser; manche arbeiten einfach cleverer und härter.');
   const sectionLabels = language === 'de'
     ? { home: 'Start', about: 'Über mich', skills: 'Kenntnisse', certificates: 'Auszeichnungen', projects: 'Projekte', terminal: 'Konsole', contact: 'Kontakt' }
     : { home: 'Home', about: 'About', skills: 'Skills', certificates: 'Certificates', projects: 'Projects', terminal: 'Terminal', contact: 'Contact' };
