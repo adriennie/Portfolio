@@ -21,12 +21,20 @@ import '../styles/global.css';
 		<meta name="twitter:description" content="Projects and research in LLM systems, applied machine learning, and scientific data." />
 		<meta name="twitter:image" content="https://github.com/adriennie.png" />
 		<script is:inline>
-			const navigationEntry = performance.getEntriesByType('navigation')[0];
-			if (navigationEntry?.type === 'reload') {
-				if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-				if (location.hash) history.replaceState(history.state, '', `${location.pathname}${location.search}`);
-				window.addEventListener('pageshow', () => window.scrollTo(0, 0), { once: true });
-			}
+			// The portfolio should open at its introduction on every full page load.
+			// Section navigation still uses hashes while the app is already running.
+			if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+			if (location.hash) history.replaceState(history.state, '', `${location.pathname}${location.search}`);
+
+			const resetPageScroll = () => {
+				requestAnimationFrame(() => requestAnimationFrame(() => {
+					document.documentElement.style.scrollBehavior = 'auto';
+					window.scrollTo(0, 0);
+					document.documentElement.style.removeProperty('scroll-behavior');
+				}));
+			};
+			window.addEventListener('pageshow', resetPageScroll);
+			window.addEventListener('load', resetPageScroll, { once: true });
 		</script>
 	</head>
 	<body class="bg-[#06080F] text-slate-100 antialiased selection:bg-pink-500/30 selection:text-pink-200 min-h-screen">
