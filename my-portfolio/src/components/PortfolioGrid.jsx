@@ -89,6 +89,7 @@ export default function PortfolioGrid() {
     { label: t('Skills', 'Kenntnisse'), keywords: 'skills tools technology', href: '#skills' },
     { label: t('Certificates & achievements', 'Zertifikate & Auszeichnungen'), keywords: 'certificates awards', href: '#certificates' },
     { label: t('Projects', 'Projekte'), keywords: 'work portfolio', href: '#projects' },
+    { label: 'Log Triage Assistant', keywords: 'log triage anomaly detection observability trustworthy ai', href: `${BASE_URL}projects/log-triage` },
     { label: 'vLLM PagedAttention Benchmark', keywords: 'inference vllm benchmark', href: `${BASE_URL}projects/vllm-pagedattention-benchmark` },
     { label: 'vLLM LoRA Extension', keywords: 'lora adapter vllm', href: `${BASE_URL}projects/vllm-lora-extension` },
     { label: 'Swasthya Pharmacy Network', keywords: 'swasthya pharmacy health', href: `${BASE_URL}projects/swasthya` },
@@ -761,7 +762,31 @@ export default function PortfolioGrid() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             
-            {/* 1. vLLM PagedAttention Benchmark (2026) */}
+            {/* 1. Log Triage Assistant (2026) */}
+            <div className="group rounded-3xl border border-pink-400/30 bg-gradient-to-br from-pink-500/[0.09] via-[#0B0F1A]/90 to-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-400/60 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1">
+              <div className="space-y-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-[10px] font-mono text-pink-300 uppercase tracking-widest block">{t('RECENT · OBSERVABILITY (2026)', 'AKTUELL · OBSERVABILITY (2026)')}</span>
+                  <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-2 py-1 text-[9px] font-mono text-emerald-300">RESULTS LOGGED</span>
+                </div>
+                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors">Log Triage Assistant</h3>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  {t('Streaming anomaly detection with trace-aware logs and citation guardrails: 5,781.4 lines/s, 0% citation hallucination rate, and 93.1% lower feature-scoring memory.', 'Streaming-Anomalieerkennung mit Trace-aware Logs und Zitations-Guardrails: 5.781,4 Zeilen/s, 0 % Zitations-Halluzinationsrate und 93,1 % weniger Speicher beim Feature-Scoring.')}
+                </p>
+              </div>
+              <div className="pt-6 space-y-4">
+                <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300">
+                  <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">Python · FastAPI</span>
+                  <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">OpenTelemetry</span>
+                  <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">Drain3</span>
+                </div>
+                <a href={`${BASE_URL}projects/log-triage`} className="block text-center w-full py-2.5 rounded-xl text-xs font-mono font-bold bg-pink-500/10 text-pink-300 border border-pink-400/30 hover:bg-pink-500/20 transition-all">
+                  {t('View Results & Architecture ↗', 'Ergebnisse & Architektur ansehen ↗')}
+                </a>
+              </div>
+            </div>
+
+            {/* 2. vLLM PagedAttention Benchmark (2026) */}
             <div className="group rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-500/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1">
               <div className="space-y-3">
                 <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">{t('INFERENCE OPTIMIZATION (2026)', 'INFERENZOPTIMIERUNG (2026)')}</span>
@@ -782,7 +807,7 @@ export default function PortfolioGrid() {
               </div>
             </div>
 
-            {/* 2. vLLM LoRA Extension (2026) */}
+            {/* 3. vLLM LoRA Extension (2026) */}
             <div className="group rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-500/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1">
               <div className="space-y-3">
                 <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">PEFT & ADAPTER-ROUTING (2026)</span>
@@ -803,7 +828,7 @@ export default function PortfolioGrid() {
               </div>
             </div>
 
-            {/* 3. EcoShare (2026) */}
+            {/* 4. EcoShare (2026) */}
             <div className="group rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-500/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1">
               <div className="space-y-3">
                 <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">{t('COMMUNITY MARKETPLACE (2026)', 'COMMUNITY-MARKTPLATZ (2026)')}</span>
@@ -824,7 +849,7 @@ export default function PortfolioGrid() {
               </div>
             </div>
 
-            {/* 4. Swasthya (2025 - 2026) */}
+            {/* 5. Swasthya (2025 - 2026) */}
             <div className="group rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-500/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1">
               <div className="space-y-3">
                 <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">{t('PHARMACY NETWORK (2025 – 2026)', 'APOTHEKEN-NETZWERK (2025 – 2026)')}</span>
@@ -845,7 +870,7 @@ export default function PortfolioGrid() {
               </div>
             </div>
 
-            {/* 5. Astronomical Denoising Research (2024 - 2025) */}
+            {/* 6. Astronomical Denoising Research (2024 - 2025) */}
             <div className="group rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-500/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1 md:col-span-2">
               <div className="space-y-3">
                 <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">{t('DEEP LEARNING RESEARCH (2024 – 2025)', 'DEEP-LEARNING-FORSCHUNG (2024 – 2025)')}</span>

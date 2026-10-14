@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 const commandData = {
   help: {
     heading: 'Available commands',
-    lines: ['about · profile and study context', 'focus · current technical interests', 'skills · tools and languages', 'benchmark · vLLM benchmark result and setup', 'lora · adapter experiment and limitations', 'methods · how I approach experiments', 'projects · selected work', 'contact · location and GitHub'],
+    lines: ['about · profile and study context', 'focus · current technical interests', 'skills · tools and languages', 'triage · log analysis results and limits', 'benchmark · vLLM benchmark result and setup', 'lora · adapter experiment and limitations', 'methods · how I approach experiments', 'projects · selected work', 'contact · location and GitHub'],
   },
   about: {
     heading: 'Profile',
@@ -22,6 +22,11 @@ const commandData = {
     lines: ['Model: Qwen2.5-1.5B-Instruct · FP16 · NVIDIA Tesla T4', 'Batch 32: 877.69 tok/s vLLM vs 173.45 tok/s HF Transformers (5.06×).', 'A separate HF generate() row recorded 613.65 tok/s (1.43× comparison). These are notebook measurements, not a controlled serving benchmark.'],
     links: [{ label: 'Benchmark details & results', href: '/projects/vllm-pagedattention-benchmark' }],
   },
+  triage: {
+    heading: 'Log Triage · results snapshot',
+    lines: ['5,781.4 lines/s throughput · 345.93 ms pipeline latency · 4.04 MB peak memory.', '0.00% citation hallucination rate with 24/24 citations verified; template accuracy reached 71.43%.', 'Classification remains exploratory: F1 0.0061 and recall 0.0033 on the checked-in HDFS benchmark.'],
+    links: [{ label: 'Triage details & results', href: '/projects/log-triage' }],
+  },
   lora: {
     heading: 'LoRA · experiment snapshot',
     lines: ['Trained Qwen2.5-1.5B-Instruct adapters at ranks 4, 8, and 16; routed requests through one vLLM engine.', 'Exploratory setup: four unique examples repeated 25 times; one run per rank; no held-out evaluation.', 'Training loss is not evidence of generalization or a best rank.'],
@@ -33,8 +38,9 @@ const commandData = {
   },
   projects: {
     heading: 'Selected projects',
-    lines: ['LLM systems · vLLM throughput benchmark and LoRA adapter routing', 'Applied AI · Swasthya pharmacy network and EcoShare community marketplace', 'Research · astronomical image denoising and object detection'],
+    lines: ['Observability · streaming log triage with citation guardrails and trace correlation', 'LLM systems · vLLM throughput benchmark and LoRA adapter routing', 'Applied AI · Swasthya pharmacy network and EcoShare community marketplace', 'Research · astronomical image denoising and object detection'],
     links: [
+      { label: 'Log triage assistant', href: '/projects/log-triage' },
       { label: 'vLLM benchmark', href: '/projects/vllm-pagedattention-benchmark' },
       { label: 'LoRA extension', href: '/projects/vllm-lora-extension' },
       { label: 'Swasthya', href: '/projects/swasthya' },
@@ -50,14 +56,15 @@ const commandData = {
 };
 
 const germanCommandData = {
-  help: { heading: 'Verfügbare Befehle', lines: ['about · Profil und Studium', 'focus · aktuelle technische Interessen', 'skills · Technologien und Sprachen', 'benchmark · vLLM-Ergebnis und Versuchsaufbau', 'lora · Adapter-Experiment und Einschränkungen', 'methods · mein Vorgehen bei Experimenten', 'projects · ausgewählte Projekte', 'contact · Standort und GitHub'] },
+  help: { heading: 'Verfügbare Befehle', lines: ['about · Profil und Studium', 'focus · aktuelle technische Interessen', 'skills · Technologien und Sprachen', 'triage · Ergebnisse und Grenzen der Loganalyse', 'benchmark · vLLM-Ergebnis und Versuchsaufbau', 'lora · Adapter-Experiment und Einschränkungen', 'methods · mein Vorgehen bei Experimenten', 'projects · ausgewählte Projekte', 'contact · Standort und GitHub'] },
   about: { heading: 'Profil', lines: ['Adrika Pradhan · Masterstudentin der Künstlichen Intelligenz an der USI Lugano.', 'Interessiert an praktischen KI-Systemen, empirischer Evaluation und ressourcenschonender Entwicklung.'] },
   focus: { heading: 'Aktuelle Interessen', lines: ['LLM-Inferenzleistung und Verhalten des KV-Caches', 'Parameter-effizientes Fine-Tuning und Bereitstellung mehrerer Adapter', 'Angewandtes maschinelles Lernen für wissenschaftliche und operative Daten'] },
   skills: { heading: 'Technologien', lines: ['Sprachen: Python, SQL, TypeScript, Java', 'ML: PyTorch, TensorFlow, scikit-learn, Hugging Face', 'LLM-Systeme: vLLM, PEFT / LoRA', 'Daten & Cloud: PostgreSQL, Supabase, Google Cloud'] },
   benchmark: { heading: 'vLLM · Benchmark-Ergebnis', lines: ['Modell: Qwen2.5-1.5B-Instruct · FP16 · NVIDIA Tesla T4', 'Batch 32: 877,69 Tok/s mit vLLM gegenüber 173,45 Tok/s mit HF Transformers (5,06×).', 'Ein separater HF-generate()-Lauf erreichte 613,65 Tok/s (Vergleich: 1,43×). Notebook-Messungen, kein kontrollierter Serving-Benchmark.'], links: [{ label: 'Benchmark-Details und Ergebnisse', href: '/projects/vllm-pagedattention-benchmark' }] },
   lora: { heading: 'LoRA · Experiment', lines: ['Qwen2.5-1.5B-Instruct-Adapter mit Rang 4, 8 und 16 trainiert; Anfragen über eine vLLM-Engine geroutet.', 'Explorativer Aufbau: vier Beispiele, 25-mal wiederholt; ein Lauf je Rang; keine Hold-out-Evaluation.', 'Der Trainingsverlust belegt weder Generalisierung noch einen optimalen Rang.'], links: [{ label: 'LoRA-Methoden und Artefakte', href: '/projects/vllm-lora-extension' }] },
   methods: { heading: 'Grundsätze der Evaluation', lines: ['Modell, Hardware, Laufzeit, Arbeitslast und Messmethode dokumentieren.', 'Mit klar benannten Baselines vergleichen und getrennte Läufe und Metriken auseinanderhalten.', 'Einschränkungen zusammen mit den Ergebnissen berichten. Reproduzierbare Artefakte statt unbelegter Aussagen bevorzugen.'] },
-  projects: { heading: 'Ausgewählte Projekte', lines: ['LLM-Systeme · vLLM-Durchsatzbenchmark und LoRA-Adapter-Routing', 'Angewandte KI · Swasthya-Apothekennetzwerk und EcoShare-Marktplatz', 'Forschung · Entrauschung astronomischer Bilder und Objekterkennung'], links: [{ label: 'vLLM-Benchmark', href: '/projects/vllm-pagedattention-benchmark' }, { label: 'LoRA-Erweiterung', href: '/projects/vllm-lora-extension' }, { label: 'Swasthya', href: '/projects/swasthya' }, { label: 'EcoShare', href: '/projects/ecoshare' }, { label: 'Astronomische Bildverarbeitung', href: '/projects/astronomical-image-processing' }] },
+  triage: { heading: 'Log Triage · Ergebnisse', lines: ['5.781,4 Zeilen/s Durchsatz · 345,93 ms Pipeline-Latenz · 4,04 MB Spitzenspeicher.', '0,00 % Zitations-Halluzinationsrate mit 24/24 verifizierten Zitationen; Template-Genauigkeit 71,43 %.', 'Die Klassifikation bleibt explorativ: F1 0,0061 und Recall 0,0033 im HDFS-Benchmark.'], links: [{ label: 'Triage-Details und Ergebnisse', href: '/projects/log-triage' }] },
+  projects: { heading: 'Ausgewählte Projekte', lines: ['Observability · Streaming-Log-Triage mit Zitations-Guardrails und Trace-Korrelation', 'LLM-Systeme · vLLM-Durchsatzbenchmark und LoRA-Adapter-Routing', 'Angewandte KI · Swasthya-Apothekennetzwerk und EcoShare-Marktplatz', 'Forschung · Entrauschung astronomischer Bilder und Objekterkennung'], links: [{ label: 'Log Triage Assistant', href: '/projects/log-triage' }, { label: 'vLLM-Benchmark', href: '/projects/vllm-pagedattention-benchmark' }, { label: 'LoRA-Erweiterung', href: '/projects/vllm-lora-extension' }, { label: 'Swasthya', href: '/projects/swasthya' }, { label: 'EcoShare', href: '/projects/ecoshare' }, { label: 'Astronomische Bildverarbeitung', href: '/projects/astronomical-image-processing' }] },
   contact: { heading: 'Kontakt', lines: ['Standort: Lugano, Schweiz · M.Sc. KI an der USI', 'GitHub: github.com/adriennie'], links: [{ label: 'E-Mail an Adrika', href: 'mailto:adrika.pradhan@usi.ch' }, { label: 'GitHub-Profil', href: 'https://github.com/adriennie' }] },
 };
 
@@ -100,7 +107,7 @@ export default function PortfolioTerminal({ language = 'en' }) {
     ].slice(-24));
   };
 
-  const quickCommands = ['help', 'focus', 'benchmark', 'lora', 'methods', 'projects'];
+  const quickCommands = ['help', 'focus', 'triage', 'benchmark', 'lora', 'methods', 'projects'];
 
   return (
     <div className="min-w-0 overflow-hidden rounded-3xl border border-pink-500/20 bg-[#090C15]/95 font-mono shadow-2xl shadow-pink-950/20 backdrop-blur-xl">

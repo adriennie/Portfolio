@@ -1,5 +1,86 @@
 export const projects = [
   {
+    id: "log-triage",
+    title: "Log Triage Assistant",
+    subtitle: "Streaming Anomaly Detection & Trustworthy AI (2026)",
+    tagline: "Research-grade log analysis pipeline that streams large files, correlates anomalies with trace context, and verifies every AI citation against source lines.",
+    githubUrl: "https://github.com/adriennie/log-triage",
+    tags: ["Python", "FastAPI", "Drain3", "OpenTelemetry", "SQLite"],
+    artifacts: {
+      type: "Research & Engineering Artifacts",
+      items: [
+        "Streaming CLI and NDJSON API",
+        "Benchmark reports in Markdown, JSON, and SVG",
+        "Citation verification safety audit"
+      ],
+      links: [
+        { label: "Repository README", url: "https://github.com/adriennie/log-triage/blob/main/README.md" },
+        { label: "Benchmark report", url: "https://github.com/adriennie/log-triage/tree/main/reports" },
+        { label: "OpenAPI service", url: "https://github.com/adriennie/log-triage/blob/main/src/logtriage/api.py" }
+      ]
+    },
+    architecture: `Streaming Triage Pipeline:
+├── Parse: Streaming Drain3 templates with persistent state
+├── Window: Bounded log buffers grouped into analysis blocks
+├── Score: Batched anomaly scoring with bounded feature matrices
+├── Retrieve: SQLite-backed vector cache for recurring templates
+└── Guardrail: Citation verification with W3C trace correlation`,
+    stats: [
+      { label: "Throughput", value: "5,781.4 lines/s" },
+      { label: "Citation hallucination rate", value: "0.00%" },
+      { label: "Memory reduction", value: "93.1%" }
+    ],
+    overview: "Built a streaming log triage system for distributed services. It combines Drain3 parsing, bounded-window anomaly scoring, persistent SQLite vector caching, FastAPI streaming endpoints, and OpenTelemetry trace propagation. The system treats citations as a safety boundary: every cited line is checked against the active log window before an explanation is accepted.",
+    readmeSections: [
+      {
+        title: "Live streaming results",
+        intro: "The CLI processes the Loghub HDFS_2k dataset incrementally instead of loading the full file into memory. A 2,000-line run completed in four chunks and flagged 52 anomalies; later chunks accelerated after parser state and vector representations were reused.",
+        table: {
+          headers: ["Run", "Dataset", "Result", "Observed detail"],
+          rows: [["stream", "HDFS_2k.log", "2,000 lines / 4 chunks", "52 anomalies flagged"], ["analyze", "HDFS_2k.log", "17 templates / 24 anomalies", "344.8 ms latency"], ["eval", "HDFS_2k.log", "1,994 windows", "0.050 contamination"]]
+        }
+      },
+      {
+        title: "Empirical benchmark results",
+        intro: "The evaluation suite compares anomaly classification, parsing quality, resource use, and citation safety against the Loghub HDFS benchmark.",
+        table: {
+          headers: ["Category", "Metric", "Result", "Interpretation"],
+          rows: [
+            ["Classification", "Precision / Recall / F1", "0.0417 / 0.0033 / 0.0061", "Conservative detector; recall needs improvement"],
+            ["Classification", "Specificity / Accuracy", "0.9864 / 0.8365", "Few false positives relative to the benchmark"],
+            ["Parsing", "Template accuracy", "71.43%", "17 Drain3 clusters discovered"],
+            ["Scalability", "Throughput / latency", "5,781.4 lines/s / 345.93 ms", "Measured on the checked-in evaluation run"],
+            ["Resources", "Peak memory", "4.04 MB", "20.22 MB per 10k lines"],
+            ["Trustworthy AI", "Hallucination rate", "0.00%", "24/24 citations verified; confidence 1.0000"]
+          ]
+        }
+      },
+      {
+        title: "System capabilities",
+        bullets: [
+          "Generator-based parsing and bounded feature batches keep memory tied to the active chunk rather than the complete log.",
+          "Drain3 state persistence and a SHA-256 keyed SQLite vector cache reduce repeated parsing and embedding work.",
+          "W3C TraceContext propagation connects API requests, structured JSON logs, and pipeline stages through trace IDs.",
+          "Citation guardrails reject explanations when generated line references do not exist in the active source window."
+        ]
+      },
+      {
+        title: "Evaluation limits",
+        bullets: [
+          "The reported F1 score of 0.0061 and recall of 0.0033 show that anomaly classification is an active research result, not a production-ready detector.",
+          "The benchmark is based on the checked-in HDFS_2k dataset and should be rerun across additional services and log distributions.",
+          "The 93.1% memory reduction compares batched feature scoring with the project baseline; it is not a guarantee for every deployment."
+        ]
+      }
+    ],
+    keyModules: [
+      { name: "Streaming Pipeline", desc: "Processes multi-gigabyte logs chunk by chunk with Drain3 template persistence and bounded memory." },
+      { name: "Citation Safety", desc: "Verifies every cited source line and emits a structured guardrail payload before returning an explanation." },
+      { name: "Observability", desc: "Propagates W3C trace context through FastAPI middleware and structured pipeline logs." },
+      { name: "Evaluation Suite", desc: "Exports classification, parsing, latency, throughput, memory, and citation-safety metrics." }
+    ]
+  },
+  {
     id: "vllm-pagedattention-benchmark",
     title: "vLLM PagedAttention Benchmarking",
     subtitle: "Inference & KV-Cache Optimization (2026)",
