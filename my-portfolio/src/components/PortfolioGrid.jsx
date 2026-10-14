@@ -767,7 +767,6 @@ export default function PortfolioGrid() {
               <div className="space-y-3">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-[10px] font-mono text-pink-300 uppercase tracking-widest block">{t('RECENT · OBSERVABILITY (2026)', 'AKTUELL · OBSERVABILITY (2026)')}</span>
-                  <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-2 py-1 text-[9px] font-mono text-emerald-300">RESULTS LOGGED</span>
                 </div>
                 <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors">Log Triage Assistant</h3>
                 <p className="text-xs text-slate-300 leading-relaxed">
