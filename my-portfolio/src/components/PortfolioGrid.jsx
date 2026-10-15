@@ -77,6 +77,7 @@ export default function PortfolioGrid() {
   const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' });
   const [emailDraftRequested, setEmailDraftRequested] = useState(false);
   const [typedHeroTagline, setTypedHeroTagline] = useState('');
+  const [showMoreProjects, setShowMoreProjects] = useState(false);
   const reducedMotion = useReducedMotion();
   const t = (english, german) => language === 'de' ? german : english;
   const heroTagline = t('No one is better; some simply work smarter and harder.', 'Niemand ist besser; manche arbeiten einfach cleverer und härter.');
@@ -89,8 +90,9 @@ export default function PortfolioGrid() {
     { label: t('Skills', 'Kenntnisse'), keywords: 'skills tools technology', href: '#skills' },
     { label: t('Certificates & achievements', 'Zertifikate & Auszeichnungen'), keywords: 'certificates awards', href: '#certificates' },
     { label: t('Projects', 'Projekte'), keywords: 'work portfolio', href: '#projects' },
+    { label: t('More projects (products & platforms)', 'Weitere Projekte (Produkte & Plattformen)'), keywords: 'more projects products platforms ecoshare swasthya', action: 'more-projects', href: '#more-projects-heading' },
     { label: 'Log Triage Assistant', keywords: 'log triage anomaly detection observability trustworthy ai', href: `${BASE_URL}projects/log-triage` },
-    { label: 'vLLM PagedAttention Benchmark', keywords: 'inference vllm benchmark', href: `${BASE_URL}projects/vllm-pagedattention-benchmark` },
+    { label: 'vLLM PagedAttention & Hugging Face Unified Benchmark Suite', keywords: 'inference vllm benchmark', href: `${BASE_URL}projects/vllm-pagedattention-benchmark` },
     { label: 'vLLM LoRA Extension', keywords: 'lora adapter vllm', href: `${BASE_URL}projects/vllm-lora-extension` },
     { label: 'Swasthya Pharmacy Network', keywords: 'swasthya pharmacy health', href: `${BASE_URL}projects/swasthya` },
     { label: 'EcoShare', keywords: 'ecoshare community marketplace', href: `${BASE_URL}projects/ecoshare` },
@@ -224,6 +226,17 @@ export default function PortfolioGrid() {
     if (item.action === 'resume') {
       setIsPaletteOpen(false);
       setIsResumeOpen(true);
+      return;
+    }
+    if (item.action === 'more-projects') {
+      setIsPaletteOpen(false);
+      setShowMoreProjects(true);
+      window.requestAnimationFrame(() => {
+        document.getElementById('more-projects-heading')?.scrollIntoView({
+          behavior: reducedMotion ? 'auto' : 'smooth',
+          block: 'start',
+        });
+      });
       return;
     }
     if (item.href.startsWith('#')) {
@@ -785,11 +798,11 @@ export default function PortfolioGrid() {
               </div>
             </div>
 
-            {/* 2. vLLM PagedAttention Benchmark (2026) */}
+            {/* 2. vLLM PagedAttention & Hugging Face Unified Benchmark Suite (2026) */}
             <div className="group rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-500/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1">
               <div className="space-y-3">
                 <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">{t('INFERENCE OPTIMIZATION (2026)', 'INFERENZOPTIMIERUNG (2026)')}</span>
-                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors">vLLM PagedAttention Benchmark</h3>
+                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors">vLLM PagedAttention & Hugging Face Unified Benchmark Suite</h3>
                 <p className="text-xs text-slate-400 leading-relaxed">
                   {t('At batch 32, vLLM measured 5.06x the Transformers row and 1.43x a separate generate() row.', 'Bei Batch 32 erreichte vLLM das 5,06-Fache des Transformers-Laufs und das 1,43-Fache eines separaten generate()-Laufs.')}
                 </p>
@@ -810,7 +823,7 @@ export default function PortfolioGrid() {
             <div className="group rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-500/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1">
               <div className="space-y-3">
                 <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">PEFT & ADAPTER-ROUTING (2026)</span>
-                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors">vLLM LoRA Adaptation Extension</h3>
+                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors">LoRA Rank Ablation & Multi-Adapter Evaluation with PEFT</h3>
                 <p className="text-xs text-slate-400 leading-relaxed">
                   {t('Trained LoRA adapters (ranks 4, 8, 16) and served all three adapters from one vLLM engine using LoraRequest routing.', 'LoRA-Adapter (Ränge 4, 8, 16) trainiert und alle drei über eine vLLM-Engine mit LoraRequest-Routing bereitgestellt.')}
                 </p>
@@ -827,49 +840,7 @@ export default function PortfolioGrid() {
               </div>
             </div>
 
-            {/* 4. EcoShare (2026) */}
-            <div className="group rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-500/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1">
-              <div className="space-y-3">
-                <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">{t('COMMUNITY MARKETPLACE (2026)', 'COMMUNITY-MARKTPLATZ (2026)')}</span>
-                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors">EcoShare</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  {t('Mobile-first community marketplace for sharing items, managing orders, and transferring community credits.', 'Mobile-first Community-Marktplatz zum Teilen von Artikeln, Verwalten von Bestellungen und Übertragen von Community-Guthaben.')}
-                </p>
-              </div>
-              <div className="pt-6 space-y-4">
-                <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300">
-                  <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">Expo / React Native</span>
-                  <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">Bun</span>
-                  <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">Supabase · Clerk</span>
-                </div>
-                <a href={`${BASE_URL}projects/ecoshare`} className="block text-center w-full py-2.5 rounded-xl text-xs font-mono font-bold bg-pink-500/10 text-pink-400 border border-pink-500/30 hover:bg-pink-500/20 transition-all">
-                  {t('View Details & Architecture ↗', 'Details & Architektur ansehen ↗')}
-                </a>
-              </div>
-            </div>
-
-            {/* 5. Swasthya (2025 - 2026) */}
-            <div className="group rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-500/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1">
-              <div className="space-y-3">
-                <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">{t('PHARMACY NETWORK (2025 – 2026)', 'APOTHEKEN-NETZWERK (2025 – 2026)')}</span>
-                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors">Swasthya Pharmacy Network</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  {t('Role-based app for customer health tools, pharmacy inventory, distributor orders, and admin operations, with an external ML API integration.', 'Rollenbasierte App mit Gesundheitsfunktionen, Apothekenbestand, Händlerbestellungen und Admin-Prozessen sowie einer externen ML-API.')}
-                </p>
-              </div>
-              <div className="pt-6 space-y-4">
-                <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300">
-                  <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">Expo · TypeScript</span>
-                  <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">Supabase</span>
-                  <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">ML API</span>
-                </div>
-                <a href={`${BASE_URL}projects/swasthya`} className="block text-center w-full py-2.5 rounded-xl text-xs font-mono font-bold bg-pink-500/10 text-pink-400 border border-pink-500/30 hover:bg-pink-500/20 transition-all">
-                  {t('View Details & Architecture ↗', 'Details & Architektur ansehen ↗')}
-                </a>
-              </div>
-            </div>
-
-            {/* 6. Astronomical Denoising Research (2024 - 2025) */}
+            {/* 4. Astronomical Denoising Research (2024 - 2025) */}
             <div className="group rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-500/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1 md:col-span-2">
               <div className="space-y-3">
                 <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">{t('DEEP LEARNING RESEARCH (2024 – 2025)', 'DEEP-LEARNING-FORSCHUNG (2024 – 2025)')}</span>
@@ -891,6 +862,94 @@ export default function PortfolioGrid() {
             </div>
 
           </div>
+
+          <div id="more-projects-controls" className="flex justify-center pt-2">
+            <button
+              type="button"
+              onClick={() => setShowMoreProjects((prev) => !prev)}
+              aria-expanded={showMoreProjects}
+              aria-controls="more-projects-section"
+              className="inline-flex items-center gap-2 rounded-full border border-pink-500/30 bg-[#0B0F1A]/90 px-6 py-3 text-xs font-mono font-bold text-pink-300 shadow-xl shadow-pink-950/40 backdrop-blur-xl transition-all duration-200 hover:-translate-y-0.5 hover:border-pink-400/60 hover:bg-pink-500/10 hover:text-white active:translate-y-0"
+            >
+              <span>{showMoreProjects ? t('Show fewer projects', 'Weniger Projekte anzeigen') : t('More projects', 'Weitere Projekte')}</span>
+              <span className={`inline-block transition-transform duration-300 ${showMoreProjects ? 'rotate-180' : ''}`} aria-hidden="true">
+                ↓
+              </span>
+            </button>
+          </div>
+
+          <AnimatePresence>
+            {showMoreProjects && (
+              <motion.div
+                id="more-projects-section"
+                initial={reducedMotion ? { opacity: 0 } : { opacity: 0, y: 16 }}
+                animate={reducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+                exit={reducedMotion ? { opacity: 0 } : { opacity: 0, y: 16 }}
+                transition={{ duration: 0.25 }}
+              >
+                <section className="space-y-5 pt-4" aria-labelledby="more-projects-heading">
+                  <div className="max-w-3xl space-y-2">
+                    <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-pink-400">{t('More projects', 'Weitere Projekte')}</p>
+                    <h3 id="more-projects-heading" className="text-2xl font-extrabold tracking-tight text-white">
+                      {t('Applied products and platforms', 'Angewandte Produkte und Plattformen')}
+                    </h3>
+                    <p className="text-xs leading-relaxed text-slate-400">
+                      {t('A second shelf for product work beyond the featured research and systems projects.', 'Eine zweite Reihe für Produktarbeit neben den hervorgehobenen Forschungs- und Systemprojekten.')}
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div className="group flex flex-col justify-between rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/70 p-6 shadow-xl transition-all hover:-translate-y-1 hover:border-pink-500/50">
+                      <div className="space-y-3">
+                        <span className="block text-[10px] font-mono uppercase tracking-widest text-pink-400">{t('COMMUNITY MARKETPLACE (2026)', 'COMMUNITY-MARKTPLATZ (2026)')}</span>
+                        <h4 className="text-xl font-bold text-white transition-colors group-hover:text-pink-300">EcoShare</h4>
+                        <p className="text-xs leading-relaxed text-slate-400">{t('Mobile-first community marketplace for sharing items, managing orders, and transferring community credits.', 'Mobile-first Community-Marktplatz zum Teilen von Artikeln, Verwalten von Bestellungen und Übertragen von Community-Guthaben.')}</p>
+                      </div>
+                      <div className="space-y-4 pt-6">
+                        <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300">
+                          <span className="rounded border border-pink-500/20 bg-[#0E1322] px-2 py-0.5">Expo / React Native</span>
+                          <span className="rounded border border-pink-500/20 bg-[#0E1322] px-2 py-0.5">Bun</span>
+                          <span className="rounded border border-pink-500/20 bg-[#0E1322] px-2 py-0.5">Supabase · Clerk</span>
+                        </div>
+                        <a href={`${BASE_URL}projects/ecoshare`} className="block w-full rounded-xl border border-pink-500/30 bg-pink-500/10 py-2.5 text-center text-xs font-mono font-bold text-pink-400 transition-all hover:bg-pink-500/20">{t('View project ↗', 'Projekt ansehen ↗')}</a>
+                      </div>
+                    </div>
+
+                    <div className="group flex flex-col justify-between rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/70 p-6 shadow-xl transition-all hover:-translate-y-1 hover:border-pink-500/50">
+                      <div className="space-y-3">
+                        <span className="block text-[10px] font-mono uppercase tracking-widest text-pink-400">{t('PHARMACY NETWORK (2025 – 2026)', 'APOTHEKEN-NETZWERK (2025 – 2026)')}</span>
+                        <h4 className="text-xl font-bold text-white transition-colors group-hover:text-pink-300">Swasthya Pharmacy Network</h4>
+                        <p className="text-xs leading-relaxed text-slate-400">{t('Role-based app for customer health tools, pharmacy inventory, distributor orders, and admin operations, with an external ML API integration.', 'Rollenbasierte App mit Gesundheitsfunktionen, Apothekenbestand, Händlerbestellungen und Admin-Prozessen sowie einer externen ML-API.')}</p>
+                      </div>
+                      <div className="space-y-4 pt-6">
+                        <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300">
+                          <span className="rounded border border-pink-500/20 bg-[#0E1322] px-2 py-0.5">Expo · TypeScript</span>
+                          <span className="rounded border border-pink-500/20 bg-[#0E1322] px-2 py-0.5">Supabase</span>
+                          <span className="rounded border border-pink-500/20 bg-[#0E1322] px-2 py-0.5">ML API</span>
+                        </div>
+                        <a href={`${BASE_URL}projects/swasthya`} className="block w-full rounded-xl border border-pink-500/30 bg-pink-500/10 py-2.5 text-center text-xs font-mono font-bold text-pink-400 transition-all hover:bg-pink-500/20">{t('View project ↗', 'Projekt ansehen ↗')}</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex justify-center pt-2">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setShowMoreProjects(false);
+                        document.getElementById('more-projects-controls')?.scrollIntoView({
+                          behavior: reducedMotion ? 'auto' : 'smooth',
+                          block: 'center',
+                        });
+                      }}
+                      className="inline-flex items-center gap-2 rounded-full border border-pink-500/30 bg-[#0B0F1A]/90 px-5 py-2.5 text-xs font-mono font-bold text-pink-300 shadow-xl shadow-pink-950/40 backdrop-blur-xl transition-all duration-200 hover:-translate-y-0.5 hover:border-pink-400/60 hover:bg-pink-500/10 hover:text-white"
+                    >
+                      <span>{t('Show fewer projects', 'Weniger Projekte anzeigen')}</span>
+                      <span aria-hidden="true">↑</span>
+                    </button>
+                  </div>
+                </section>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </section>
 
         {/* SECTION: PORTFOLIO TERMINAL */}

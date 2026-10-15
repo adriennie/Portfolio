@@ -40,7 +40,7 @@ const architectureSteps = project.architecture
     {/* Ambient Background Lights */}
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-pink-600/10 rounded-full blur-[160px] pointer-events-none"></div>
 
-    <div class="mx-auto w-full max-w-4xl px-4 py-7 sm:px-6 sm:py-12 space-y-8 sm:space-y-10 relative z-10">
+    <div class="mx-auto w-full max-w-5xl px-4 py-7 sm:px-6 sm:py-12 space-y-8 sm:space-y-10 relative z-10">
       
       {/* Top Bar Navigation */}
       <nav class="flex items-center justify-between border-b border-pink-950/60 pb-6">
@@ -67,14 +67,17 @@ const architectureSteps = project.architecture
       </nav>
 
       {/* Main Header */}
-      <header class="space-y-4">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-pink-500/10 text-pink-400 border border-pink-500/20">
+      <header class="space-y-5">
+        <div class="space-y-2">
+          <p class="text-[10px] font-mono uppercase tracking-[0.24em] text-pink-300">Research project · repository reconstruction</p>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-pink-500/10 text-pink-400 border border-pink-500/20">
           <span class="w-1.5 h-1.5 rounded-full bg-pink-400 animate-pulse"></span>
           {project.subtitle}
+          </div>
         </div>
         
-        <h1 class="text-3xl leading-tight sm:text-5xl font-extrabold text-white tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
-          🌸 {project.title}
+        <h1 class="max-w-4xl text-3xl leading-[1.05] sm:text-5xl font-extrabold text-white tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
+          {project.title}
         </h1>
         
         <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-3xl">
@@ -92,7 +95,7 @@ const architectureSteps = project.architecture
       </header>
 
       {/* Metrics Grid */}
-      <section class="grid grid-cols-1 min-[420px]:grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 pt-2">
+      <section class="grid grid-cols-1 min-[420px]:grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 pt-2" aria-label="Project snapshot">
         {project.stats.map((stat) => (
           <div class="group relative p-5 rounded-2xl border border-pink-950/60 bg-[#0B0F1A]/60 backdrop-blur-xl hover:border-pink-500/40 transition-all">
             <p class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">{stat.label}</p>
@@ -146,12 +149,20 @@ const architectureSteps = project.architecture
       )}
 
       {project.id === 'vllm-pagedattention-benchmark' && (
-        <section aria-label="Interactive benchmark replay">
+        <section class="space-y-3" aria-label="Interactive benchmark replay">
+          <div>
+            <p class="text-[10px] font-mono uppercase tracking-[0.2em] text-pink-300">Replay the recorded run</p>
+            <h2 class="mt-1 text-xl font-bold text-white sm:text-2xl">Unified throughput comparison</h2>
+          </div>
           <VllmPlayground client:load />
         </section>
       )}
       {project.id === 'vllm-lora-extension' && (
-        <section aria-label="Interactive LoRA simulator">
+        <section class="space-y-3" aria-label="Interactive LoRA simulator">
+          <div>
+            <p class="text-[10px] font-mono uppercase tracking-[0.2em] text-pink-300">Replay the recorded run</p>
+            <h2 class="mt-1 text-xl font-bold text-white sm:text-2xl">Rank ablation and adapter routing</h2>
+          </div>
           <LoraPlayground client:load />
         </section>
       )}

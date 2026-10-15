@@ -15,8 +15,8 @@ export const projects = [
       ],
       links: [
         { label: "Repository README", url: "https://github.com/adriennie/log-triage/blob/main/README.md" },
-        { label: "Benchmark report", url: "https://github.com/adriennie/log-triage/tree/main/reports" },
-        { label: "OpenAPI service", url: "https://github.com/adriennie/log-triage/blob/main/src/logtriage/api.py" }
+        { label: "Benchmark report", url: "https://github.com/adriennie/log-triage/blob/main/reports/benchmark_report.md" },
+        { label: "OpenAPI service", url: "https://github.com/adriennie/log-triage/blob/main/logtriage/api.py" }
       ]
     },
     architecture: `Streaming Triage Pipeline:
@@ -82,9 +82,9 @@ export const projects = [
   },
   {
     id: "vllm-pagedattention-benchmark",
-    title: "vLLM PagedAttention Benchmarking",
-    subtitle: "Inference & KV-Cache Optimization (2026)",
-    tagline: "Notebook comparison of vLLM PagedAttention with Hugging Face Transformers and generate() throughput paths for autoregressive inference.",
+    title: "vLLM PagedAttention & Hugging Face Unified Benchmark Suite",
+    subtitle: "Empirical Inference Benchmarking · NVIDIA Tesla T4 (2026)",
+    tagline: "A reproducible notebook suite comparing vLLM PagedAttention with two Hugging Face inference paths across batch sizes, throughput, request rate, and recorded runtime conditions.",
     githubUrl: "https://github.com/adriennie/vllm-pagedattention-benchmark",
     tags: ["vLLM", "PyTorch", "CUDA", "NVIDIA T4", "Qwen 2.5"],
     artifacts: {
@@ -144,7 +144,7 @@ export const projects = [
       { label: "Peak Generation", value: "877.69 tok/s (Batch 32)" },
       { label: "Hardware", value: "NVIDIA Tesla T4 (FP16)" }
     ],
-    overview: "Benchmarked vLLM (PagedAttention) against two recorded Hugging Face paths on Qwen2.5-1.5B-Instruct across batch sizes 1-32 on a Tesla T4. At batch 32, the CSV records 877.69 tok/s for vLLM, 173.45 tok/s for Transformers (5.06x), and 613.65 tok/s for a separate generate() row (1.43x). At batch 16, vLLM is slower than that generate() row. See the result table and measurement limits.",
+    overview: "This suite makes the comparison legible instead of collapsing it into one speedup claim: the same Qwen2.5-1.5B-Instruct workload is replayed across batch sizes 1–32 on a Tesla T4, with separate rows for Transformers and generate(). At batch 32, vLLM reaches 877.69 tok/s; the comparison depends on which Hugging Face path is used.",
     keyModules: [
       { name: "Hugging Face Path", desc: "PyTorch model executed via model.generate() with standard KV memory allocation." },
       { name: "vLLM Path", desc: "vLLM engine utilizing block-managed KV memory with continuous batching." }
@@ -152,9 +152,9 @@ export const projects = [
   },
   {
     id: "vllm-lora-extension",
-    title: "vLLM LoRA Adaptation Extension",
-    subtitle: "PEFT & Dynamic Adapter Routing (2026)",
-    tagline: "Extending vLLM serving infrastructure and memory management to benchmark Low-Rank Adaptation (LoRA) weights efficiently.",
+    title: "LoRA Rank Ablation & Multi-Adapter Evaluation with PEFT",
+    subtitle: "Parameter-Efficient Fine-Tuning · Dynamic Adapter Routing (2026)",
+    tagline: "A small PEFT study that compares LoRA ranks 4, 8, and 16, then routes the saved adapters through one shared vLLM engine with LoraRequest.",
     githubUrl: "https://github.com/adriennie/vllm-lora-extension",
     tags: ["vLLM", "PEFT", "LoRA", "PyTorch", "TRL"],
     artifacts: {
@@ -221,7 +221,7 @@ export const projects = [
       { label: "Trainable Params", value: "544,768 to 2,179,072 (0.0353% - 0.1410%)" },
       { label: "Serving Architecture", value: "Single Engine + LoraRequest" }
     ],
-    overview: "Trained LoRA adapters (q_proj, v_proj; ranks 4, 8, 16) on Qwen2.5-1.5B-Instruct on a Kaggle T4. Served all three adapters from one vLLM engine using LoraRequest routing. The evaluation was exploratory and did not include a held-out set.",
+    overview: "This repository connects two experiments: a rank ablation for q_proj and v_proj updates on Qwen2.5-1.5B-Instruct, and a multi-adapter serving demonstration using one vLLM engine. The evaluation is intentionally small: four unique examples, one run per rank, and no held-out quality set.",
     keyModules: [
       { name: "LoRA Training Ablation", desc: "Frozen base weights with low-rank updates via PEFT SFTTrainer." },
       { name: "Multi-Adapter Serving", desc: "Dynamic runtime adapter loading and routing without engine re-initialization." }
@@ -232,7 +232,7 @@ export const projects = [
     title: "EcoShare",
     subtitle: "Community Sharing & Credit App",
     tagline: "A mobile-first community marketplace for sharing items, managing orders, and transferring community credits.",
-    githubUrl: "https://github.com/adriennie/Revive-App",
+    githubUrl: "https://github.com/adriennie/EcoShare-App",
     tags: ["Expo / React Native", "TypeScript", "Bun", "Supabase", "Clerk"],
     artifacts: {
       type: "Repository Highlights",
