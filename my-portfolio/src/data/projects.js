@@ -385,7 +385,7 @@ export const projects = [
       { label: "SSIM Score", value: "0.88" },
       { label: "Mean IoU (placeholder labels)", value: "0.51 → 0.69" }
     ],
-    overview: "Trained a convolutional autoencoder from scratch on DeepSpace YOLO images (128x128, synthetic Gaussian noise, $\sigma=0.2$) and a YOLO-inspired 16x16-grid detector. The study reports test-set PSNR of 27.52 dB and SSIM of 0.88. Its mean IoU changed from 0.51 to 0.69 on denoised inputs, measured against placeholder labels.",
+    overview: "Trained a convolutional autoencoder from scratch on DeepSpace YOLO images (128x128, synthetic Gaussian noise, \u03C3 =0.2) and a YOLO-inspired 16x16-grid detector. The study reports test-set PSNR of 27.52 dB and SSIM of 0.88. Its mean IoU changed from 0.51 to 0.69 on denoised inputs, measured against placeholder labels.",
     keyModules: [
       { name: "Denoising Autoencoder", desc: "Encoder-decoder network trained with MSE loss to strip background Gaussian noise." },
       { name: "Object Detector", desc: "Grid-based CNN estimating target presence and bounding boxes." }

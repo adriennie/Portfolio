@@ -533,10 +533,12 @@ export default function PortfolioGrid() {
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
               🌸 {t('Hi, I’m', 'Hallo, ich bin')} <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">Adrika</span>
             </h1>
-            <h2 className="text-2xl sm:text-3xl font-bold text-pink-400 font-mono" aria-label={heroTagline}>
-              <span aria-hidden="true">{typedHeroTagline}<span className="animate-pulse">▍</span></span>
-              <span className="sr-only">{heroTagline}</span>
-            </h2>
+            <div className="min-h-[3rem] sm:min-h-[3.75rem] flex items-center">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-pink-400 font-mono" aria-label={heroTagline}>
+                <span aria-hidden="true">{typedHeroTagline}<span className="animate-pulse">▍</span></span>
+                <span className="sr-only">{heroTagline}</span>
+              </h2>
+            </div>
             <p className="text-slate-300/80 text-sm sm:text-base leading-7 max-w-xl">
               {t('M.Sc. Artificial Intelligence student at USI Lugano, working across LLM inference optimization, LoRA serving, and deep learning for scientific data. I like turning careful experiments into practical, resource-aware systems.', 'Masterstudentin der Künstlichen Intelligenz an der USI Lugano. Meine Arbeit umfasst die Optimierung der LLM-Inferenz, das Bereitstellen von LoRA-Adaptern und Deep Learning für wissenschaftliche Daten. Ich mache aus sorgfältigen Experimenten praktische, ressourcenschonende Systeme.')}
             </p>
@@ -709,7 +711,7 @@ export default function PortfolioGrid() {
         <section id="skills" className="space-y-12 pt-12 scroll-mt-28">
           <div className="max-w-3xl space-y-2">
             <h2 className="text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
-              🌸 {t('Core', 'Zentrale')} <span className="text-pink-400">{t('Skills', 'Kenntnisse')}</span> 🌸
+              🌸 {t('Core', 'Zentrale')} <span className="text-pink-400">{t('Skills', 'Kenntnisse')}</span>
             </h2>
             <p className="text-xs font-mono text-slate-400 uppercase tracking-widest">{t('Technical stack & competencies', 'Technologien & Kompetenzen')}</p>
           </div>
@@ -732,7 +734,7 @@ export default function PortfolioGrid() {
         <section id="certificates" className="space-y-12 pt-12 scroll-mt-28">
           <div className="max-w-3xl space-y-2">
             <h2 className="text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
-              🌸 {t('Certificates &', 'Zertifikate &')} <span className="text-pink-400">{t('Achievements', 'Auszeichnungen')}</span> 🌸
+              🌸 {t('Certificates &', 'Zertifikate &')} <span className="text-pink-400">{t('Achievements', 'Auszeichnungen')}</span>
             </h2>
             <p className="text-xs font-mono text-slate-400 uppercase tracking-widest">{t('Professional credentials and competitive awards', 'Berufliche Zertifikate und Wettbewerbserfolge')}</p>
           </div>
@@ -744,7 +746,12 @@ export default function PortfolioGrid() {
                 {certificatesList.map((cert, idx) => (
                   <div key={idx} className="p-3 rounded-xl bg-[#0E1322] border border-pink-500/20 text-xs space-y-1">
                     <div className="font-bold text-white">{cert.name}</div>
-                    <div className="text-slate-400 font-mono">{cert.issuer} · {cert.date} {cert.credential ? `(ID: ${cert.credential})` : ''}</div>
+                    <div className="text-slate-400 font-mono flex items-center justify-between gap-2">
+                      <span>{cert.issuer} · {cert.date}</span>
+                      {cert.credential && (
+                        <span className="text-[10px] text-pink-300/90 font-mono">ID: {cert.credential}</span>
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -768,7 +775,7 @@ export default function PortfolioGrid() {
         <section id="projects" className="space-y-12 pt-12 scroll-mt-28">
           <div className="max-w-3xl space-y-2">
             <h2 className="text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
-              🌸 {t('Selected', 'Ausgewählte')} <span className="text-pink-400">{t('Projects', 'Projekte')}</span> 🌸
+              🌸 {t('Selected', 'Ausgewählte')} <span className="text-pink-400">{t('Projects', 'Projekte')}</span>
             </h2>
             <p className="text-xs font-mono text-slate-400 uppercase tracking-widest">{t('Chronological engineering & research milestones', 'Ausgewählte Projekte aus Entwicklung und Forschung')}</p>
           </div>
@@ -776,86 +783,104 @@ export default function PortfolioGrid() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             
             {/* 1. Log Triage Assistant (2026) */}
-            <div className="group rounded-3xl border border-pink-400/30 bg-gradient-to-br from-pink-500/[0.09] via-[#0B0F1A]/90 to-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-400/60 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1">
+            <div className="group rounded-3xl border border-pink-500/20 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-400/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1 h-full">
               <div className="space-y-3">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-[10px] font-mono text-pink-300 uppercase tracking-widest block">{t('RECENT · OBSERVABILITY (2026)', 'AKTUELL · OBSERVABILITY (2026)')}</span>
+                <div className="flex flex-wrap items-center justify-between gap-2 min-h-[1.75rem]">
+                  <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">{t('RECENT · OBSERVABILITY (2026)', 'AKTUELL · OBSERVABILITY (2026)')}</span>
+                  <span className="rounded-full border border-pink-400/30 bg-pink-400/10 px-2.5 py-0.5 text-[10px] font-mono font-bold text-pink-300">
+                    ⚡ 5,781 lines/s · 0% hallucination
+                  </span>
                 </div>
-                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors">Log Triage Assistant</h3>
-                <p className="text-xs text-slate-300 leading-relaxed">
+                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors min-h-[3.5rem] flex items-start">Log Triage Assistant</h3>
+                <p className="text-xs text-slate-300 leading-relaxed min-h-[3.75rem] sm:min-h-[4rem]">
                   {t('Streaming anomaly detection with trace-aware logs and citation guardrails: 5,781.4 lines/s, 0% citation hallucination rate, and 93.1% lower feature-scoring memory.', 'Streaming-Anomalieerkennung mit Trace-aware Logs und Zitations-Guardrails: 5.781,4 Zeilen/s, 0 % Zitations-Halluzinationsrate und 93,1 % weniger Speicher beim Feature-Scoring.')}
                 </p>
               </div>
-              <div className="pt-6 space-y-4">
-                <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300">
+              <div className="pt-6 space-y-4 mt-auto">
+                <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300 min-h-[1.75rem] items-center">
                   <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">Python · FastAPI</span>
                   <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">OpenTelemetry</span>
                   <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">Drain3</span>
                 </div>
-                <a href={`${BASE_URL}projects/log-triage`} className="block text-center w-full py-2.5 rounded-xl text-xs font-mono font-bold bg-pink-500/10 text-pink-300 border border-pink-400/30 hover:bg-pink-500/20 transition-all">
+                <a href={`${BASE_URL}projects/log-triage`} className="block text-center w-full py-2.5 rounded-xl text-xs font-mono font-bold bg-pink-500/10 text-pink-300 border border-pink-400/30 hover:bg-pink-500/20 hover:text-white transition-all">
                   {t('View Results & Architecture ↗', 'Ergebnisse & Architektur ansehen ↗')}
                 </a>
               </div>
             </div>
 
             {/* 2. vLLM PagedAttention & Hugging Face Unified Benchmark Suite (2026) */}
-            <div className="group rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-500/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1">
+            <div className="group rounded-3xl border border-pink-500/20 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-400/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1 h-full">
               <div className="space-y-3">
-                <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">{t('INFERENCE OPTIMIZATION (2026)', 'INFERENZOPTIMIERUNG (2026)')}</span>
-                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors">vLLM PagedAttention & Hugging Face Unified Benchmark Suite</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <div className="flex flex-wrap items-center justify-between gap-2 min-h-[1.75rem]">
+                  <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">{t('INFERENCE OPTIMIZATION (2026)', 'INFERENZOPTIMIERUNG (2026)')}</span>
+                  <span className="rounded-full border border-pink-400/30 bg-pink-400/10 px-2.5 py-0.5 text-[10px] font-mono font-bold text-pink-300">
+                    🚀 5.06× throughput (BS=32)
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors min-h-[3.5rem] flex items-start">vLLM PagedAttention & Hugging Face Unified Benchmark Suite</h3>
+                <p className="text-xs text-slate-300 leading-relaxed min-h-[3.75rem] sm:min-h-[4rem]">
                   {t('At batch 32, vLLM measured 5.06x the Transformers row and 1.43x a separate generate() row.', 'Bei Batch 32 erreichte vLLM das 5,06-Fache des Transformers-Laufs und das 1,43-Fache eines separaten generate()-Laufs.')}
                 </p>
               </div>
-              <div className="pt-6 space-y-4">
-                <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300">
+              <div className="pt-6 space-y-4 mt-auto">
+                <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300 min-h-[1.75rem] items-center">
                   <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">vLLM</span>
                   <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">PyTorch</span>
                   <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">Tesla T4</span>
                 </div>
-                <a href={`${BASE_URL}projects/vllm-pagedattention-benchmark`} className="block text-center w-full py-2.5 rounded-xl text-xs font-mono font-bold bg-pink-500/10 text-pink-400 border border-pink-500/30 hover:bg-pink-500/20 transition-all">
+                <a href={`${BASE_URL}projects/vllm-pagedattention-benchmark`} className="block text-center w-full py-2.5 rounded-xl text-xs font-mono font-bold bg-pink-500/10 text-pink-300 border border-pink-400/30 hover:bg-pink-500/20 hover:text-white transition-all">
                   {t('View Details & Architecture ↗', 'Details & Architektur ansehen ↗')}
                 </a>
               </div>
             </div>
 
             {/* 3. vLLM LoRA Extension (2026) */}
-            <div className="group rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-500/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1">
+            <div className="group rounded-3xl border border-pink-500/20 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-400/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1 h-full">
               <div className="space-y-3">
-                <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">PEFT & ADAPTER-ROUTING (2026)</span>
-                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors">LoRA Rank Ablation & Multi-Adapter Evaluation with PEFT</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <div className="flex flex-wrap items-center justify-between gap-2 min-h-[1.75rem]">
+                  <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">PEFT & ADAPTER-ROUTING (2026)</span>
+                  <span className="rounded-full border border-pink-400/30 bg-pink-400/10 px-2.5 py-0.5 text-[10px] font-mono font-bold text-pink-300">
+                    ⚙️ 3 adapters · 1 engine
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors min-h-[3.5rem] flex items-start">LoRA Rank Ablation & Multi-Adapter Evaluation with PEFT</h3>
+                <p className="text-xs text-slate-300 leading-relaxed min-h-[3.75rem] sm:min-h-[4rem]">
                   {t('Trained LoRA adapters (ranks 4, 8, 16) and served all three adapters from one vLLM engine using LoraRequest routing.', 'LoRA-Adapter (Ränge 4, 8, 16) trainiert und alle drei über eine vLLM-Engine mit LoraRequest-Routing bereitgestellt.')}
                 </p>
               </div>
-              <div className="pt-6 space-y-4">
-                <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300">
+              <div className="pt-6 space-y-4 mt-auto">
+                <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300 min-h-[1.75rem] items-center">
                   <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">PEFT</span>
                   <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">LoRA</span>
                   <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">vLLM</span>
                 </div>
-                <a href={`${BASE_URL}projects/vllm-lora-extension`} className="block text-center w-full py-2.5 rounded-xl text-xs font-mono font-bold bg-pink-500/10 text-pink-400 border border-pink-500/30 hover:bg-pink-500/20 transition-all">
+                <a href={`${BASE_URL}projects/vllm-lora-extension`} className="block text-center w-full py-2.5 rounded-xl text-xs font-mono font-bold bg-pink-500/10 text-pink-300 border border-pink-400/30 hover:bg-pink-500/20 hover:text-white transition-all">
                   {t('View Details & Architecture ↗', 'Details & Architektur ansehen ↗')}
                 </a>
               </div>
             </div>
 
             {/* 4. Astronomical Denoising Research (2024 - 2025) */}
-            <div className="group rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-500/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1 md:col-span-2">
+            <div className="group rounded-3xl border border-pink-500/20 bg-[#0B0F1A]/80 p-6 backdrop-blur-xl hover:border-pink-400/50 flex flex-col justify-between shadow-2xl transition-all hover:-translate-y-1 h-full">
               <div className="space-y-3">
-                <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">{t('DEEP LEARNING RESEARCH (2024 – 2025)', 'DEEP-LEARNING-FORSCHUNG (2024 – 2025)')}</span>
-                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors">Denoising Astronomical Images with CAE for YOLO Detection</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <div className="flex flex-wrap items-center justify-between gap-2 min-h-[1.75rem]">
+                  <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest block">{t('DEEP LEARNING RESEARCH (2024 – 2025)', 'DEEP-LEARNING-FORSCHUNG (2024 – 2025)')}</span>
+                  <span className="rounded-full border border-pink-400/30 bg-pink-400/10 px-2.5 py-0.5 text-[10px] font-mono font-bold text-pink-300">
+                    🔭 27.52 dB PSNR · 0.88 SSIM
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors min-h-[3.5rem] flex items-start">Denoising Astronomical Images with CAE for YOLO Detection</h3>
+                <p className="text-xs text-slate-300 leading-relaxed min-h-[3.75rem] sm:min-h-[4rem]">
                   {t('Reported 27.52 dB PSNR and 0.88 SSIM. The 0.51 to 0.69 mean IoU comparison used placeholder labels.', 'Berichtet wurden 27,52 dB PSNR und 0,88 SSIM. Der mittlere IoU-Vergleich von 0,51 auf 0,69 nutzte Platzhalter-Labels.')}
                 </p>
               </div>
-              <div className="pt-6 space-y-4">
-                <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300">
+              <div className="pt-6 space-y-4 mt-auto">
+                <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300 min-h-[1.75rem] items-center">
                   <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">TensorFlow</span>
                   <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">OpenCV</span>
                   <span className="px-2 py-0.5 rounded bg-[#0E1322] border border-pink-500/20">LaTeX</span>
                 </div>
-                <a href={`${BASE_URL}projects/astronomical-image-processing`} className="block text-center w-full py-2.5 rounded-xl text-xs font-mono font-bold bg-pink-500/10 text-pink-400 border border-pink-500/30 hover:bg-pink-500/20 transition-all">
+                <a href={`${BASE_URL}projects/astronomical-image-processing`} className="block text-center w-full py-2.5 rounded-xl text-xs font-mono font-bold bg-pink-500/10 text-pink-300 border border-pink-400/30 hover:bg-pink-500/20 hover:text-white transition-all">
                   {t('View Details & Architecture ↗', 'Details & Architektur ansehen ↗')}
                 </a>
               </div>
@@ -898,35 +923,35 @@ export default function PortfolioGrid() {
                     </p>
                   </div>
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <div className="group flex flex-col justify-between rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/70 p-6 shadow-xl transition-all hover:-translate-y-1 hover:border-pink-500/50">
+                    <div className="group flex flex-col justify-between rounded-3xl border border-pink-500/20 bg-[#0B0F1A]/80 p-6 shadow-xl backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-pink-400/50 h-full">
                       <div className="space-y-3">
                         <span className="block text-[10px] font-mono uppercase tracking-widest text-pink-400">{t('COMMUNITY MARKETPLACE (2026)', 'COMMUNITY-MARKTPLATZ (2026)')}</span>
-                        <h4 className="text-xl font-bold text-white transition-colors group-hover:text-pink-300">EcoShare</h4>
-                        <p className="text-xs leading-relaxed text-slate-400">{t('Mobile-first community marketplace for sharing items, managing orders, and transferring community credits.', 'Mobile-first Community-Marktplatz zum Teilen von Artikeln, Verwalten von Bestellungen und Übertragen von Community-Guthaben.')}</p>
+                        <h4 className="text-xl font-bold text-white transition-colors group-hover:text-pink-300 min-h-[3.5rem] flex items-start">EcoShare</h4>
+                        <p className="text-xs leading-relaxed text-slate-400 min-h-[3.75rem] sm:min-h-[4rem]">{t('Mobile-first community marketplace for sharing items, managing orders, and transferring community credits.', 'Mobile-first Community-Marktplatz zum Teilen von Artikeln, Verwalten von Bestellungen und Übertragen von Community-Guthaben.')}</p>
                       </div>
-                      <div className="space-y-4 pt-6">
-                        <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300">
+                      <div className="space-y-4 pt-6 mt-auto">
+                        <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300 min-h-[1.75rem] items-center">
                           <span className="rounded border border-pink-500/20 bg-[#0E1322] px-2 py-0.5">Expo / React Native</span>
                           <span className="rounded border border-pink-500/20 bg-[#0E1322] px-2 py-0.5">Bun</span>
                           <span className="rounded border border-pink-500/20 bg-[#0E1322] px-2 py-0.5">Supabase · Clerk</span>
                         </div>
-                        <a href={`${BASE_URL}projects/ecoshare`} className="block w-full rounded-xl border border-pink-500/30 bg-pink-500/10 py-2.5 text-center text-xs font-mono font-bold text-pink-400 transition-all hover:bg-pink-500/20">{t('View project ↗', 'Projekt ansehen ↗')}</a>
+                        <a href={`${BASE_URL}projects/ecoshare`} className="block w-full rounded-xl border border-pink-400/30 bg-pink-500/10 py-2.5 text-center text-xs font-mono font-bold text-pink-300 transition-all hover:bg-pink-500/20 hover:text-white">{t('View project ↗', 'Projekt ansehen ↗')}</a>
                       </div>
                     </div>
 
-                    <div className="group flex flex-col justify-between rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/70 p-6 shadow-xl transition-all hover:-translate-y-1 hover:border-pink-500/50">
+                    <div className="group flex flex-col justify-between rounded-3xl border border-pink-500/20 bg-[#0B0F1A]/80 p-6 shadow-xl backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-pink-400/50 h-full">
                       <div className="space-y-3">
                         <span className="block text-[10px] font-mono uppercase tracking-widest text-pink-400">{t('PHARMACY NETWORK (2025 – 2026)', 'APOTHEKEN-NETZWERK (2025 – 2026)')}</span>
-                        <h4 className="text-xl font-bold text-white transition-colors group-hover:text-pink-300">Swasthya Pharmacy Network</h4>
-                        <p className="text-xs leading-relaxed text-slate-400">{t('Role-based app for customer health tools, pharmacy inventory, distributor orders, and admin operations, with an external ML API integration.', 'Rollenbasierte App mit Gesundheitsfunktionen, Apothekenbestand, Händlerbestellungen und Admin-Prozessen sowie einer externen ML-API.')}</p>
+                        <h4 className="text-xl font-bold text-white transition-colors group-hover:text-pink-300 min-h-[3.5rem] flex items-start">Swasthya Pharmacy Network</h4>
+                        <p className="text-xs leading-relaxed text-slate-400 min-h-[3.75rem] sm:min-h-[4rem]">{t('Role-based app for customer health tools, pharmacy inventory, distributor orders, and admin operations, with an external ML API integration.', 'Rollenbasierte App mit Gesundheitsfunktionen, Apothekenbestand, Händlerbestellungen und Admin-Prozessen sowie einer externen ML-API.')}</p>
                       </div>
-                      <div className="space-y-4 pt-6">
-                        <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300">
+                      <div className="space-y-4 pt-6 mt-auto">
+                        <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-300 min-h-[1.75rem] items-center">
                           <span className="rounded border border-pink-500/20 bg-[#0E1322] px-2 py-0.5">Expo · TypeScript</span>
                           <span className="rounded border border-pink-500/20 bg-[#0E1322] px-2 py-0.5">Supabase</span>
                           <span className="rounded border border-pink-500/20 bg-[#0E1322] px-2 py-0.5">ML API</span>
                         </div>
-                        <a href={`${BASE_URL}projects/swasthya`} className="block w-full rounded-xl border border-pink-500/30 bg-pink-500/10 py-2.5 text-center text-xs font-mono font-bold text-pink-400 transition-all hover:bg-pink-500/20">{t('View project ↗', 'Projekt ansehen ↗')}</a>
+                        <a href={`${BASE_URL}projects/swasthya`} className="block w-full rounded-xl border border-pink-400/30 bg-pink-500/10 py-2.5 text-center text-xs font-mono font-bold text-pink-300 transition-all hover:bg-pink-500/20 hover:text-white">{t('View project ↗', 'Projekt ansehen ↗')}</a>
                       </div>
                     </div>
                   </div>
@@ -960,7 +985,12 @@ export default function PortfolioGrid() {
             <p className="text-sm text-slate-400 leading-relaxed">{t('Explore research interests, benchmark context, experiment limits, and selected projects through concise commands.', 'Erkunde Forschungsschwerpunkte, Benchmark-Kontext, Grenzen der Experimente und ausgewählte Projekte mit kurzen Befehlen.')}</p>
           </div>
           <div className="max-w-4xl">
-            <PortfolioTerminal language={language} />
+            <PortfolioTerminal
+              language={language}
+              onOpenResume={() => setIsResumeOpen(true)}
+              onNavigate={(section) => navigateToSection(null, section)}
+              onLanguageChange={(lang) => setLanguage(lang)}
+            />
           </div>
         </section>
 
@@ -968,7 +998,7 @@ export default function PortfolioGrid() {
         <section id="contact" className="space-y-12 pt-12 scroll-mt-28">
           <div className="max-w-3xl space-y-2">
             <h2 className="text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
-              🌸 {t('Contact Me', 'Kontaktiere mich')} 🌸
+              🌸 {t('Get in', 'Kontaktiere')} <span className="text-pink-400">{t('Touch', 'mich')}</span>
             </h2>
             <p className="text-xs font-mono text-slate-400 uppercase tracking-widest">{t('Get in touch with me', 'Schreib mir gern')}</p>
           </div>
@@ -1051,6 +1081,38 @@ export default function PortfolioGrid() {
         </section>
 
       </div>
+
+      {/* Global Page Footer */}
+      <footer className="mt-20 border-t border-white/[0.08] bg-[#04060B] py-12 text-xs font-mono text-slate-400">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="space-y-1 text-center sm:text-left">
+            <p className="font-bold text-white tracking-wider">ADRIKA PRADHAN</p>
+            <p className="text-[11px] text-slate-500">
+              {t('M.Sc. Artificial Intelligence · USI Lugano, Switzerland', 'M.Sc. Künstliche Intelligenz · USI Lugano, Schweiz')}
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-6 text-[11px]">
+            <a href="#home" onClick={(e) => navigateToSection(e, 'home')} className="hover:text-pink-300 transition-colors">{t('Home', 'Start')}</a>
+            <a href="#about" onClick={(e) => navigateToSection(e, 'about')} className="hover:text-pink-300 transition-colors">{t('About', 'Über mich')}</a>
+            <a href="#skills" onClick={(e) => navigateToSection(e, 'skills')} className="hover:text-pink-300 transition-colors">{t('Skills', 'Kenntnisse')}</a>
+            <a href="#projects" onClick={(e) => navigateToSection(e, 'projects')} className="hover:text-pink-300 transition-colors">{t('Projects', 'Projekte')}</a>
+            <a href="#terminal" onClick={(e) => navigateToSection(e, 'terminal')} className="hover:text-pink-300 transition-colors">{t('Terminal', 'Konsole')}</a>
+            <button type="button" onClick={() => setIsResumeOpen(true)} className="hover:text-pink-300 transition-colors">{t('Resume', 'Lebenslauf')}</button>
+            <a href="#contact" onClick={(e) => navigateToSection(e, 'contact')} className="hover:text-pink-300 transition-colors">{t('Contact', 'Kontakt')}</a>
+          </div>
+          <div className="flex items-center gap-4 text-[11px]">
+            <a href="https://github.com/adriennie" target="_blank" rel="noreferrer" className="hover:text-pink-300 transition-colors">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/adrika-pradhan-3a92622ba/" target="_blank" rel="noreferrer" className="hover:text-pink-300 transition-colors">LinkedIn ↗</a>
+            <button
+              type="button"
+              onClick={() => window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' })}
+              className="text-pink-400 hover:text-pink-300 transition-colors ml-2"
+            >
+              ↑ {t('Top', 'Nach oben')}
+            </button>
+          </div>
+        </div>
+      </footer>
 
       {/* Resume Modal */}
       <AnimatePresence>
