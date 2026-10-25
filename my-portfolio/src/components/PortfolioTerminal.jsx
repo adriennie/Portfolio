@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { logTriageReplay } from '../data/logTriageReplay.js';
 
 const BASE_URL = `${import.meta.env.BASE_URL}/`;
 
@@ -29,7 +30,7 @@ const virtualFiles = [
 const availableSections = ['home', 'about', 'skills', 'certificates', 'projects', 'terminal', 'contact'];
 
 const commandList = [
-  'help', 'about', 'focus', 'skills', 'benchmark', 'lora', 'triage', 'methods',
+  'help', 'run', 'bench', 'about', 'focus', 'skills', 'benchmark', 'lora', 'triage', 'methods',
   'projects', 'contact', 'ls', 'cat', 'tree', 'whoami', 'pwd', 'resume',
   'goto', 'cd', 'lang', 'neofetch', 'matrix', 'cowsay', 'quote', 'clear', 'reset', 'date'
 ];
@@ -40,9 +41,12 @@ const makeInitialHistory = (language) => [
     text: language === 'de'
       ? 'adrika-term v2.4 · USI Lugano (M.Sc. Künstliche Intelligenz)'
       : 'adrika-term v2.4 · USI Lugano (M.Sc. Artificial Intelligence)',
-    chips: ['help', 'benchmark 32', 'lora 8', 'triage', 'ls', 'resume'],
+    chips: ['help', 'run triage', 'bench --batch 32', 'lora 8', 'ls', 'resume'],
   },
 ];
+
+const prefersReducedMotion = () => typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let streamCounter = 0;
 
 export default function PortfolioTerminal({
   language = 'en',
@@ -92,6 +96,71 @@ export default function PortfolioTerminal({
     });
   };
 
+
+  // Appends a response, then reveals its lines one at a time (all at once with reduced motion).
+  const streamResponse = (inputText, { heading, lines, chips, links }, delay = 320) => {
+    streamCounter += 1;
+    const id = `stream-${streamCounter}`;
+    const instant = prefersReducedMotion();
+    setHistory((current) => [
+      ...current,
+      { type: 'input', text: `$ ${inputText}` },
+      { type: 'response', id, heading, lines: instant ? lines : [], chips: instant ? chips : [], links: instant ? links : [] },
+    ].slice(-28));
+    if (instant) return;
+    lines.forEach((line, index) => {
+      window.setTimeout(() => {
+        setHistory((current) => current.map((item) => {
+          if (item.id !== id) return item;
+          const done = index === lines.length - 1;
+          return { ...item, lines: [...item.lines, line], chips: done ? chips : item.chips, links: done ? links : item.links };
+        }));
+      }, delay * (index + 1));
+    });
+  };
+
+  const streamTriageReplay = (inputText) => {
+    const { chunks, citations, command: cliCommand } = logTriageReplay;
+    const lines = [`$ ${cliCommand}`];
+    chunks.forEach((chunk) => {
+      chunk.sample.slice(0, 2).forEach((line) => lines.push(`  ${String(line.n).padStart(4)} │ ${line.text.slice(0, 92)}…`));
+      lines.push(`  ▸ chunk ${chunk.index} · ${chunk.cumulative.toLocaleString()} lines · ${chunk.templates} templates · ${chunk.anomalies} anomalies · ${chunk.latencyMs} ms · guardrail ${chunk.guardrail}`);
+    });
+    lines.push(`✔ ${chunks.at(-1).cumulative.toLocaleString()} lines in ${chunks.length} chunks · ${chunks.reduce((sum, chunk) => sum + chunk.anomalies, 0)} anomalies flagged`);
+    citations.forEach((citation) => lines.push(`  ✓ ${citation.block.slice(0, 20)}… cites line ${citation.line} → found in window, verified`));
+    lines.push(t('● Citation guardrail PASSED · 0.00% hallucination (24/24 in the full analyze run)', '● Zitations-Guardrail BESTANDEN · 0,00 % Halluzination (24/24 im vollständigen Analyze-Lauf)'));
+    streamResponse(inputText, {
+      heading: t('Replaying recorded stream run · Loghub HDFS_2k', 'Wiedergabe des aufgezeichneten Stream-Laufs · Loghub HDFS_2k'),
+      lines,
+      chips: ['triage', 'bench --batch 32', 'goto projects'],
+      links: [{ label: t('Open interactive replay ↗', 'Interaktive Wiedergabe öffnen ↗'), href: `${BASE_URL}projects/log-triage#results` }],
+    }, 260);
+  };
+
+  const streamBench = (inputText, bs) => {
+    const data = benchmarkData[bs];
+    const bar = (value) => `${'█'.repeat(Math.max(1, Math.round((value / 900) * 28)))}`;
+    streamResponse(inputText, {
+      heading: t(`Throughput at batch ${bs} · Qwen2.5-1.5B on Tesla T4`, `Durchsatz bei Batch ${bs} · Qwen2.5-1.5B auf Tesla T4`),
+      lines: [
+        `vLLM            ${bar(data.vllm).padEnd(28)} ${data.vllm.toFixed(2)} tok/s`,
+        `HF generate()   ${bar(data.generate).padEnd(28)} ${data.generate.toFixed(2)} tok/s`,
+        `HF Transformers ${bar(data.transformers).padEnd(28)} ${data.transformers.toFixed(2)} tok/s`,
+        `→ ${(data.vllm / data.transformers).toFixed(2)}x vs Transformers · ${(data.vllm / data.generate).toFixed(2)}x vs generate() (separate runs)`,
+      ],
+      chips: [1, 2, 4, 8, 16, 32].filter((size) => size !== bs).slice(-3).map((size) => `bench --batch ${size}`),
+      links: [{ label: t('Open benchmark replay ↗', 'Benchmark-Wiedergabe öffnen ↗'), href: `${BASE_URL}projects/vllm-pagedattention-benchmark#results` }],
+    }, 380);
+  };
+
+  // Lets the command palette run a command here.
+  const executeRef = useRef(null);
+  useEffect(() => {
+    const onRun = (event) => executeRef.current?.(event.detail);
+    window.addEventListener('portfolio-terminal-run', onRun);
+    return () => window.removeEventListener('portfolio-terminal-run', onRun);
+  }, []);
+
   const executeCommand = (rawCommand) => {
     const trimmed = rawCommand.trim();
     if (!trimmed) return;
@@ -114,6 +183,18 @@ export default function PortfolioTerminal({
       return;
     }
 
+    if (command === 'run' && (!arg || arg === 'triage')) {
+      streamTriageReplay(trimmed);
+      return;
+    }
+
+    if (command === 'bench') {
+      const batchMatch = fullArg.match(/(\d+)/);
+      const bs = [1, 2, 4, 8, 16, 32].includes(Number(batchMatch?.[1])) ? Number(batchMatch[1]) : 32;
+      streamBench(trimmed, bs);
+      return;
+    }
+
     let responseItem = null;
 
     switch (command) {
@@ -121,6 +202,8 @@ export default function PortfolioTerminal({
         responseItem = {
           heading: t('Available Commands', 'Verfügbare Befehle'),
           lines: [
+            '  run triage       Replay the recorded HDFS stream run, chunk by chunk',
+            '  bench --batch N  Animated vLLM vs Hugging Face throughput (N: 1, 2, 4, 8, 16, 32)',
             '  benchmark [bs]   vLLM PagedAttention throughput replay (bs: 1, 2, 4, 8, 16, 32)',
             '  lora [rank]      PEFT adapter routing & parameter breakdown (rank: 4, 8, 16)',
             '  triage           Streaming log parser with Drain3 & citation guardrails',
@@ -146,7 +229,7 @@ export default function PortfolioTerminal({
           heading: `vLLM PagedAttention Benchmark (BS=${bs})`,
           type: 'bars',
           barData: [
-            { label: 'vLLM (PagedAttention)', value: row.vllm, ratio: `${tfRatio}×`, color: 'from-pink-500 to-rose-400' },
+            { label: 'vLLM (PagedAttention)', value: row.vllm, ratio: `${tfRatio}×`, color: 'from-accent-500 to-neon-400' },
             { label: 'HF Transformers', value: row.transformers, ratio: '1.00×', color: 'from-slate-500 to-slate-600' },
             { label: 'HF generate()', value: row.generate, ratio: `${genRatio}×`, color: 'from-violet-400 to-indigo-500' },
           ],
@@ -265,12 +348,13 @@ export default function PortfolioTerminal({
           responseItem = {
             heading: 'projects.txt',
             lines: [
-              '1. Log Triage Assistant          -> Streaming anomaly detection & citation guardrails',
-              '2. vLLM PagedAttention Benchmark -> 5.06x speedup on NVIDIA Tesla T4',
-              '3. LoRA Extension & Routing      -> Multi-adapter serving with PEFT on vLLM',
-              '4. Astronomical Denoising        -> 27.52 dB PSNR CAE for nebula YOLO detection',
-              '5. Swasthya Pharmacy Network     -> Role-based healthcare inventory & ML API',
-              '6. EcoShare Marketplace          -> Mobile-first community exchange app',
+              '1. SIB Doc (hackathon)           -> Privacy-checked NL-to-SPARQL for clinical graphs',
+              '2. Log Triage Assistant          -> Streaming anomaly detection & citation guardrails',
+              '3. vLLM PagedAttention Benchmark -> 5.06x speedup on NVIDIA Tesla T4',
+              '4. LoRA Extension & Routing      -> Multi-adapter serving with PEFT on vLLM',
+              '5. Astronomical Denoising        -> Learning project: post-mortem of a collapsed denoiser',
+              '6. Swasthya (Major Project 2)    -> Group: pharmacy demand forecasting & reorders',
+              '7. EcoShare (Major Project 1)    -> Group: AI-assisted neighbourhood sharing',
             ],
             chips: ['goto projects', 'triage', 'benchmark 32'],
           };
@@ -300,6 +384,7 @@ export default function PortfolioTerminal({
           heading: 'adrika-portfolio',
           lines: [
             '.',
+            '├── hackathons/         (sib-doc-neural-wave)',
             '├── research/           (log-triage, vllm-benchmark, lora-routing, astro-denoising)',
             '├── applied-products/   (swasthya-pharmacy, ecoshare-marketplace)',
             '└── credentials/        (USI_MSc_AI, resume.pdf)',
@@ -399,7 +484,7 @@ export default function PortfolioTerminal({
           lines: [
             'vLLM::PagedAttention [877.69 tok/s] ·· Drain3 [5.78k lines/s]',
             'LoRA::Rank[4,8,16] ──> LoraRequest ──> Shared vLLM Engine',
-            'PSNR: 27.52 dB · SSIM: 0.88 · Hallucination Rate: 0.00%',
+            'SIB Doc::Guard [0/117 forbidden let through] · Hallucination Rate: 0.00%',
           ],
           chips: ['help', 'neofetch'],
         };
@@ -488,12 +573,13 @@ export default function PortfolioTerminal({
         responseItem = {
           heading: t('Selected Projects', 'Ausgewählte Projekte'),
           lines: [
+            '• SIB Doc — Neural Wave hackathon (LLM agents, SPARQL, privacy guard)',
             '• Log Triage Assistant (FastAPI, Drain3, OpenTelemetry)',
             '• vLLM PagedAttention Benchmark (5.06x speedup on T4)',
             '• vLLM LoRA Extension (PEFT routing on shared engine)',
-            '• Astronomical Image Denoising (CAE + YOLO detection)',
-            '• Swasthya Pharmacy Network (Expo, Supabase, ML API)',
-            '• EcoShare Community Marketplace (Bun, Supabase, Clerk)',
+            '• Astronomical Denoising (learning project · post-mortem)',
+            '• Swasthya (Major Project 2 · group): Expo, Supabase, FastAPI ML',
+            '• EcoShare (Major Project 1 · group): Expo, Express, Supabase, Hugging Face',
           ],
           chips: ['goto projects', 'triage', 'benchmark 32'],
         };
@@ -545,6 +631,8 @@ export default function PortfolioTerminal({
     ].slice(-28));
   };
 
+  executeRef.current = executeCommand;
+
   const handleKeyDown = (event) => {
     if (event.key === 'ArrowUp') {
       event.preventDefault();
@@ -595,8 +683,8 @@ export default function PortfolioTerminal({
 
   return (
     <div
-      className={`min-w-0 overflow-hidden rounded-2xl border border-pink-500/20 bg-[#07090F]/95 font-mono shadow-2xl backdrop-blur-xl transition-[height] duration-300 ${
-        isMaximized ? 'ring-1 ring-pink-500/40' : ''
+      className={`min-w-0 overflow-hidden rounded-2xl border border-accent-500/20 bg-[#07090F]/95 font-mono shadow-2xl backdrop-blur-xl transition-[height] duration-300 ${
+        isMaximized ? 'ring-1 ring-accent-500/40' : ''
       }`}
     >
       {/* MINIMAL TERMINAL WINDOW HEADER */}
@@ -608,7 +696,7 @@ export default function PortfolioTerminal({
             onClick={() => setHistory([])}
             title={t('Clear output', 'Ausgabe löschen')}
             aria-label="Clear console"
-            className="h-2.5 w-2.5 rounded-full bg-rose-500/80 hover:bg-rose-500 transition-colors"
+            className="h-2.5 w-2.5 rounded-full bg-neon-500/80 hover:bg-neon-500 transition-colors"
           />
           <button
             type="button"
@@ -661,8 +749,8 @@ export default function PortfolioTerminal({
         {history.map((item, index) => {
           if (item.type === 'input') {
             return (
-              <div key={index} className="flex items-center gap-2 font-semibold text-pink-300 pt-1">
-                <span className="text-pink-400 select-none">$</span>
+              <div key={index} className="flex items-center gap-2 font-semibold text-accent-300 pt-1">
+                <span className="text-accent-400 select-none">$</span>
                 <span>{item.text.replace(/^\$\s*/, '')}</span>
               </div>
             );
@@ -679,7 +767,7 @@ export default function PortfolioTerminal({
                         key={chip}
                         type="button"
                         onClick={() => executeCommand(chip)}
-                        className="rounded border border-pink-500/25 bg-pink-500/5 px-2 py-0.5 text-[10px] text-pink-300 hover:border-pink-400 hover:bg-pink-500/15 hover:text-white transition-colors"
+                        className="rounded border border-accent-500/25 bg-accent-500/5 px-2 py-0.5 text-[10px] text-accent-300 hover:border-accent-400 hover:bg-accent-500/15 hover:text-white transition-colors"
                       >
                         {chip}
                       </button>
@@ -691,7 +779,7 @@ export default function PortfolioTerminal({
           }
 
           return (
-            <div key={index} className="space-y-1.5 pl-3 border-l border-pink-500/30 text-slate-300">
+            <div key={index} className="space-y-1.5 pl-3 border-l border-accent-500/30 text-slate-300">
               {item.heading && (
                 <p className="font-semibold text-slate-100 text-[11px] pb-0.5">{item.heading}</p>
               )}
@@ -706,7 +794,7 @@ export default function PortfolioTerminal({
                         <div className="flex justify-between text-slate-300 font-mono">
                           <span>{bar.label}</span>
                           <span className="text-white font-semibold">
-                            {bar.value.toFixed(2)} tok/s <span className="text-pink-400 text-[10px]">({bar.ratio})</span>
+                            {bar.value.toFixed(2)} tok/s <span className="text-accent-400 text-[10px]">({bar.ratio})</span>
                           </span>
                         </div>
                         <div className="h-1.5 w-full rounded-full bg-slate-900 border border-white/5 overflow-hidden">
@@ -723,7 +811,7 @@ export default function PortfolioTerminal({
 
               {/* Monospace ASCII or Standard Lines */}
               {item.type === 'ascii' ? (
-                <pre className="text-[11px] leading-relaxed text-pink-300/90 font-mono py-1">
+                <pre className="text-[11px] leading-relaxed text-accent-300/90 font-mono py-1">
                   {item.lines.join('\n')}
                 </pre>
               ) : (
@@ -742,7 +830,7 @@ export default function PortfolioTerminal({
                       key={chip}
                       type="button"
                       onClick={() => executeCommand(chip)}
-                      className="rounded border border-pink-500/20 bg-pink-500/5 px-2 py-0.5 text-[10px] text-pink-300/90 hover:border-pink-400 hover:bg-pink-500/15 hover:text-white transition-colors"
+                      className="rounded border border-accent-500/20 bg-accent-500/5 px-2 py-0.5 text-[10px] text-accent-300/90 hover:border-accent-400 hover:bg-accent-500/15 hover:text-white transition-colors"
                     >
                       {chip}
                     </button>
@@ -759,7 +847,7 @@ export default function PortfolioTerminal({
                       href={link.href}
                       target={link.href.startsWith('http') ? '_blank' : undefined}
                       rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
-                      className="text-[11px] text-pink-300 underline underline-offset-2 hover:text-white transition-colors"
+                      className="text-[11px] text-accent-300 underline underline-offset-2 hover:text-white transition-colors"
                     >
                       {link.label}
                     </a>
@@ -781,7 +869,7 @@ export default function PortfolioTerminal({
         }}
         className="flex items-center gap-2 border-t border-white/[0.06] bg-white/[0.015] px-4 py-2.5 sm:px-5"
       >
-        <span aria-hidden="true" className="font-bold text-pink-400 select-none">
+        <span aria-hidden="true" className="font-bold text-accent-400 select-none">
           $
         </span>
 
@@ -806,7 +894,7 @@ export default function PortfolioTerminal({
         <button
           type="submit"
           aria-label="Execute command"
-          className="sm:hidden text-xs text-pink-400 hover:text-white px-1.5 py-0.5"
+          className="sm:hidden text-xs text-accent-400 hover:text-white px-1.5 py-0.5"
         >
           ↵
         </button>

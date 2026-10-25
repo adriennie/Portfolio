@@ -21,6 +21,6 @@ export const timelineEvents = [
     organization: "UPES, Dehradun 🇮🇳",
     type: "Education",
     description: "Specialized in Artificial Intelligence & Machine Learning with a 7.91/10 CGPA, including 9.18 and 10.0 SGPA in the final two semesters.",
-    highlights: ["CGPA: 7.91/10", "Astronomical Denoising Research", "Swasthya & EcoShare Capstones"]
+    highlights: ["CGPA: 7.91/10", "Astronomical Denoising (learning project)", "Group major projects: EcoShare & Swasthya"]
   }
 ];

@@ -11,25 +11,32 @@ import '../styles/global.css';
 		<meta name="generator" content={Astro.generator} />
 		<title>Adrika Pradhan | Portfolio</title>
 		<meta name="description" content="Adrika Pradhan is an M.Sc. Artificial Intelligence student at USI Lugano, focused on LLM systems, applied machine learning, and scientific data." />
-		<meta name="theme-color" content="#06080f" />
+		<meta name="theme-color" content="#05060d" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Adrika Pradhan | AI Engineer & Researcher" />
 		<meta property="og:description" content="Projects and research in LLM systems, applied machine learning, and scientific data." />
-		<meta property="og:image" content="https://github.com/adriennie.png" />
-		<meta name="twitter:card" content="summary" />
+		<meta property="og:image" content={new URL(`${import.meta.env.BASE_URL}/og/home.png`, Astro.site).href} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="Adrika Pradhan | AI Engineer & Researcher" />
 		<meta name="twitter:description" content="Projects and research in LLM systems, applied machine learning, and scientific data." />
-		<meta name="twitter:image" content="https://github.com/adriennie.png" />
+		<meta name="twitter:image" content={new URL(`${import.meta.env.BASE_URL}/og/home.png`, Astro.site).href} />
 		<script is:inline>
 			// The portfolio should open at its introduction on every full page load.
 			// Section navigation still uses hashes while the app is already running.
+			// The one exception: "Back to Projects" from a case study returns to the project grid.
+			let referrerPath = '';
+			try { referrerPath = document.referrer && new URL(document.referrer).origin === location.origin ? new URL(document.referrer).pathname : ''; } catch { /* Ignore malformed referrers. */ }
+			const returningToProjects = location.hash === '#projects' && referrerPath.includes('/projects/');
 			if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-			if (location.hash) history.replaceState(history.state, '', `${location.pathname}${location.search}`);
+			if (location.hash && !returningToProjects) history.replaceState(history.state, '', `${location.pathname}${location.search}`);
 
 			const resetPageScroll = () => {
 				requestAnimationFrame(() => requestAnimationFrame(() => {
 					document.documentElement.style.scrollBehavior = 'auto';
-					window.scrollTo(0, 0);
+					if (returningToProjects) document.getElementById('projects')?.scrollIntoView({ block: 'start' });
+					else window.scrollTo(0, 0);
 					document.documentElement.style.removeProperty('scroll-behavior');
 				}));
 			};
@@ -37,7 +44,7 @@ import '../styles/global.css';
 			window.addEventListener('load', resetPageScroll, { once: true });
 		</script>
 	</head>
-	<body class="bg-[#06080F] text-slate-100 antialiased selection:bg-pink-500/30 selection:text-pink-200 min-h-screen">
+	<body class="bg-[#06080F] text-slate-100 antialiased selection:bg-accent-500/30 selection:text-accent-200 min-h-screen">
 		<main>
 			<PortfolioGrid client:load />
 		</main>

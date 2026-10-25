@@ -1,8 +1,51 @@
 @import "tailwindcss";
+@import "@fontsource-variable/space-grotesk";
 
 @theme {
 	--font-sans: "Inter", "Avenir Next", Avenir, "Segoe UI", sans-serif;
 	--font-mono: "SFMono-Regular", "Cascadia Code", "Roboto Mono", Consolas, monospace;
+	--font-display: "Space Grotesk Variable", "Inter", "Avenir Next", sans-serif;
+
+	/* Electric blue: links, buttons, labels, structure. */
+	--color-accent-50: #eef4ff;
+	--color-accent-100: #dbe7ff;
+	--color-accent-200: #b9d0ff;
+	--color-accent-300: #8db3ff;
+	--color-accent-400: #5e8fff;
+	--color-accent-500: #3d6dff;
+	--color-accent-600: #2b51ea;
+	--color-accent-700: #2441bd;
+	--color-accent-800: #213895;
+	--color-accent-900: #1e3172;
+	--color-accent-950: #121b42;
+
+	/* Hot neon pink: highlights only (key words, carets, selection, pointer glow). */
+	--color-neon-50: #fff0f7;
+	--color-neon-100: #ffdcee;
+	--color-neon-200: #ffb6da;
+	--color-neon-300: #ff82c0;
+	--color-neon-400: #ff4fa5;
+	--color-neon-500: #ff2e8a;
+	--color-neon-600: #e11770;
+	--color-neon-700: #b50f58;
+	--color-neon-800: #8b0d45;
+	--color-neon-900: #5f0a30;
+	--color-neon-950: #3a061d;
+}
+
+/* Cross-document view transitions: project cards morph into their case-study headers. */
+@view-transition {
+	navigation: auto;
+}
+
+::view-transition-group(*) {
+	animation-duration: 420ms;
+	animation-timing-function: cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+::view-transition-old(*),
+::view-transition-new(*) {
+	height: 100%;
 }
 
 @layer base {
@@ -32,8 +75,8 @@
 		margin: 0;
 		overflow-x: hidden;
 		background:
-			radial-gradient(circle at 80% 0%, rgba(219, 39, 119, 0.08), transparent 28rem),
-			radial-gradient(circle at 10% 100%, rgba(14, 165, 233, 0.06), transparent 24rem),
+			radial-gradient(circle at 80% 0%, rgba(61, 109, 255, 0.12), transparent 28rem),
+			radial-gradient(circle at 10% 100%, rgba(255, 46, 138, 0.07), transparent 24rem),
 			#06080f;
 		color: #f8fafc;
 		font-feature-settings: "cv02", "cv03", "cv04", "cv11";
@@ -44,8 +87,10 @@
 		inset: 0;
 		z-index: -1;
 		pointer-events: none;
-		background-image: linear-gradient(rgba(148, 163, 184, 0.035) 1px, transparent 1px);
-		background-size: 100% 4rem;
+		background-image:
+			linear-gradient(rgba(94, 143, 255, 0.05) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(94, 143, 255, 0.05) 1px, transparent 1px);
+		background-size: 4rem 4rem;
 		content: "";
 		mask-image: linear-gradient(to bottom, black, transparent 78%);
 	}
@@ -56,7 +101,7 @@
 	}
 
 	:focus-visible {
-		outline: 2px solid #f472b6;
+		outline: 2px solid #5e8fff;
 		outline-offset: 4px;
 	}
 
@@ -74,8 +119,8 @@
 	}
 
 	::selection {
-		background: rgba(236, 72, 153, 0.3);
-		color: #fbcfe8;
+		background: rgba(255, 46, 138, 0.35);
+		color: #ffdcee;
 	}
 }
 
@@ -100,10 +145,14 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #db2777;
+	background: #3d6dff;
 }
 
 @media (prefers-reduced-motion: reduce) {
+	@view-transition {
+		navigation: none;
+	}
+
 	html {
 		scroll-behavior: auto;
 	}
@@ -119,7 +168,7 @@
 
 @media (max-width: 640px) {
 	body::before {
-		background-size: 100% 3rem;
+		background-size: 3rem 3rem;
 	}
 
 	input:not([type="range"]),
@@ -168,3 +217,68 @@
 	transform: translateY(0);
 }
 
+
+/* Reading-progress rail: driven by the scroll position where supported, hidden elsewhere. */
+.progress-rail {
+	position: fixed;
+	inset: 0 0 auto 0;
+	z-index: 70;
+	height: 2px;
+	transform-origin: 0 50%;
+	transform: scaleX(0);
+	background: linear-gradient(90deg, #3d6dff, #ff2e8a);
+	pointer-events: none;
+	display: none;
+}
+
+@supports (animation-timeline: scroll()) {
+	.progress-rail {
+		display: block;
+		animation: progress-rail-grow linear both;
+		animation-timeline: scroll(root block);
+	}
+}
+
+@keyframes progress-rail-grow {
+	to { transform: scaleX(1); }
+}
+
+/* Touch feedback: buttons compress under a finger instead of chasing it. */
+@media (hover: none) {
+	.tactile {
+		transition: transform 140ms ease;
+	}
+
+	.tactile:active {
+		transform: scale(0.96);
+	}
+}
+
+/* Scroll cue: a dot travelling down a thin line. */
+.scroll-cue-dot {
+	animation: scroll-cue 1.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes scroll-cue {
+	0% { transform: translateY(0); opacity: 0; }
+	20% { opacity: 1; }
+	80% { opacity: 1; }
+	100% { transform: translateY(2.25rem); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.progress-rail {
+		animation: none;
+		display: none;
+	}
+}
+
+/* Mobile bottom navigation keeps clear of the home indicator. */
+.bottom-nav {
+	padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+/* Neon highlight glow for pink key words. */
+.neon-glow {
+	text-shadow: 0 0 18px rgba(255, 46, 138, 0.45), 0 0 42px rgba(255, 46, 138, 0.18);
+}
