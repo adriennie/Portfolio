@@ -2,6 +2,8 @@
 import { projects } from '../../data/projects.js';
 import VllmPlayground from '../../components/VllmPlayground.jsx';
 import LoraPlayground from '../../components/LoraPlayground.jsx';
+import LogTriageReplay from '../../components/LogTriageReplay.jsx';
+import PipelineStory from '../../components/PipelineStory.jsx';
 import '../../styles/global.css';
 
 export function getStaticPaths() {
@@ -12,41 +14,54 @@ export function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const architectureSteps = project.architecture
-  .split('\n')
-  .slice(1)
-  .map((step) => step.replace(/^[├└]──\s*/, '').trim())
-  .filter(Boolean);
+const base = import.meta.env.BASE_URL;
+const ogImage = new URL(`${base}/og/${project.id}.png`, Astro.site).href;
+// Sections about limits, interpretation or next steps move to "Honest results".
+const isLimitSection = (section) => /limit|interpretation|boundar|next step|scope/i.test(section.title);
+const resultSections = (project.readmeSections || []).filter((section) => !isLimitSection(section));
+const limitSections = (project.readmeSections || []).filter(isLimitSection);
+const hasLimits = Boolean(project.evaluationNotes) || limitSections.length > 0;
+const chapters = [
+  { id: 'problem', label: 'Problem' },
+  { id: 'method', label: 'Method' },
+  { id: 'results', label: 'Results' },
+  ...(hasLimits ? [{ id: 'limits', label: 'Honest results' }] : []),
+  { id: 'artifacts', label: 'Artifacts' },
+];
+const chapterNumber = (id) => String(chapters.findIndex((chapter) => chapter.id === id) + 1).padStart(2, '0');
 ---
 
 <html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
     <title>{project.title} | Adrika Pradhan</title>
     <meta name="description" content={project.tagline} />
-    <meta name="theme-color" content="#06080f" />
+    <meta name="theme-color" content="#05060d" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content={`${project.title} | Adrika Pradhan`} />
     <meta property="og:description" content={project.tagline} />
-    <meta property="og:image" content="https://github.com/adriennie.png" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${project.title} | Adrika Pradhan`} />
     <meta name="twitter:description" content={project.tagline} />
-    <meta name="twitter:image" content="https://github.com/adriennie.png" />
+    <meta name="twitter:image" content={ogImage} />
   </head>
-  <body class="bg-[#06080F] text-slate-100 font-sans min-h-screen selection:bg-pink-500/30 selection:text-pink-200 relative overflow-x-hidden">
+  <body class="bg-[#06080F] text-slate-100 font-sans min-h-screen selection:bg-accent-500/30 selection:text-accent-200 relative overflow-x-hidden">
     
     {/* Ambient Background Lights */}
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-pink-600/10 rounded-full blur-[160px] pointer-events-none"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(900px,100%)] h-[400px] bg-accent-600/10 rounded-full blur-[160px] pointer-events-none"></div>
 
     <div class="mx-auto w-full max-w-5xl px-4 py-7 sm:px-6 sm:py-12 space-y-8 sm:space-y-10 relative z-10">
       
       {/* Top Bar Navigation */}
-      <nav class="flex items-center justify-between border-b border-pink-950/60 pb-6">
+      <nav class="flex items-center justify-between border-b border-accent-950/60 pb-6">
         <a 
           href={`${import.meta.env.BASE_URL}/#projects`} 
-          class="group inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-pink-400 transition-colors"
+          class="group inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-accent-400 transition-colors"
         >
           <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -57,9 +72,9 @@ const architectureSteps = project.architecture
           href={project.githubUrl} 
           target="_blank" 
           rel="noreferrer"
-          class="inline-flex items-center gap-2 text-xs font-mono text-slate-200 hover:text-white px-4 py-2 rounded-xl bg-[#0B0F1A] border border-pink-500/20 hover:border-pink-500/50 transition-all shadow-lg"
+          class="inline-flex items-center gap-2 text-xs font-mono text-slate-200 hover:text-white px-4 py-2 rounded-xl bg-[#0B0F1A] border border-accent-500/20 hover:border-accent-500/50 transition-all shadow-lg"
         >
-          <svg class="w-4 h-4 text-pink-400" fill="currentColor" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 text-accent-400" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
           </svg>
           Repository ↗
@@ -69,15 +84,15 @@ const architectureSteps = project.architecture
       {/* Main Header */}
       <header class="space-y-5">
         <div class="space-y-2">
-          <p class="text-[10px] font-mono uppercase tracking-[0.24em] text-pink-300">Research project · repository reconstruction</p>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-pink-500/10 text-pink-400 border border-pink-500/20">
-          <span class="w-1.5 h-1.5 rounded-full bg-pink-400 animate-pulse"></span>
+          <p class="text-[10px] font-mono uppercase tracking-[0.24em] text-accent-300">Research project · repository reconstruction</p>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-accent-500/10 text-accent-400 border border-accent-500/20" style={`view-transition-name: project-kicker-${project.id}`}>
+          <span class="w-1.5 h-1.5 rounded-full bg-accent-400 animate-pulse"></span>
           {project.subtitle}
           </div>
         </div>
         
-        <h1 class="max-w-4xl text-3xl leading-[1.05] sm:text-5xl font-extrabold text-white tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
-          {project.title}
+        <h1 class="max-w-4xl text-3xl leading-[1.05] sm:text-5xl font-extrabold text-white tracking-tight">
+          <span class="bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent" style={`view-transition-name: project-title-${project.id}`}>{project.title}</span>
         </h1>
         
         <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-3xl">
@@ -87,7 +102,7 @@ const architectureSteps = project.architecture
         {/* Tech Badges */}
         <div class="flex flex-wrap gap-2 pt-3">
           {project.tags.map((tag) => (
-            <span class="px-3 py-1 rounded-xl text-xs font-mono bg-[#0B0F1A] border border-pink-500/20 text-slate-300">
+            <span class="px-3 py-1 rounded-xl text-xs font-mono bg-[#0B0F1A] border border-accent-500/20 text-slate-300">
               {tag}
             </span>
           ))}
@@ -97,147 +112,97 @@ const architectureSteps = project.architecture
       {/* Metrics Grid */}
       <section class="grid grid-cols-1 min-[420px]:grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 pt-2" aria-label="Project snapshot">
         {project.stats.map((stat) => (
-          <div class="group relative p-5 rounded-2xl border border-pink-950/60 bg-[#0B0F1A]/60 backdrop-blur-xl hover:border-pink-500/40 transition-all">
+          <div class="group relative p-5 rounded-2xl border border-accent-950/60 bg-[#0B0F1A]/60 backdrop-blur-xl hover:border-accent-500/40 transition-all">
             <p class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">{stat.label}</p>
-            <p class="text-xl font-bold font-mono text-white mt-1 group-hover:text-pink-300 transition-colors">
+            <p class="text-xl font-bold font-mono text-white mt-1 group-hover:text-accent-300 transition-colors" data-countup={stat.value || stat.desc}>
               {stat.value || stat.desc}
             </p>
           </div>
         ))}
       </section>
 
-      {/* Open Science & Artifacts Box */}
-      {project.artifacts && (
-        <section class="p-4 sm:p-6 rounded-3xl border border-pink-950/80 bg-[#0B0F1A]/80 backdrop-blur-xl space-y-4 shadow-xl">
-          <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-pink-400"></span>
-            <h2 class="text-sm font-bold font-mono text-white uppercase tracking-wider">{project.artifacts.type}</h2>
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {project.artifacts.items.map((item) => (
-              <div class="p-3 rounded-xl bg-[#06080F] border border-pink-500/20 text-xs font-mono text-slate-300 flex items-center gap-2">
-                <span class="text-pink-400">✓</span>
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-          {project.artifacts.links && (
-            <div class="flex flex-wrap gap-2">
-              {project.artifacts.links.map((link) => (
-                <a href={link.url} target="_blank" rel="noreferrer" class="inline-flex min-h-10 items-center rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-mono text-slate-300 transition-colors hover:border-pink-500/30 hover:text-pink-300">
-                  {link.label} ↗
-                </a>
+      {/* Sticky chapter indicator */}
+      <nav class="sticky top-3 z-30 -mx-1 overflow-x-auto rounded-2xl border border-white/10 bg-[#06080F]/85 p-1.5 shadow-xl shadow-black/40 backdrop-blur-xl" aria-label="Case study sections">
+        <ol class="flex min-w-max gap-1 font-mono text-[11px]">
+          {chapters.map((chapter, index) => (
+            <li>
+              <a href={`#${chapter.id}`} data-chapter-link={chapter.id} class="chapter-link flex items-center gap-2 rounded-xl px-3 py-2 text-slate-400 transition-colors hover:text-white">
+                <span class="text-accent-400/70">{String(index + 1).padStart(2, '0')}</span>{chapter.label}
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+
+      <main class="min-w-0 space-y-14 sm:space-y-16 pt-2">
+
+        {/* 01 · Problem */}
+        <section id="problem" class="scroll-mt-24 space-y-5" data-chapter="problem">
+          <header class="space-y-1">
+            <p class="text-[10px] font-mono uppercase tracking-[0.22em] text-accent-300">{chapterNumber('problem')} · Problem</p>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">What needed solving</h2>
+          </header>
+          <p class="text-slate-300 leading-relaxed text-sm sm:text-base max-w-3xl">{project.overview}</p>
+          {project.bottlenecks && (
+            <div class="space-y-3">
+              {project.bottlenecks.map((b, idx) => (
+                <details class="group rounded-2xl border border-accent-950/80 bg-[#0B0F1A]/70 backdrop-blur-xl overflow-hidden transition-all open:border-accent-500/40 shadow-xl" open={idx === 0}>
+                  <summary class="flex items-start sm:items-center justify-between gap-3 p-4 sm:p-5 cursor-pointer select-none font-mono text-xs sm:text-sm text-white font-bold hover:text-accent-300 transition-colors">
+                    <span class="flex items-center gap-3">
+                      <span class="text-accent-400 font-mono">0{idx + 1}.</span>
+                      {b.challenge}
+                    </span>
+                    <span class="transition-transform group-open:rotate-180 text-accent-400 font-mono">▼</span>
+                  </summary>
+                  <div class="p-4 pt-0 sm:p-5 sm:pt-0 border-t border-accent-950/40 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans space-y-2">
+                    <div class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono bg-accent-500/10 text-accent-300 border border-accent-500/20 mb-1 mt-3">
+                      Approach
+                    </div>
+                    <p>{b.solution}</p>
+                  </div>
+                </details>
               ))}
             </div>
           )}
-          <a href={project.githubUrl} target="_blank" rel="noreferrer" class="inline-flex rounded-xl border border-pink-500/30 bg-pink-500/10 px-4 py-2 text-xs font-mono text-pink-300 transition-colors hover:bg-pink-500/20">
-            Explore repository and available artifacts ↗
-          </a>
-          {project.id === 'astronomical-image-processing' && (
-            <a href={`${import.meta.env.BASE_URL}/Adrika_Pradhan_Research_paper.pdf`} target="_blank" rel="noreferrer" class="sm:ml-2 inline-flex rounded-xl border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-mono text-slate-200 transition-colors hover:border-pink-500/30 hover:text-pink-300">
-              Read research paper (PDF) ↗
-            </a>
-          )}
         </section>
-      )}
 
-      {project.evaluationNotes && (
-        <aside class="rounded-2xl border border-amber-400/20 bg-amber-400/[0.04] p-4 sm:p-5">
-          <h2 class="text-xs font-mono uppercase tracking-wider text-amber-200">Evaluation notes and limitations</h2>
-          <p class="mt-2 text-sm leading-relaxed text-slate-300">{project.evaluationNotes}</p>
-        </aside>
-      )}
-
-      {project.id === 'vllm-pagedattention-benchmark' && (
-        <section class="space-y-3" aria-label="Interactive benchmark replay">
-          <div>
-            <p class="text-[10px] font-mono uppercase tracking-[0.2em] text-pink-300">Replay the recorded run</p>
-            <h2 class="mt-1 text-xl font-bold text-white sm:text-2xl">Unified throughput comparison</h2>
+        {/* 02 · Method */}
+        <section id="method" class="scroll-mt-24 space-y-6" data-chapter="method">
+          <header class="space-y-1">
+            <p class="text-[10px] font-mono uppercase tracking-[0.22em] text-accent-300">{chapterNumber('method')} · Method</p>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">How it works</h2>
+          </header>
+          <div class="rounded-3xl border border-accent-950/60 bg-[#0B0F1A]/40 p-4 sm:p-6 backdrop-blur-xl">
+            <PipelineStory client:idle architecture={project.architecture} />
           </div>
-          <VllmPlayground client:load />
-        </section>
-      )}
-      {project.id === 'vllm-lora-extension' && (
-        <section class="space-y-3" aria-label="Interactive LoRA simulator">
-          <div>
-            <p class="text-[10px] font-mono uppercase tracking-[0.2em] text-pink-300">Replay the recorded run</p>
-            <h2 class="mt-1 text-xl font-bold text-white sm:text-2xl">Rank ablation and adapter routing</h2>
-          </div>
-          <LoraPlayground client:load />
-        </section>
-      )}
-
-      {project.preview && (
-        <section class="overflow-hidden rounded-3xl border border-pink-500/20 bg-gradient-to-br from-[#101321] via-[#0B0F1A] to-[#140b16] p-5 shadow-2xl shadow-pink-950/20 sm:p-7" aria-label={`${project.title} architecture overview`}>
-          <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div class="space-y-2">
-              <p class="text-[10px] font-mono uppercase tracking-[0.22em] text-pink-300">{project.preview.eyebrow}</p>
-              <h2 class="text-xl font-bold text-white sm:text-2xl">{project.preview.title}</h2>
-            </div>
-            <span class="w-fit rounded-full border border-white/10 bg-black/20 px-3 py-1.5 text-[10px] font-mono text-slate-400">Architecture snapshot</span>
-          </div>
-          <p class="mt-3 max-w-3xl text-xs leading-relaxed text-slate-400">{project.preview.note}</p>
-          <ol class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
-            {project.preview.steps.map((step, idx) => (
-              <li class="relative min-w-0 rounded-2xl border border-white/10 bg-[#06080F]/75 p-4 sm:min-h-36">
-                <div class="mb-3 flex items-center gap-2">
-                  <span class="flex h-7 w-7 flex-none items-center justify-center rounded-full border border-pink-400/30 bg-pink-400/10 text-[10px] font-mono text-pink-300">0{idx + 1}</span>
-                  <h3 class="text-sm font-semibold text-white">{step.label}</h3>
-                </div>
-                <p class="text-xs leading-relaxed text-slate-400">{step.detail}</p>
-                {idx < project.preview.steps.length - 1 && <span aria-hidden="true" class="absolute -right-2 top-6 z-10 hidden text-pink-300 xl:block">→</span>}
-              </li>
-            ))}
-          </ol>
-          <div class="mt-5 flex flex-wrap gap-2" aria-label="Key capabilities">
-            {project.preview.capabilities.map((capability) => (
-              <span class="rounded-full border border-pink-400/15 bg-pink-400/[0.06] px-3 py-1.5 text-[10px] font-mono text-pink-100/80">{capability}</span>
-            ))}
-          </div>
-          <a href={project.githubUrl} target="_blank" rel="noreferrer" class="mt-5 inline-flex min-h-10 items-center rounded-xl border border-pink-400/30 bg-pink-400/10 px-4 py-2 text-xs font-mono text-pink-200 transition-colors hover:bg-pink-400/20">
-            Explore the source on GitHub ↗
-          </a>
-        </section>
-      )}
-
-      {/* Main Sections */}
-      <main class="min-w-0 space-y-8 sm:space-y-10 pt-2 sm:pt-4">
-        
-        {/* Overview */}
-        <section class="space-y-4 rounded-3xl border border-pink-950/60 bg-[#0B0F1A]/40 p-4 sm:p-7 backdrop-blur-xl">
-          <h2 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2 font-mono">
-            <span class="text-pink-400">01.</span> Overview & Intent
-          </h2>
-          <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
-            {project.overview}
-          </p>
-        </section>
-
-        {/* Architecture */}
-        <section class="space-y-4 rounded-3xl border border-pink-950/60 bg-[#0B0F1A]/40 p-4 sm:p-7 backdrop-blur-xl">
-          <h2 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2 font-mono">
-            <span class="text-pink-400">02.</span> System Architecture
-          </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {architectureSteps.map((step, idx) => (
-              <div class="flex items-start gap-3 rounded-2xl border border-pink-950/60 bg-[#030408] p-4 shadow-lg">
-                <span class="flex h-7 w-7 flex-none items-center justify-center rounded-full border border-pink-500/30 bg-pink-500/10 text-[10px] font-mono text-pink-300">{String(idx + 1).padStart(2, '0')}</span>
-                <p class="pt-1 text-xs font-mono leading-relaxed text-slate-300">{step}</p>
+          {project.preview && (
+            <div class="overflow-hidden rounded-3xl border border-accent-500/20 bg-gradient-to-br from-[#101321] via-[#0B0F1A] to-[#140b16] p-5 shadow-2xl shadow-accent-950/20 sm:p-7">
+              <p class="text-[10px] font-mono uppercase tracking-[0.22em] text-accent-300">{project.preview.eyebrow}</p>
+              <h3 class="mt-2 text-xl font-bold text-white">{project.preview.title}</h3>
+              <p class="mt-2 max-w-3xl text-xs leading-relaxed text-slate-400">{project.preview.note}</p>
+              <ol class="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                {project.preview.steps.map((step, idx) => (
+                  <li class="relative min-w-0 rounded-2xl border border-white/10 bg-[#06080F]/75 p-4">
+                    <div class="mb-3 flex items-center gap-2">
+                      <span class="flex h-7 w-7 flex-none items-center justify-center rounded-full border border-accent-400/30 bg-accent-400/10 text-[10px] font-mono text-accent-300">0{idx + 1}</span>
+                      <h4 class="text-sm font-semibold text-white">{step.label}</h4>
+                    </div>
+                    <p class="text-xs leading-relaxed text-slate-400">{step.detail}</p>
+                  </li>
+                ))}
+              </ol>
+              <div class="mt-5 flex flex-wrap gap-2" aria-label="Key capabilities">
+                {project.preview.capabilities.map((capability) => (
+                  <span class="rounded-full border border-accent-400/15 bg-accent-400/[0.06] px-3 py-1.5 text-[10px] font-mono text-accent-100/80">{capability}</span>
+                ))}
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Core Modules */}
-        <section class="space-y-4">
-          <h2 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2 font-mono">
-            <span class="text-pink-400">03.</span> Core Implementation
-          </h2>
+            </div>
+          )}
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             {project.keyModules.map((module) => (
-              <div class="p-5 rounded-2xl border border-pink-950/60 bg-[#0B0F1A]/50 backdrop-blur-xl hover:border-pink-500/40 transition-all flex flex-col justify-between space-y-2">
+              <div class="p-5 rounded-2xl border border-accent-950/60 bg-[#0B0F1A]/50 backdrop-blur-xl hover:border-accent-500/40 transition-all space-y-2">
                 <h3 class="text-sm font-semibold text-white font-mono flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-pink-400"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-accent-400"></span>
                   {module.name}
                 </h3>
                 <p class="text-xs text-slate-400 leading-relaxed">{module.desc}</p>
@@ -246,88 +211,213 @@ const architectureSteps = project.architecture
           </div>
         </section>
 
-        {/* Bottlenecks & Failure Modes (Collapsible Details) */}
-        {project.bottlenecks && (
-          <section class="space-y-4">
-            <h2 class="text-xl font-bold text-white flex items-center gap-2 font-mono">
-              <span class="text-pink-400">04.</span> Engineering Trade-offs & Bottlenecks
-            </h2>
-            <div class="space-y-3">
-              {project.bottlenecks.map((b, idx) => (
-                <details class="group rounded-2xl border border-pink-950/80 bg-[#0B0F1A]/70 backdrop-blur-xl overflow-hidden transition-all open:border-pink-500/40 shadow-xl">
-                  <summary class="flex items-start sm:items-center justify-between gap-3 p-4 sm:p-5 cursor-pointer select-none font-mono text-xs sm:text-sm text-white font-bold hover:text-pink-300 transition-colors">
-                    <span class="flex items-center gap-3">
-                      <span class="text-pink-400 font-mono">0{idx + 1}.</span>
-                      {b.challenge}
-                    </span>
-                    <span class="transition-transform group-open:rotate-180 text-pink-400 font-mono">▼</span>
-                  </summary>
-                  <div class="p-4 pt-0 sm:p-5 sm:pt-0 border-t border-pink-950/40 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans space-y-2">
-                    <div class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono bg-pink-500/10 text-pink-300 border border-pink-500/20 mb-1">
-                      Resolution Strategy
-                    </div>
-                    <p>{b.solution}</p>
-                  </div>
-                </details>
+        {/* 03 · Results */}
+        <section id="results" class="scroll-mt-24 space-y-6" data-chapter="results">
+          <header class="space-y-1">
+            <p class="text-[10px] font-mono uppercase tracking-[0.22em] text-accent-300">{chapterNumber('results')} · Results</p>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">What it produced</h2>
+          </header>
+
+          {project.video && (
+            <div class="youtube-embed relative aspect-video overflow-hidden rounded-3xl border border-white/10 bg-black shadow-2xl" data-youtube-id={project.video.youtubeId} data-youtube-title={project.video.title}>
+              <button type="button" class="group absolute inset-0 h-full w-full" aria-label={`Play video: ${project.video.title}`}>
+                <img
+                  src={project.video.poster ? `${base}/${project.video.poster}` : `https://i.ytimg.com/vi/${project.video.youtubeId}/hqdefault.jpg`}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  class="h-full w-full object-cover opacity-90 transition-opacity group-hover:opacity-100"
+                />
+                <span class="absolute bottom-4 left-4">
+                  <span class="flex items-center gap-2 rounded-full bg-accent-500 px-5 py-3 font-mono text-xs font-bold text-white shadow-xl shadow-accent-500/40 transition-transform group-hover:scale-105">▶ Play demo</span>
+                </span>
+              </button>
+            </div>
+          )}
+
+          {project.gallery && (
+            <div class="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0" aria-label="Screenshots">
+              {project.gallery.map((shot) => (
+                <figure class="w-[85%] flex-none snap-center overflow-hidden rounded-2xl border border-white/10 bg-[#06080F] sm:w-[70%]">
+                  <img src={`${base}/${shot.src}`} alt={shot.alt} loading="lazy" decoding="async" width="1280" height="720" class="h-auto w-full" />
+                  <figcaption class="border-t border-white/10 px-4 py-2.5 font-mono text-[11px] text-slate-400">{shot.caption}</figcaption>
+                </figure>
               ))}
             </div>
-          </section>
-        )}
+          )}
 
-        {project.readmeSections?.length > 0 && (
-          <section class="space-y-5 pt-2" aria-label="Project documentation">
-            <div class="space-y-2">
-              <p class="text-[10px] font-mono uppercase tracking-[0.2em] text-pink-300">Restored project documentation</p>
-              <h2 class="text-xl sm:text-2xl font-bold text-white font-mono">Methods, results & reproducibility</h2>
-            </div>
-            {project.readmeSections.map((section, index) => (
-              <article class="min-w-0 space-y-4 rounded-3xl border border-pink-950/60 bg-[#0B0F1A]/55 p-4 sm:p-6">
-                <h3 class="text-base sm:text-lg font-bold text-white"><span class="mr-2 font-mono text-pink-400">{String(index + 1).padStart(2, '0')}.</span>{section.title}</h3>
+          {project.id === 'log-triage' && <LogTriageReplay client:visible />}
+          {project.id === 'vllm-pagedattention-benchmark' && <VllmPlayground client:visible />}
+          {project.id === 'vllm-lora-extension' && <LoraPlayground client:visible />}
+
+          {resultSections.map((section, index) => (
+            <article class="min-w-0 space-y-4 rounded-3xl border border-accent-950/60 bg-[#0B0F1A]/55 p-4 sm:p-6">
+              <h3 class="text-base sm:text-lg font-bold text-white"><span class="mr-2 font-mono text-accent-400">{String(index + 1).padStart(2, '0')}.</span>{section.title}</h3>
+              {section.intro && <p class="text-sm leading-relaxed text-slate-300">{section.intro}</p>}
+              {section.image && (
+                <figure class="overflow-hidden rounded-2xl border border-white/10 bg-[#06080F]">
+                  <a href={section.image.src} target="_blank" rel="noreferrer" aria-label={`Open full-size figure: ${section.image.alt}`}>
+                    <img src={section.image.src} alt={section.image.alt} loading="lazy" decoding="async" class="h-auto w-full object-contain" />
+                  </a>
+                  <figcaption class="border-t border-white/10 px-4 py-3 text-xs leading-relaxed text-slate-400">{section.image.caption}</figcaption>
+                </figure>
+              )}
+              {section.bullets && (
+                <ul class="list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-300 marker:text-accent-400">
+                  {section.bullets.map((bullet) => <li>{bullet}</li>)}
+                </ul>
+              )}
+              {section.table && (
+                <div class="max-w-full overflow-x-auto rounded-xl border border-white/10 overscroll-x-contain">
+                  <table class="w-full min-w-[520px] border-collapse text-left text-xs">
+                    <thead class="bg-white/[0.04] text-[10px] uppercase tracking-wide text-slate-400">
+                      <tr>{section.table.headers.map((header) => <th scope="col" class="px-3 py-3 font-mono">{header}</th>)}</tr>
+                    </thead>
+                    <tbody>
+                      {section.table.rows.map((row) => (
+                        <tr class="border-t border-white/10 text-slate-300">
+                          {row.map((cell) => <td class="px-3 py-3 align-top">{cell}</td>)}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </article>
+          ))}
+        </section>
+
+        {/* 04 · Honest results */}
+        {hasLimits && (
+          <section id="limits" class="scroll-mt-24 space-y-5" data-chapter="limits">
+            <header class="space-y-1">
+              <p class="text-[10px] font-mono uppercase tracking-[0.22em] text-amber-200">{chapterNumber('limits')} · Honest results</p>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">What these numbers do and don't show</h2>
+            </header>
+            {project.evaluationNotes && (
+              <p class="rounded-2xl border border-amber-400/20 bg-amber-400/[0.04] p-4 sm:p-5 text-sm leading-relaxed text-slate-300">{project.evaluationNotes}</p>
+            )}
+            {limitSections.map((section) => (
+              <article class="space-y-3 rounded-2xl border border-amber-400/15 bg-[#0B0F1A]/55 p-4 sm:p-5">
+                <h3 class="font-mono text-sm font-bold text-amber-100">{section.title}</h3>
                 {section.intro && <p class="text-sm leading-relaxed text-slate-300">{section.intro}</p>}
-                {section.image && (
-                  <figure class="overflow-hidden rounded-2xl border border-white/10 bg-[#06080F]">
-                    <a href={section.image.src} target="_blank" rel="noreferrer" aria-label={`Open full-size figure: ${section.image.alt}`}>
-                      <img src={section.image.src} alt={section.image.alt} loading="lazy" decoding="async" class="h-auto w-full object-contain" />
-                    </a>
-                    <figcaption class="border-t border-white/10 px-4 py-3 text-xs leading-relaxed text-slate-400">{section.image.caption}</figcaption>
-                  </figure>
-                )}
                 {section.bullets && (
-                  <ul class="list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-300 marker:text-pink-400">
+                  <ul class="list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-300 marker:text-amber-300">
                     {section.bullets.map((bullet) => <li>{bullet}</li>)}
                   </ul>
-                )}
-                {section.table && (
-                  <div class="max-w-full overflow-x-auto rounded-xl border border-white/10 overscroll-x-contain">
-                    <table class="w-full min-w-[520px] border-collapse text-left text-xs">
-                      <thead class="bg-white/[0.04] text-[10px] uppercase tracking-wide text-slate-400">
-                        <tr>{section.table.headers.map((header) => <th scope="col" class="px-3 py-3 font-mono">{header}</th>)}</tr>
-                      </thead>
-                      <tbody>
-                        {section.table.rows.map((row) => (
-                          <tr class="border-t border-white/10 text-slate-300">
-                            {row.map((cell) => <td class="px-3 py-3 align-top">{cell}</td>)}
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
                 )}
               </article>
             ))}
           </section>
         )}
 
+        {/* 05 · Artifacts */}
+        <section id="artifacts" class="scroll-mt-24 space-y-5" data-chapter="artifacts">
+          <header class="space-y-1">
+            <p class="text-[10px] font-mono uppercase tracking-[0.22em] text-accent-300">{chapterNumber('artifacts')} · Artifacts</p>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">{project.artifacts?.type || 'Sources'}</h2>
+          </header>
+          <div class="p-4 sm:p-6 rounded-3xl border border-accent-950/80 bg-[#0B0F1A]/80 backdrop-blur-xl space-y-4 shadow-xl">
+            {project.artifacts && (
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {project.artifacts.items.map((item) => (
+                  <div class="p-3 rounded-xl bg-[#06080F] border border-accent-500/20 text-xs font-mono text-slate-300 flex items-center gap-2">
+                    <span class="text-accent-400">✓</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+            {project.artifacts?.links && (
+              <div class="flex flex-wrap gap-2">
+                {project.artifacts.links.map((link) => (
+                  <a href={link.url} target="_blank" rel="noreferrer" class="inline-flex min-h-10 items-center rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-mono text-slate-300 transition-colors hover:border-accent-500/30 hover:text-accent-300">
+                    {link.label} ↗
+                  </a>
+                ))}
+              </div>
+            )}
+            <div class="flex flex-wrap gap-2">
+              <a href={project.githubUrl} target="_blank" rel="noreferrer" class="inline-flex rounded-xl border border-accent-500/30 bg-accent-500/10 px-4 py-2 text-xs font-mono text-accent-300 transition-colors hover:bg-accent-500/20">
+                Explore repository and available artifacts ↗
+              </a>
+              {project.id === 'astronomical-image-processing' && (
+                <a href={`${base}/Adrika_Pradhan_Research_paper.pdf`} target="_blank" rel="noreferrer" class="inline-flex rounded-xl border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-mono text-slate-200 transition-colors hover:border-accent-500/30 hover:text-accent-300">
+                  Original paper (PDF) · its results are not supported ↗
+                </a>
+              )}
+            </div>
+          </div>
+        </section>
+
       </main>
 
       {/* Footer */}
-      <footer class="pt-6 sm:pt-8 border-t border-pink-950/60 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-xs font-mono text-slate-500">
+      <footer class="pt-6 sm:pt-8 border-t border-accent-950/60 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-xs font-mono text-slate-500">
         <span>Adrika Pradhan · Systems Documentation</span>
-        <a href={`${import.meta.env.BASE_URL}/#projects`} class="text-pink-400 hover:text-pink-300 transition-colors">
+        <a href={`${import.meta.env.BASE_URL}/#projects`} class="text-accent-400 hover:text-accent-300 transition-colors">
           Back to Projects ↑
         </a>
       </footer>
 
     </div>
+
+    <script is:inline>
+      (() => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Highlight the chapter currently on screen in the sticky indicator.
+        const links = new Map([...document.querySelectorAll('[data-chapter-link]')].map((link) => [link.dataset.chapterLink, link]));
+        const setActive = (id) => links.forEach((link, key) => {
+          const active = key === id;
+          link.classList.toggle('bg-accent-500/15', active);
+          link.classList.toggle('text-white', active);
+          if (active) link.setAttribute('aria-current', 'true'); else link.removeAttribute('aria-current');
+        });
+        const chapterObserver = new IntersectionObserver((entries) => {
+          const visible = entries.filter((entry) => entry.isIntersecting);
+          if (visible.length) setActive(visible[0].target.dataset.chapter);
+        }, { rootMargin: '-30% 0px -60% 0px' });
+        document.querySelectorAll('[data-chapter]').forEach((section) => chapterObserver.observe(section));
+
+        // Click-to-load YouTube: no third-party player until the visitor asks for it.
+        document.querySelectorAll('.youtube-embed').forEach((embed) => {
+          embed.querySelector('button')?.addEventListener('click', () => {
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube-nocookie.com/embed/${embed.dataset.youtubeId}?autoplay=1&rel=0`;
+            iframe.title = embed.dataset.youtubeTitle || 'Project demo video';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            iframe.className = 'absolute inset-0 h-full w-full';
+            embed.replaceChildren(iframe);
+          }, { once: true });
+        });
+
+        // Count stat numbers up from zero when they first appear.
+        if (reduceMotion) return;
+        const format = (value, decimals, grouped) => value.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals, useGrouping: grouped });
+        const countObserver = new IntersectionObserver((entries) => entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          countObserver.unobserve(entry.target);
+          const { prefix, suffix, target, decimals, grouped } = entry.target._count;
+          const start = performance.now();
+          const tick = (now) => {
+            const progress = Math.min((now - start) / 1100, 1);
+            entry.target.textContent = `${prefix}${format(target * (1 - Math.pow(1 - progress, 3)), decimals, grouped)}${suffix}`;
+            if (progress < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        }), { threshold: 0.5 });
+        document.querySelectorAll('[data-countup]').forEach((element) => {
+          const match = element.dataset.countup.match(/^([^\d]*?)(\d[\d,]*(?:\.\d+)?)(.*)$/s);
+          if (!match || /\d/.test(match[3]) || (!match[2].includes('.') && Number(match[2].replace(/,/g, '')) < 10)) return;
+          const decimals = match[2].includes('.') ? match[2].split('.')[1].length : 0;
+          element._count = { prefix: match[1], suffix: match[3], target: Number(match[2].replace(/,/g, '')), decimals, grouped: match[2].includes(',') };
+          element.setAttribute('aria-label', element.dataset.countup);
+          element.textContent = `${match[1]}${format(0, decimals, element._count.grouped)}${match[3]}`;
+          countObserver.observe(element);
+        });
+      })();
+    </script>
   </body>
 </html>
